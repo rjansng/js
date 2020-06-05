@@ -25,7 +25,7 @@ function signbbs(signedmatch, homedata) {
     subTitle = `簽到结果: 成功 (重複簽到)`
     chavy.msg(title, subTitle, detail)
   } else {
-    const signmatch = homedata.match(/plugin.php\?id=awa_signin:pper([^\']*)/)
+    const signmatch = homedata.match(/plugin.php\?id=awa_signin:sign([^\']*)/)
     if (signmatch) {
       let url = { url: `https://awabest.com/${signmatch[0]}&inajax=1&signsubmit=yes&handlekey=signin&emotid=11&referer=https%3A%2F%2Fawabest.com%2F.%2F`, headers: { Cookie: cookieVal } }
       url.headers['Host'] = 'awabest.com'
