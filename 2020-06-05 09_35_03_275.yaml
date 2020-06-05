@@ -134,11 +134,11 @@ DOMAIN-SUFFIX,mopub.com,REJECT
 DOMAIN-SUFFIX,openx.com,REJECT
 DOMAIN-SUFFIX,flurry.com,REJECT
 
-# GeoIP China
+GEOIP,TW,SSID
 FINAL,SSID
 
 [Remote Rule]
-
+https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Apple.list,policy=🎯𝐃𝐢𝐫𝐞𝐜𝐭, enabled=true
 # 订阅规则
 #https://raw.githubusercontent.com/eHpo1/Rules/master/Surge4/Ruleset/Liby.list, policy=🚫𝐀𝐝 𝐁𝐥𝐨𝐜𝐤, enabled=false
 # BlockOTA
