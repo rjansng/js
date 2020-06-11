@@ -87,6 +87,11 @@ SSID = ssid,default = DIRECT, cellular = DIRECT, "tsu office" = DIRECT, "an1" = 
 #  𝐍𝐞𝐭𝐞𝐚𝐬𝐞𝐌𝐮𝐬𝐢𝐜
 #DOMAIN-SUFFIX,music.126.net,DIRECT
 
+#! Line 廣告
+#! 白名單
+URL-REGEX,^https:\/\/obs\.line\-scdn\.net\/r,DIRECT
+URL-REGEX,^https:\/\/obs\-tw\.line\-apps\.com\/talk,DIRECT
+URL-REGEX,^https:\/\/stickershop\.line\-scdn\.net,DIRECT
 
 DOMAIN-KEYWORD,aotter,REJECT
 DOMAIN-KEYWORD,app-measurement,REJECT
