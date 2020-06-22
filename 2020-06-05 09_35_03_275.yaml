@@ -10,7 +10,7 @@ bypass-tun = 10.0.0.0/8,127.0.0.0/8,169.254.0.0/16,192.0.2.0/24,192.168.0.0/16,1
 # [DNS] => DNS 服务器
 dns-server = system,
 allow-udp-proxy = true
-host = 127.0.0.1
+host = 127.0.0.1,8.8.8.8,8.8.4.4,1.1.1.1
 
 [Remote Proxy]
 # 订阅节点
