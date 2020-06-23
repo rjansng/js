@@ -209,7 +209,7 @@ http-request ^https?://[\s\S]*\.googlevideo\.com/.*&(oad|ctier) script-path=http
 [Remote Script]
 # 远程脚本
 https://raw.githubusercontent.com/nzw9314/Loon/master/Task.conf, tag=签到, enabled=true
-https://raw.githubusercontent.com/nzw9314/Loon/master/Script.conf, tag=脚本, enabled=true
+https://raw.githubusercontent.com/nzw9314/Loon/master/Script.conf, tag=脚本, enabled=false
 https://raw.githubusercontent.com/nzw9314/Loon/master/Cookie.conf, tag=Cookie, enabled=false
 
 [MITM]
