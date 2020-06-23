@@ -141,7 +141,7 @@ DOMAIN-SUFFIX,openx.com,REJECT
 DOMAIN-SUFFIX,flurry.com,REJECT
 
 GEOIP,TW,🎯𝐃𝐢𝐫𝐞𝐜𝐭
-FINAL,SSID
+FINAL,🎯𝐃𝐢𝐫𝐞𝐜𝐭
 
 [Remote Rule]
 https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Apple.list,policy=🎯𝐃𝐢𝐫𝐞𝐜𝐭, enabled=true
