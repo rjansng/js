@@ -137,8 +137,7 @@ https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Ap
 
 #ADList
 https://raw.githubusercontent.com/jkgtw/Surge/master/ADLists/AD.list, policy=🚫𝐀𝐝 𝐁𝐥𝐨𝐜𝐤, enabled=true
-
-
+https://raw.githubusercontent.com/Zhuliyer/AD/master/AD-yer.list, policy=🚫𝐀𝐝 𝐁𝐥𝐨𝐜𝐤, enabled=true
 [URL Rewrite]
 # 本地重写
 enable = true
