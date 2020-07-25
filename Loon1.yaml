@@ -182,10 +182,6 @@ enable = true
 # > 四季線上影視4gTV
 ^https?+:\/\/service\.4gtv\.tv\/4gtv\/Data\/(?>GetAD|ADLog) - reject-200
 
-https:\/\/api\.bilibili\.com\/pgc\/player\/api\/playurl http://api.bili.best:22333/geturl/ 302
-https:\/\/api.bilibili.com\/pgc\/view\/app\/season http://api.bili.best:22333/season/ 302
-
-
 [Remote Rewrite]
 #订阅重写 去广告 by eHpo
 # 格式：订阅url，别名(可选)
@@ -197,6 +193,7 @@ https://raw.githubusercontent.com/eHpo1/Rules/master/Loon/Rewrite.conf, tag=eHpo
 enable = true
 # > YouTube 
 http-request ^https?://[\s\S]*\.googlevideo\.com/.*&(oad|ctier) script-path=https://Choler.github.io/Surge/Script/YouTube.js
+http-response https:\/\/ap(p|i)\.bilibili\.com\/((pgc\/player\/api\/playurl)|(x\/v2\/account\/myinfo\?)|(x\/v2\/account/mine\?)) requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Script/Bilibili/BiliHD.js
 
 [Remote Script]
 # 远程脚本
