@@ -118,7 +118,6 @@ ctier=[A-Z] citer=A 302
 ^https?+:\/\/ads\.superad\.cc\/? _ reject-200
 
 
-
 #! 漫畫人
 ^http:\/\/mangaapi.manhuaren.com\/.+\/public\/(getShelfActivity|getStartPageAds|getStartPageAds2|getRecommendedGame|getAditem|getAds) - reject-200
 ^http:\/\/mangaapi.manhuaren.com\/.+\/manga\/getMangaPromotionActivity - reject-200
@@ -153,8 +152,7 @@ https://raw.githubusercontent.com/eHpo1/Rules/master/Loon/Rewrite.conf, tag=eHpo
 [Script]
 # 本地脚本
 enable = true
-# > YouTube 
-http-request ^https://[\s\S]*\.googlevideo\.com/.*&(oad|ctier) script-path=https://Choler.github.io/Surge/Script/YouTube.js, timeout=10, tag=YouTube.js
+
 
 
 [Remote Script]
@@ -165,8 +163,6 @@ https://raw.githubusercontent.com/nzw9314/Loon/master/Cookie.conf, tag=Cookie, e
 
 
 [Plugin]
-https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Loon/Plugin/DouYin.plugin, proxy=DIRECT, tag=dy, enabled=true
-https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Loon/Plugin/rrsp.plugin, proxy=DIRECT, tag=人人, enabled=false
 https://gitee.com/chavyleung/scripts/raw/master/box/rewrite/boxjs.rewrite.loon.tf.plugin, proxy=DIRECT, tag=box.js, enabled=true
 # plugin-url tag=tag,proxy=插件中PROXY所指向的策略,enable=true
 # plugin策略可设置为DIRECT,REJECT,PROXY，其中PROXY为用户在app中手动映射的策略，rule后不跟随策略默认使用PROXY
