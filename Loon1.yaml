@@ -125,7 +125,7 @@ https://raw.githubusercontent.com/eHpo1/Rules/master/Surge4/Ruleset/Global.list,
 enable = true
 ^https?+:\/\/ads\.superad\.cc\/? _ reject-200
 
-ctier=[A-Z] citer=A 302
+
 ^https?:\/\/.+\.youtube\.com\/.+adformat url reject-img
 ^https?:\/\/.+\.youtube\.com\/.+get_ads url reject-img
 ^https?:\/\/.+\.youtube\.com\/api\/stats\/ads url reject-img
@@ -143,15 +143,7 @@ ctier=[A-Z] citer=A 302
 ^http:\/\/mangaapi.manhuaren.com\/.+\/public\/(getShelfActivity|getStartPageAds|getStartPageAds2|getRecommendedGame|getAditem|getAds) - reject-200
 ^http:\/\/mangaapi.manhuaren.com\/.+\/manga\/getMangaPromotionActivity - reject-200
 ^http:\/\/mangaapi.manhuaren.com\/.+\/ad\/ - reject-200
-
-# G
-# > Google
-# >> Youtube
-#^https?+:\/\/.+?\.googlevideo\.com\/.+?(?>&oad|ctier) - reject-200
-#^https?+:\/\/\w+?\.youtube\.com\/api\/.+?ad - reject-200
-#^https?+:\/\/\w+?\.youtube\.com\/p(?>agead|tracking) - reject-200
-#^https?+:\/\/youtubei\.googleapis\.com\/youtubei\/.+?(?>ad|log)_ - reject-200
-
+ctier=[A-Z] citer=A 302
 
 [Remote Rewrite]
 #订阅重写 去广告 by eHpo
