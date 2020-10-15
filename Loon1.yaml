@@ -163,7 +163,12 @@ https://raw.githubusercontent.com/nzw9314/Loon/master/Cookie.conf, tag=Cookie, e
 
 
 [Plugin]
+# Loon 测试版 (TestFlight)
 https://gitee.com/chavyleung/scripts/raw/master/box/rewrite/boxjs.rewrite.loon.tf.plugin, proxy=DIRECT, tag=box.js, enabled=true
+
+# Loon 商店版 (AppStore)
+#https://gitee.com/chavyleung/scripts/raw/master/box/rewrite/boxjs.rewrite.loon.conf, proxy=DIRECT, tag=box.js, enabled=true
+
 # plugin-url tag=tag,proxy=插件中PROXY所指向的策略,enable=true
 # plugin策略可设置为DIRECT,REJECT,PROXY，其中PROXY为用户在app中手动映射的策略，rule后不跟随策略默认使用PROXY
 
