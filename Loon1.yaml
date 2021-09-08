@@ -6,14 +6,14 @@ bypass-tun = 10.0.0.0/8,100.64.0.0/10,127.0.0.0/8,169.254.0.0/16,172.16.0.0/12,1
 dns-server = system,51.79.173.140,8.8.8.8,8.8.4.4
 # Wi-Fi 访问
 # > 允许 Wi-Fi 网络下其它设备访问
-allow-udp-proxy = false
+allow-udp-proxy = true
 allow-wifi-access = false
 wifi-access-http-port = 7222
 wifi-access-socket5-port = 7221
 # > 代理测速 URL
 proxy-test-url = http://www.gstatic.com/generate_204
 # > 测速超时 (s)
-test-timeout = 5
+test-timeout = 3
 # > 解决一些ip请求无法匹配域名类规则的问题。real-ip指定的域名将不返回fake ip响应，直接将dns请求发往目标dns服务器
 real-ip = msftconnecttest.com, msftncsi.com, *.msftconnecttest.com, *.msftncsi.com, *.srv.nintendo.net, *.stun.playstation.net, xbox.*.microsoft.com, *.xboxlive.com, *.battlenet.com.cn, *.battlenet.com, *.blzstatic.cn, *.battle.net
 # 解析器
@@ -30,7 +30,7 @@ resource-parser = https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/scr
 [Proxy]
 
 [Proxy Group]
-
+🎯𝐃𝐢𝐫𝐞𝐜𝐭 = select,DIRECT
 # SSID
 # 别名 = ssid，默认 = 策略， 蜂窝 = 策略， ssid名称 = 策略
 SSID = ssid,default = DIRECT, cellular = DIRECT, "tsu office" = DIRECT, "an1" = DIRECT, "WiFiAir" = DIRECT, "tsu wifi" = DIRECT, "an" = DIRECT
@@ -51,8 +51,8 @@ URL-REGEX,https?:\/\/youtubei.googleapis.com\/youtubei\/.+(ad|log),REJECT
 URL-REGEX,https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adformat,REJECT
 URL-REGEX,https?:\/\/[\w-]+\.googlevideo\.com\/.+&oad,REJECT-TINYGIF
 
-GEOIP,TW,SSID
-FINAL,SSID
+GEOIP,TW,🎯𝐃𝐢𝐫𝐞𝐜𝐭
+FINAL,🎯𝐃𝐢𝐫𝐞𝐜𝐭
 
 [Remote Rule]
 https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Guard/Advertising.list, policy=REJECT, tag=去广告,enabled=true
