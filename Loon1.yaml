@@ -39,23 +39,6 @@ SSID = ssid,default = DIRECT, cellular = DIRECT, "tsu office" = DIRECT, "an1" = 
 
 GEOIP,TW,DIRECT
 FINAL,DIRECT
-=======
-DOMAIN-SUFFIX,ads.superad.cc,REJECT
-URL-REGEX,^https:\/\/.+\.googlevideo\.com\/.+&oad,REJECT
-
-# 本地規則
-# Type:DOMAIN-SUFFIX,DOMAIN,DOMAIN-KEYWORD,USER-AGENT,URL-REGEX,IP-CIDR
-# Strategy:DIRECT,Proxy,REJECT
-# Options:force-remote-dns(Default:false),no-resolve
-
-#  𝐍𝐞𝐭𝐞𝐚𝐬𝐞𝐌𝐮𝐬𝐢𝐜
-#DOMAIN-SUFFIX,music.126.net,DIRECT
-
-
-
-GEOIP,TW,🎯𝐃𝐢𝐫𝐞𝐜𝐭
-FINAL,🎯𝐃𝐢𝐫𝐞𝐜𝐭
-
 
 [Remote Rule]
 https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Guard/Advertising.list, policy=REJECT, tag=去广告,enabled=true
@@ -65,42 +48,15 @@ https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/
 # 本地重写
 
 enable = false
-=======
-enable = true
 ctier=[A-Z] citer=A 302
-
-^https?+:\/\/ads\.superad\.cc\/? _ reject-200
-
-
 
 #! 漫畫人
 ^http:\/\/mangaapi.manhuaren.com\/.+\/public\/(getShelfActivity|getStartPageAds|getStartPageAds2|getRecommendedGame|getAditem|getAds) - reject-200
 ^http:\/\/mangaapi.manhuaren.com\/.+\/manga\/getMangaPromotionActivity - reject-200
 ^http:\/\/mangaapi.manhuaren.com\/.+\/ad\/ - reject-200
 
-<<<<<<< HEAD
 ^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=start url reject-200
-=======
 
-^https?:\/\/.+\.googlevideo\.com\/.+oad= url reject-200
-^https?:\/\/.+\.googlevideo\.com\/ptracking url reject-200
-^https?:\/\/.+\.googlevideo\.com\/videogoodput url reject-200
-^https?:\/\/r[0-9].+\.googlevideo\.com\/.+owc= url reject-200
-^https?:\/\/.+\.youtube\.com\/.+adformat url reject-200
-^https?:\/\/.+\.youtube\.com\/.+get_ads url reject-200
-^https?:\/\/.+\.youtube\.com\/api\/stats\/ads url reject-200
-^https?:\/\/.+\.youtube\.com\/api\/stats\/atr url reject-200
-^https?:\/\/.+\.youtube\.com\/api\/stats\/qoe url reject-200
-^https?:\/\/.+\.youtube\.com\/csi_204 url reject-200
-^https?:\/\/.+\.youtube\.com\/gen_204 url reject-200
-^https?:\/\/.+\.youtube\.com\/generate_204 url reject-200
-^https?:\/\/.+\.youtube\.com\/get_midroll url reject-200
-^https?:\/\/.+\.youtube\.com\/pagead url reject-200
-^https?:\/\/.+\.youtube\.com\/pcs\/activeview url reject-200
-^https?:\/\/.+\.youtube\.com\/ptracking url reject-200
-^https?:\/\/.+\.googleapis.com/.+ad_break url reject-200
-^https?:\/\/.+\.googleapis.com/adsmeasurement url reject-200
->>>>>>> 99873fc48f0d51838806ce4ed194694104dc681a
 
 [Remote Rewrite]
 #订阅重写 去广告 by eHpo
@@ -111,7 +67,7 @@ https://raw.githubusercontent.com/eHpo1/Rules/master/Loon/Rewrite.conf, tag=eHpo
 [Script]
 
 enable = false
-=======
+
 # 本地脚本
 enable = true
 
@@ -133,19 +89,6 @@ https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Plugin/TF-Down
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/Loon/Redirect/Redirect.plugin, tag=General, enabled=true
 https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.rewrite.loon.tf.plugin, tag=Boxjs, enabled=true
 https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/config/Loon.plugin, tag=订阅解析器, enabled=false
-
-[MITM]
-enable = true
-=======
-# Loon 测试版 (TestFlight)
-https://gitee.com/chavyleung/scripts/raw/master/box/rewrite/boxjs.rewrite.loon.tf.plugin, proxy=DIRECT, tag=box.js, enabled=true
-
-# Loon 商店版 (AppStore)
-#https://gitee.com/chavyleung/scripts/raw/master/box/rewrite/boxjs.rewrite.loon.conf, proxy=DIRECT, tag=box.js, enabled=true
-
-# plugin-url tag=tag,proxy=插件中PROXY所指向的策略,enable=true
-# plugin策略可设置为DIRECT,REJECT,PROXY，其中PROXY为用户在app中手动映射的策略，rule后不跟随策略默认使用PROXY
-
 
 [MITM]
 enable = true
