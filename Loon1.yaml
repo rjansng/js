@@ -63,6 +63,7 @@ https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Cookie.conf, t
 https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Task.conf, tag=Task, enabled=false
 https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Script.conf, tag=Script, enabled=false
 https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/JD.conf, tag=JD, enabled=false
+https://kinta.ma/surge/modules/shopee_token.sgmodule, tag=蝦皮Token, enabled=false
 
 [Plugin]
 https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Plugin/Unlock/TikTokJP.plugin, tag=Tiktok, enabled=false
@@ -74,7 +75,7 @@ https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.re
 https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/config/Loon.plugin, tag=订阅解析器, enabled=false
 https://raw.githubusercontent.com/FutaGuard/FutaFilter/master/Surge/filters.txt, tag=FutaFilter, enabled=true
 https://kinta.ma/surge/modules/facebook_block_sdk.sgmodule, tag=FBBlock, enabled=true
-https://kinta.ma/surge/modules/shopee_token.sgmodule, tag=蝦皮Token, enabled=false
+
 https://kinta.ma/surge/modules/shopee_checkin.sgmodule, tag=蝦皮每日簽到寶箱, enabled=false
 [MITM]
 enable = true
