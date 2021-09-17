@@ -54,7 +54,7 @@ ctier=[A-Z] citer=A 302
 [Script]
 enable = true
 http-request https?:\/\/.+?\.googlevideo\.com\/.+&(oad|ctier)=(?!A),script-path=https://choler.github.io/Surge/Script/YouTube.js
-
+http-request ^https:\/\/live\.shopee\.tw\/p\/live-manage$,script-path=https://kinta.ma/surge/scripts/shopee_token.js,requires-body=true
 
 [Remote Script]
 # 远程脚本
