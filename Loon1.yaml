@@ -91,7 +91,7 @@ https://kinta.ma/surge/modules/facebook_block_sdk.sgmodule, tag=FBBlock, enabled
 https://kinta.ma/surge/modules/shopee_checkin.sgmodule, tag=蝦皮每日簽到寶箱, enabled=false
 https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Plugin/Block/YouTubeAdsTest.plugin, tag=YoutubeBlock, enabled=false
 https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Plugin/Block/YouTubeAds.plugin, tag=YoutubeTest, enabled=false
-https://raw.githubusercontent.com/jkgtw/Surge/master/Modules/LINE-ADs.sgmodule, tag=Line廣告, enabled=false
+https://raw.githubusercontent.com/jkgtw/Surge/master/Modules/LINE-ADs.sgmodule, tag=Line 廣告, enabled=false
 
 [MITM]
 enable = true
