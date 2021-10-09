@@ -90,6 +90,8 @@ https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/config/Loon.plugin, t
 https://raw.githubusercontent.com/FutaGuard/FutaFilter/master/Surge/filters.txt, tag=FutaFilter, enabled=true
 https://kinta.ma/surge/modules/facebook_block_sdk.sgmodule, tag=FBBlock, enabled=true
 https://kinta.ma/surge/modules/shopee_checkin.sgmodule, tag=蝦皮每日簽到寶箱, enabled=false
+https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Plugin/Block/YouTubeAdsTest.plugin, tag=YoutubeBlock, enabled=false
+
 [MITM]
 enable = true
 hostname = *.googlevideo.com
