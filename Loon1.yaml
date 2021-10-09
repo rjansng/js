@@ -60,14 +60,13 @@ https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/
 
 [URL Rewrite]
 # 本地重写
-enable = true
-ctier=[A-Z] citer=A 302
-^https://[\s\S]*\.googlevideo\.com/.*&(oad|ctier) url reject-200
+enable = false
+
 [Remote Rewrite]
 
 [Script]
-enable = true
-http-request https?:\/\/.+?\.googlevideo\.com\/.+&(oad|ctier)=(?!A),script-path=https://choler.github.io/Surge/Script/YouTube.js
+enable = false
+
 
 
 [Remote Script]
@@ -91,6 +90,7 @@ https://raw.githubusercontent.com/FutaGuard/FutaFilter/master/Surge/filters.txt,
 https://kinta.ma/surge/modules/facebook_block_sdk.sgmodule, tag=FBBlock, enabled=true
 https://kinta.ma/surge/modules/shopee_checkin.sgmodule, tag=蝦皮每日簽到寶箱, enabled=false
 https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Plugin/Block/YouTubeAdsTest.plugin, tag=YoutubeBlock, enabled=false
+https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Plugin/Block/YouTubeAds.plugin, tag=YoutubeTest, enabled=false
 
 [MITM]
 enable = true
