@@ -1,6 +1,6 @@
-[General] 
+[General]
 ipv6 = false
-skip-proxy = 127.0.0.1, 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, 100.64.0.0/10, localhost, *.local, passenger.t3go.cn,passenger.t3go.cn
+skip-proxy = 127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,100.64.0.0/10,localhost,*.local,passenger.t3go.cn,passenger.t3go.cn
 bypass-tun = 10.0.0.0/8,100.64.0.0/10,127.0.0.0/8,169.254.0.0/16,172.16.0.0/12,192.0.0.0/24,192.0.2.0/24,192.88.99.0/24,192.168.0.0/16,198.18.0.0/15,198.51.100.0/24,203.0.113.0/24,224.0.0.0/4,255.255.255.255/32
 # [DNS] => DNS server
 dns-server = system,51.79.173.140,8.8.8.8,8.8.4.4
@@ -33,137 +33,27 @@ resource-parser = https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/scr
 🎯𝐃𝐢𝐫𝐞𝐜𝐭 = select,DIRECT
 # SSID
 # 别名 = ssid，默认 = 策略， 蜂窝 = 策略， ssid名称 = 策略
-SSID = ssid,default = DIRECT, cellular = DIRECT, "tsu office" = DIRECT, "an1" = DIRECT, "WiFiAir" = DIRECT, "tsu wifi" = DIRECT, "an" = DIRECT
+SSID = ssid,default=DIRECT,cellular=DIRECT,"tsu office"=DIRECT,"an1"=DIRECT,"WiFiAir"=DIRECT,"tsu wifi"=DIRECT,"an"=DIRECT
 FINAL = select,DIRECT,节点选择,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
 
 [Rule]
-AND,((NOT,((USER-AGENT,*FBAN/FBIOS;*))), (NOT,((USER-AGENT,*FBAN/FBPageAdmin;*))), (NOT,((USER-AGENT,*FBAN/MessengerLiteForiOS;*))), (NOT,((USER-AGENT,Instagram*))), (NOT,((USER-AGENT,Messenger*))), (DOMAIN,graph.facebook.com)),REJECT
-
-#! Line 廣告
-#! 白名單
-URL-REGEX,^https:\/\/obs\.line-scdn\.net\/r,DIRECT
-URL-REGEX,^https:\/\/obs-tw\.line-apps\.com\/talk,DIRECT
-DOMAIN,stickershop.line-scdn.net,DIRECT
-#! 黑名單
-#! UA 偽裝
-URL-REGEX,^https:\/\/a\.line\.me\/er\/la.*\/v1\/,REJECT-DROP
-URL-REGEX,^https:\/\/a\.line\.me\/lass\/api\/v\d\/ads$,REJECT-DROP
-#! 廣告媒體
-URL-REGEX,^https:\/\/d\.line-scdn\.net\/lcp\-prod\-photo,REJECT
-URL-REGEX,^https:\/\/obs\.line-scdn\.net\/0h.*\/m540x540$,REJECT
-URL-REGEX,^https:\/\/obs\.line-scdn\.net\/0h.*\/m1280x720$,REJECT
-URL-REGEX,^https:\/\/obs\.line-scdn\.net\/0h.*\/(w750|o1280x720|.*\.mp4),REJECT
-#! 廣告資料
-URL-REGEX,^https:\/\/sch\.line\.me\/api\/v\d+\/ads,REJECT-DROP
-URL-REGEX,^https:\/\/buy\.line\.me\/api\/graphql\?variables,REJECT
-URL-REGEX,^https:\/\/scdn\.line-apps\.com\/appresources\/moretab\/list\.json,REJECT
-URL-REGEX,^https:\/\/scdn\.line-apps\.com\/lan\/image\/line\/bannerImageEvent\/,REJECT
-URL-REGEX,^https:\/\/w\.line\.me\/adp\/api\/ad\/v\d\/,REJECT-DROP
-#! Line 新聞
-URL-REGEX,^https:\/\/crs-event\.line\.me,REJECT
-URL-REGEX,^https:\/\/api\.today\.line\.me\/webapi\/TW\/recommendation\/articles\/articleend,REJECT
-#! Line 小紅紅
-URL-REGEX,^https:\/\/a\.line\.me\/cs\/v\d\/oa$,REJECT-DROP
-URL-REGEX,^https:\/\/a\.line\.me\/oa\/v\d\/e$,REJECT-DROP
-
-#! Dcard 
-URL-REGEX,^https:\/\/bilanx\.dcard\.tw\/v\d\/events$,REJECT
-URL-REGEX,^https:\/\/bilanx\.dcard\.tw\/v\d\/configs$,REJECT
-
-#! 漫畫人
-URL-REGEX,^https?:\/\/mangaapi.manhuaren.com\/.+\/public\/(getShelfActivity|getStartPageAds|getStartPageAds2|getRecommendedGame|getAditem|getAds|getMultiAds|getUpgradeInfo|getVendor|getUserLocation),REJECT
-URL-REGEX,^https?:\/\/mangaapi.manhuaren.com\/.+\/manga\/getMangaPromotionActivity,REJECT
-URL-REGEX,^https?:\/\/mangaapi.manhuaren.com\/.+\/ad\/,REJECT
-DOMAIN-SUFFIX,hkadsapi.manhuaren.com,REJECT
-DOMAIN-SUFFIX,adsapi.manhuaren.com,REJECT
-DOMAIN-SUFFIX,videoapi.manhuaren.com,REJECT
-DOMAIN-SUFFIX,bi.manhuaren.com,REJECT
-DOMAIN-SUFFIX,euadsapi.manhuaren.com,REJECT
-DOMAIN-SUFFIX,applog.uc.cn,REJECT-TINYGIF
-
-#! 4Gamer
-URL-REGEX,^https:\/\/www\.4gamers\.com\.tw\/site\/api\/aols\/media\?,REJECT
-
-#! PTT 相關
-URL-REGEX,^https:\/\/pttbrain\.herokuapp\.com\/api\/ptt\/metric\/user\-geo\-distributions,REJECT
-
-#! pixnet
-URL-REGEX,^https:\/\/front\.pixfs\.net\/module\/idlePop\/js\/,REJECT
-
-#! Poke Genie 團體戰
-DOMAIN-SUFFIX,cloudfunctions.net,DIRECT
-DOMAIN-SUFFIX,admob-app-id-4587251595.firebaseio.com,DIRECT
-
-#! 通用阻擋
-DOMAIN,itad.linetv.tw,REJECT
-DOMAIN,sessions.bugsnag.com,REJECT-DROP
-DOMAIN,m.vpon.com,REJECT
-DOMAIN-KEYWORD,admarvel,REJECT
-DOMAIN-KEYWORD,admaster,REJECT
-DOMAIN-KEYWORD,admdfs,REJECT
-DOMAIN-KEYWORD,adnewnc,REJECT
-DOMAIN-KEYWORD,adsage,REJECT
-DOMAIN-KEYWORD,adsame,REJECT
-DOMAIN-KEYWORD,adsensor,REJECT
-DOMAIN-KEYWORD,adserver,REJECT
-DOMAIN-KEYWORD,adservice,REJECT-DROP
-DOMAIN-KEYWORD,adsmogo,REJECT
-DOMAIN-KEYWORD,adsrvmedia,REJECT
-DOMAIN-KEYWORD,adsserving,REJECT
-DOMAIN-KEYWORD,adsystem,REJECT
-DOMAIN-KEYWORD,advert,REJECT
-DOMAIN-KEYWORD,adwords,REJECT
-DOMAIN-KEYWORD,allyes,REJECT
-DOMAIN-KEYWORD,analysis,REJECT
-DOMAIN-KEYWORD,analysys,REJECT
-DOMAIN-KEYWORD,analytics,REJECT
-DOMAIN-KEYWORD,app-measurement,REJECT
-DOMAIN-KEYWORD,applovin,REJECT
-DOMAIN-KEYWORD,appsflyer,REJECT
-DOMAIN-KEYWORD,crashlytics,REJECT-DROP
-DOMAIN-KEYWORD,dnserror,REJECT
-DOMAIN-KEYWORD,domob,REJECT
-DOMAIN-KEYWORD,doubleclick,REJECT
-DOMAIN-KEYWORD,duomeng,REJECT
-DOMAIN-KEYWORD,dwtrack,REJECT
-DOMAIN-KEYWORD,fenxi,REJECT
-DOMAIN-KEYWORD,guanggao,REJECT
-DOMAIN-KEYWORD,inmobi,REJECT
-DOMAIN-KEYWORD,lianmeng,REJECT
-DOMAIN-KEYWORD,meetrics,REJECT
-DOMAIN-KEYWORD,mobaders,REJECT
-DOMAIN-KEYWORD,omgmta,REJECT
-DOMAIN-KEYWORD,openx,REJECT
-DOMAIN-KEYWORD,partnerad,REJECT
-DOMAIN-KEYWORD,securepubads,REJECT
-DOMAIN-KEYWORD,socdm,REJECT
-DOMAIN-KEYWORD,supersonicads,REJECT
-DOMAIN-KEYWORD,taboola,REJECT
-DOMAIN-KEYWORD,uedas,REJECT
-DOMAIN-KEYWORD,umtrack,REJECT
-DOMAIN-KEYWORD,uploadMobileData,REJECT
-DOMAIN-KEYWORD,wlmonitor,REJECT
-DOMAIN-KEYWORD,zjtoolbar,REJECT
-DOMAIN-SUFFIX,admob.com,REJECT
-DOMAIN-SUFFIX,flurry.com,REJECT
-DOMAIN-SUFFIX,mopub.com,REJECT
-
 GEOIP,TW,🎯𝐃𝐢𝐫𝐞𝐜𝐭
-FINAL,🎯𝐃𝐢𝐫𝐞𝐜𝐭
+FINAL,DIRECT
 
 [Remote Rule]
-https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Guard/Advertising.list, policy=REJECT, tag=去广告,enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Advertising/Advertising_Domain.list, policy=REJECT, tag=去广告,enabled=true
+https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Guard/Advertising.list, policy=REJECT, tag=去广告, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Advertising/Advertising_Domain.list, policy=REJECT, tag=去广告, enabled=true
 
 [URL Rewrite]
 # 本地重写
-enable = false
+enable = true
+^https://[^.]+\.googlevideo\.com/.+&oad reject-200
 
 [Remote Rewrite]
 
 [Script]
-enable = false
-
+enable = true
+http-request https?:\/\/.+?\.googlevideo\.com\/.+&(oad|ctier)=(?!A), script-path=https://choler.github.io/Surge/Script/YouTube.js, timeout=10, tag=YouTube.js
 
 
 [Remote Script]
@@ -174,23 +64,20 @@ https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Task.conf, tag
 https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Script.conf, tag=Script, enabled=false
 https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/JD.conf, tag=JD, enabled=false
 
-
 [Plugin]
-https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Plugin/Unlock/TikTokJP.plugin, tag=Tiktok, enabled=false
+https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Plugin/Unlock/TikTokJP.plugin, policy=DIRECT, tag=Tiktok, enabled=false
 https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Plugin/Host.plugin, tag=Host, enabled=false
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/Loon/AdvertisingLite/AdvertisingLite.plugin, tag=Advertising, enabled=true
-https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Plugin/TF-Download.plugin, tag=TF-Download, enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/Loon/Redirect/Redirect.plugin, tag=General, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/Loon/Advertising/Advertising.plugin, tag=Advertising, enabled=false
+https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Plugin/TF-Download.plugin, tag=TF-Download, enabled=false
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/Loon/Redirect/Redirect.plugin, tag=General, enabled=false
 https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.rewrite.loon.tf.plugin, tag=Boxjs, enabled=true
 https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/config/Loon.plugin, tag=订阅解析器, enabled=false
 https://raw.githubusercontent.com/FutaGuard/FutaFilter/master/Surge/filters.txt, tag=FutaFilter, enabled=true
-https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Plugin/Block/YouTubeAdsTest.plugin, tag=YoutubeBlock, enabled=false
-https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Plugin/Block/YouTubeAds.plugin, tag=YoutubeTest, enabled=false
-https://raw.githubusercontent.com/app2smile/rules/master/plugin/spotify.plugin, tag=spotify解鎖, enabled=false
+https://raw.githubusercontent.com/app2smile/rules/master/plugin/spotify.plugin, tag=spotify, enabled=false
 
 [MITM]
 enable = true
-hostname = *.googlevideo.com, a.line.me, w.line.me, buy.line.me, crs-event.line.me, obs.line-scdn.net, d.line-scdn.net, obs-tw.line-apps.com, api.today.line.me, sch.line.me, scdn.line-apps.com, mangaapi.manhuaren.com, www.4gamers.com.tw, bilanx.dcard.tw, pttbrain.herokuapp.com, front.pixfs.net
+hostname = *.googlevideo.com
 skip-server-cert-verify = true
 
 ca-p12 = MIIJrgIBAzCCCXgGCSqGSIb3DQEHAaCCCWkEggllMIIJYTCCA/8GCSqGSIb3DQEHBqCCA/AwggPsAgEAMIID5QYJKoZIhvcNAQcBMBwGCiqGSIb3DQEMAQYwDgQIYl/myyqpUtwCAggAgIIDuMYEzEUgSxIUScp1vSSooV2iePmy4Q7YP8cfnhaatGNnX+CC9/rDdPgDuz7k1D/7hYdaOsTKpXU9aUAxHvg9SLAWFm5dL4g/9MVk7Id8qCPMYbO2H+lQTChEN8iTpWdq+qlAC8VpqY1TTXhQTkCKF3cT+S68xZUMFDuX95INBUswjN+imGIYVKFBp4s0K7UDFpF0BMUD5HwR9U/QFsZ+ScCaNj/Y1p95LWPllUkeeb67uTOeXc55yEM+O8W/SGjJhgjdnvPgetCfLMc6RWREK0SNAGMzHibuvHHHm0fIBg5zwE+DjDdefwYMUghpQVl+0gSeASjsvP9mSgtm9+horQCw/ef0a3FxcKsmTzSE6o4dx37fEckEouYN/Ni+OWnKWb6eXeaL6yVD4gLDmEwV8lmgBG4OjYcdY9jeIBFkDzbG70eUvmj6/1olUtnOnkGY5ZMvCGhVr8K4ZJ80xuykgxgPI/5enNZZiS9cAuk85xAN+XeDvmQdIHF9TxMRyLGJyWUkczjV3DSPkqZ2hMFJRuOF5zbhZlCcJgkEdCYbb4sebYnGKOEVnfceFVK1yv33Hp+BcQDmqEm+gssrtNhJGCWtqTjT28WeGxGgAWOaY2e+isVJG6TvU1D+tHCl09WyLKM671a63jY6QvpWwRpSMkbcrGEMhQRo2IMrxhwkia9vkk+eDYRt4jJcG8gRAWB0crXuYMM/t0gxDKTiVF7aS0XEHWMkH7ATWFI/+Yta4dsVLAOACnTCarD80RH/xV5JK1KiAn5pSzy13fRwvYcHAluJ/7JHphVUtNYroNgfzdt5n65B7qD5PU4ykhVMfflZXom17VGwUqf750kx0fowU23XCUyWoifoGBbkR9mgGHBqZyMZHv+Z9iWPmpqJcfjL9UBX91Ulzg74IQocvNTHMVu3cLXx63OiQ6k4+FYZcvTiJyYpu7N36I/nLz61L3D2d8LaYLHAcvnsClfC6QRVVAU/wvQnhp2/oPh/l19KBX7QUnBKPU1oFLEV8y1G87IbN/LDJ0SUroS/McCojANgutTpKQJT+5jlid+GxZkEi4CXlTAUfu6/lioLdJugycPEKHu49zAmbDw8lUy5QRUbyjWrZk8tLu2bKzaxg5A21N9N/zKt9uXmcN5J/O1L8WIcAIXDytAmkyw7ez45EF631i6k2uJeuIxtBwRfwDyuw4FwKrsqw197FoqsvsMb68Tak2vVtzgs/rSQ1PL3acsLQ0CBZ9/Do1WxAb8azc4ko36JE7e0xtM43qswggVaBgkqhkiG9w0BBwGgggVLBIIFRzCCBUMwggU/BgsqhkiG9w0BDAoBAqCCBO4wggTqMBwGCiqGSIb3DQEMAQMwDgQI3rZrdI9fPuMCAggABIIEyGZyUi/orJ8LMBdjZFQaCNXECddtwPuKPg+QxAzpxC0/VSgdtHsOR/v8koAJgddmGJUDwLXGVcuasJ7YlhdIKpnvSzNBB7qjJoQBQ5dMsXVfcJaRwbhjMExjZyvUjCKH21lJ7yaxGQORtmIXTpx0FPQUprJtghF/C2ejA9QSW+SCjYY64dkvUovvXMDaddKWq+i0lOGKi0hvCjGiLobIovBpSfjX1EYTK5pmpBtWKro5Wnm/Q5r/OBU2+PyzlFCZdMdov7bIcUwnz4D1Oypn6woQol8N9AqgQL52pMweL8k0fK8YH3eChE5EP0JNc1X0vRTHhKiAB0Su5vjSVa5QU4ZBTCdNdwM7rr2NJMzMjF8g4y7fXMTVXdPUi1QeYihOqmcU2i0pmrk4zPeobGfzLIcgRSLf9qeP2r9Gw3yt3rjJMHgbx6QvBZ+5GZ8/iooQTbLjUj83QfdGeidkD+Auba9f8cPDiurDF+Pjt2FotaT3Vqx38qlaprBdlk7H1yVZtY2G5Y5pquiyPK/C+QwrXYWEocsJIAvAb3xhXalqkUs6ZmKTVQqlpUR0L/ogRmeJ0OxHYKbqy4Rg2eIcHogPEK2Xa2iiPFmG6AbWUnE8mmH5PunCPGuhcOxFYZAkpf96//c0J9ry52pcvR15ZIvmZdSLrhjD4pD+CElUKFS6izafXSyFQpjNuQI2aCnMNS/AFSe3kH6naARoOUnXFC7Wz+e69nOKs6G84/gV3xD4klk5vCza32e55MtUD9SX09+q9XItarBeBYCn3XCZk1sZADmg8gHxZzgEj3mA7slqsRnx7E80lz1UlHU4FSLkeMEU2u9/K1QA6VZzFfFRXtitZuam2Di98zCyftyb0D0DwlywSab/ww7VrROnBq3sozc7uo7eEiT8Jx9qd2kGNF+r9KI6QePBtATJzsgCNoPHNTdA7DNX4opD0bNsRtFHQLW3b9k1PeeAix1agcrqsDVV2PsWn9Qae9vY4zqwkNY+hjlmt2CRPG/5pX8COVn+dzqGHTksFg/NgVZsAj8NK4ZGf+QSRxSUo/5sYbu61Pj6TpyEIjOEPM+ylXdhziKhDTfw4GkrmTjlrQQ9T+7pqC86nYS8HH9ZcET+SecZK8kMPe7pwbzwHPWsl+OqHTP01KvEAogOL8fAZ7LsbaHlPoLHkHDQzxeep6ZKDnoCphjsf4oqSlcQzNh383mAr0YTPY8SaVV5G6Hh9mCHQqKWWmXhNd8rN/kqZn0H7KvfMJW2BGVWgCvYaE5m5sodhHYjSMGzgauV7O9DL3H+Az2Ztz0K2hj11xsz/C7nRVNOgV02rDvIEHw0asBPq2gYPC4OG/HutK+etT87z+tLftGO9V5+TMcIc4JKaNVOUg814DP59yo/WptH346rHwY7AqvgmEi6LJ1LLP9W6+HH1k3Fk6WEpOtDJS3YqV4EjswXGCtLXu6y/IvqLkyvT7NIZi/BYFf39xwJDvD5SbLM2jhCShG/HsD0/4qfqeGA/x4LLaM9Lyl091XeKWtY9XpP9nZzfgOJkk2rsBH29jS5d8lLkz+GhdzrROPIgHn+yaSsp8vIwr8L9h27+6/95kbUiQugOWEWdO/ZO+X/iyhThallmiNbJP+Qv3abUJgzcTE+MBcGCSqGSIb3DQEJFDEKHggAZQBIAHAAbzAjBgkqhkiG9w0BCRUxFgQU5gr9fNKSpq6pZ3g5Hca/uXOuY+cwLTAhMAkGBSsOAwIaBQAEFKXWG0IDj30Q2VfVGNWcVJ8iipuZBAgHvSM3D+pSUA==
