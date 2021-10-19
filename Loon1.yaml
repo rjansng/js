@@ -37,7 +37,7 @@ SSID = ssid,default=DIRECT,cellular=DIRECT,"tsu office"=DIRECT,"an1"=DIRECT,"WiF
 FINAL = select,DIRECT,节点选择,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
 
 [Rule]
-^https://[\s\S]*\.googlevideo\.com/.*&(oad|ctier) url reject-200
+
 GEOIP,TW,🎯𝐃𝐢𝐫𝐞𝐜𝐭
 FINAL,DIRECT
 
@@ -49,7 +49,7 @@ https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/
 # 本地重写
 enable = true
 ctier=[A-Z] citer=A 302
-
+^https://[\s\S]*\.googlevideo\.com/.*&(oad|ctier) reject-200
 
 [Remote Rewrite]
 
