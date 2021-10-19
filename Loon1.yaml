@@ -47,7 +47,7 @@ https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/
 
 [URL Rewrite]
 # 本地重写
-enable = true
+enable = true 
 ctier=[A-Z] citer=A 302
 ^https://[\s\S]*\.googlevideo\.com/.*&(oad|ctier) url reject-200
 
