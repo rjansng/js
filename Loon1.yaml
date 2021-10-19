@@ -48,14 +48,14 @@ https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/
 [URL Rewrite]
 # 本地重写
 enable = true 
-ctier=[A-Z] citer=A 302
-^https://[\s\S]*\.googlevideo\.com/.*&(oad|ctier) url reject-200
+#ctier=[A-Z] citer=A 302
+#^https://[\s\S]*\.googlevideo\.com/.*&(oad|ctier) url reject-200
 
 [Remote Rewrite]
 
 [Script]
 enable = true
-http-request https?:\/\/.+?\.googlevideo\.com\/.+&(oad|ctier)=(?!A), script-path=https://choler.github.io/Surge/Script/YouTube.js, timeout=10, tag=YouTube.js
+#http-request https?:\/\/.+?\.googlevideo\.com\/.+&(oad|ctier)=(?!A), script-path=https://choler.github.io/Surge/Script/YouTube.js, timeout=10, tag=YouTube.js
 
 
 [Remote Script]
@@ -77,7 +77,8 @@ https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/config/Loon.plugin, t
 https://raw.githubusercontent.com/FutaGuard/FutaFilter/master/Surge/filters.txt, tag=FutaFilter, enabled=true
 https://raw.githubusercontent.com/app2smile/rules/master/plugin/spotify.plugin, tag=spotify, enabled=false
 https://raw.githubusercontent.com/jkgtw/Surge/master/Modules/ADList.sgmodule, tag=ADList, enabled=false
-
+https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Plugin/Block/YouTubeAds.plugin, tag=YouTubeAds, enabled=false
+https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Plugin/Block/YouTubeAdsTest.plugin, tag=YouTubeAdsTest, enabled=false
 [MITM]
 enable = true
 hostname = *.googlevideo.com
