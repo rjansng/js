@@ -37,7 +37,7 @@ SSID = ssid,default=DIRECT,cellular=DIRECT,"tsu office"=DIRECT,"an1"=DIRECT,"WiF
 FINAL = select,DIRECT,节点选择,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
 
 [Rule]
-URL-REGEX,https:\/\/[\s\S]*\.googlevideo\.com/.*&(oad|ctier),REJECT
+^https://[\s\S]*\.googlevideo\.com/.*&(oad|ctier) url reject-200
 GEOIP,TW,🎯𝐃𝐢𝐫𝐞𝐜𝐭
 FINAL,DIRECT
 
