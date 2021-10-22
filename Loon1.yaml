@@ -61,7 +61,7 @@ https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/
 [URL Rewrite]
 # 本地重写
 enable = true 
-#ctier=[A-Z] citer=A 302
+ctier=[A-Z] citer=A 302
 #^https://[\s\S]*\.googlevideo\.com/.*&(oad|ctier) url reject-200
 
 (^https?:\/\/[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+)&ctier=L(&.+) $1&ctier=A$2 header
@@ -76,7 +76,7 @@ enable = true
 
 [Script]
 enable = true
-http-request https?:\/\/.+?\.googlevideo\.com\/.+&(oad|ctier)=(?!A), script-path=https://choler.github.io/Surge/Script/YouTube.js
+#http-request https?:\/\/.+?\.googlevideo\.com\/.+&(oad|ctier)=(?!A), script-path=https://choler.github.io/Surge/Script/YouTube.js
 
 
 [Remote Script]
