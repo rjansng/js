@@ -50,7 +50,7 @@ FINAL = select,DIRECT,节点选择,img-url = https://raw.githubusercontent.com/K
 #URL-REGEX,https?:\/\/youtubei.googleapis.com\/youtubei\/.+(ad|log),REJECT
 #URL-REGEX,https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adformat,REJECT
 #URL-REGEX,https?:\/\/[\w-]+\.googlevideo\.com\/.+&oad,REJECT-TINYGIF
-
+URL-REGEX,^https?:\/\/mangaapi.manhuaren.com\/.+\/ad\/,REJECT
 GEOIP,TW,🎯𝐃𝐢𝐫𝐞𝐜𝐭
 FINAL,DIRECT
 
