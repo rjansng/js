@@ -77,8 +77,8 @@ ctier=[A-Z] citer=A 302
 [Script]
 enable = true
 http-request https?:\/\/.+?\.googlevideo\.com\/.+&(oad|ctier)=(?!A), script-path=https://choler.github.io/Surge/Script/YouTube.js
-http-request ^https?://ios\.prod\.ftl\.netflix\.com/iosui/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D script-path=https://kinta.ma/surge/scripts/netflix_rating.js
-http-response ^https?://ios\.prod\.ftl\.netflix\.com/iosui/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D requires-body=1,script-path=https://kinta.ma/surge/scripts/netflix_rating.js
+http-request ^https?://ios\.prod\.ftl\.netflix\.com/iosui/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D, script-path=https://kinta.ma/surge/scripts/netflix_rating.js
+http-response ^https?://ios\.prod\.ftl\.netflix\.com/iosui/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D, requires-body=1,script-path=https://kinta.ma/surge/scripts/netflix_rating.js
 
 [Remote Script]
 # 远程脚本
