@@ -97,6 +97,7 @@ https://raw.githubusercontent.com/jkgtw/Surge/master/Modules/ADList.sgmodule, ta
 #https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Module/Block/YouTubeAds.sgmodule, tag=YouTubeAds, enabled=false
 https://raw.githubusercontent.com/jimmyorz/Surge/master/ManhuarenPrivacy.sgmodule, tag=擋漫畫人追蹤, enabled=false
 https://raw.githubusercontent.com/jkgtw/Surge/master/Modules/LINE-ADs.sgmodule, tag=Line ADs, enabled=false
+https://kinta.ma/surge/modules/netflix_rating.sgmodule, tag=netflix_rating, enabled=false
 
 [MITM]
 enable = true
