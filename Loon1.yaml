@@ -92,10 +92,10 @@ https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smz
 https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Loon/Plugin/HKMTMedia.plugin, proxy=REJECT, tag=HKMTMedia, enabled=false
 https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Loon/Plugin/TikTokJP.plugin, proxy=JP, tag=TiktokJP, enabled=false
 https://raw.githubusercontent.com/app2smile/rules/master/plugin/spotify.plugin, tag=spotify, enabled=false
-https://raw.githubusercontent.com/jkgtw/Surge/master/Modules/ADList.sgmodule, tag=ADList, enabled=false
-https://raw.githubusercontent.com/jimmyorz/Surge/master/ManhuarenPrivacy.sgmodule, tag=擋漫畫人追蹤, enabled=false
-https://raw.githubusercontent.com/jkgtw/Surge/master/Modules/LINE-ADs.sgmodule, tag=Line ADs, enabled=false
-https://raw.githubusercontent.com/rjansng/js/master/plugin/filters.plugin, tag=filters, enabled=false
+https://raw.githubusercontent.com/jkgtw/Surge/master/Modules/ADList.sgmodule, tag=ADList, enabled=true
+https://raw.githubusercontent.com/jimmyorz/Surge/master/ManhuarenPrivacy.sgmodule, tag=擋漫畫人追蹤, enabled=true
+https://raw.githubusercontent.com/jkgtw/Surge/master/Modules/LINE-ADs.sgmodule, tag=Line ADs, enabled=true
+https://raw.githubusercontent.com/rjansng/js/master/plugin/filters.plugin, tag=filters, enabled=true
  
 [MITM]
 enable = true
