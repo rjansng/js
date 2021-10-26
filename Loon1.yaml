@@ -48,13 +48,11 @@ https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/
 enable = true 
 #ctier=[A-Z] citer=A 302
 #^https://[\s\S]*\.googlevideo\.com/.*&(oad|ctier) url reject-200
-
 #(^https?:\/\/[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+)&ctier=L(&.+) $1&ctier=A$2 header
 #^https?:\/\/[\w-]+\.googlevideo\.com\/(?!(dclk_video_ads|videoplayback\?)).+&oad - reject
 #^https?:\/\/(www|s)\.youtube\.com\/api\/stats\/ads - reject
 #^https?:\/\/(www|s)\.youtube\.com\/(pagead|ptracking) - reject
 #^https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adcontext - reject
-
 
 [Remote Rewrite]
 
