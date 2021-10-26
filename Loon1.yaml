@@ -58,7 +58,7 @@ enable = true
 
 [Remote Rewrite]
 
-[Script]
+[Script] 
 enable = true
 #http-request https?:\/\/.+?\.googlevideo\.com\/.+&(oad|ctier)=(?!A), script-path=https://choler.github.io/Surge/Script/YouTube.js
 
