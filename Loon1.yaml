@@ -94,7 +94,6 @@ https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Loon/Plugin/Ti
 https://raw.githubusercontent.com/FutaGuard/FutaFilter/master/Surge/filters.txt, tag=FutaFilter, enabled=true
 https://raw.githubusercontent.com/app2smile/rules/master/plugin/spotify.plugin, tag=spotify, enabled=false
 https://raw.githubusercontent.com/jkgtw/Surge/master/Modules/ADList.sgmodule, tag=ADList, enabled=false
-#https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Module/Block/YouTubeAds.sgmodule, tag=YouTubeAds, enabled=false
 https://raw.githubusercontent.com/jimmyorz/Surge/master/ManhuarenPrivacy.sgmodule, tag=擋漫畫人追蹤, enabled=false
 https://raw.githubusercontent.com/jkgtw/Surge/master/Modules/LINE-ADs.sgmodule, tag=Line ADs, enabled=false
 https://kinta.ma/surge/modules/netflix_rating.sgmodule, tag=netflix_rating, enabled=false
