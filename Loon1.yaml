@@ -13,7 +13,7 @@ wifi-access-socket5-port = 7221
 # > 代理测速 URL
 proxy-test-url = http://www.gstatic.com/generate_204
 # > 测速超时 (s)
-test-timeout = 3
+test-timeout = 5
 # > 解决一些ip请求无法匹配域名类规则的问题。real-ip指定的域名将不返回fake ip响应，直接将dns请求发往目标dns服务器
 real-ip = msftconnecttest.com, msftncsi.com, *.msftconnecttest.com, *.msftncsi.com, *.srv.nintendo.net, *.stun.playstation.net, xbox.*.microsoft.com, *.xboxlive.com, *.battlenet.com.cn, *.battlenet.com, *.blzstatic.cn, *.battle.net
 # 解析器
@@ -23,23 +23,14 @@ resource-parser = https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/scr
 
 [Host]
 
-[Remote Proxy]
-
-[Remote Filter]
-
 [Proxy]
+
+[Remote Proxy]
 
 [Proxy Group]
 SSID = ssid,default=DIRECT,cellular=DIRECT,"tsu office"=DIRECT,"an1"=DIRECT,"WiFiAir"=DIRECT,"tsu wifi"=DIRECT,"an"=DIRECT
 
-[Rule]
-
-GEOIP,TW,DIRECT
-FINAL,DIRECT
-
-[Remote Rule]
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Advertising/Advertising.list, policy=REJECT, tag=REJECT, enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Advertising/Advertising_Domain.list, policy=REJECT, tag=REJECT, enabled=true
+[Remote Filter]
 
 [URL Rewrite]
 enable = true 
@@ -66,21 +57,27 @@ http-response ^https?://ios\.prod\.ftl\.netflix\.com/iosui/warmer/.+type=show-at
 [Remote Script]
 https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Loon/Cookie.conf, tag=Cookie, enabled=false
 
+[Remote Rule]
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Advertising/Advertising.list, policy=REJECT, tag=REJECT, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Advertising/Advertising_Domain.list, policy=REJECT, tag=REJECT, enabled=true
+
 [Plugin]
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/Loon/AdvertisingLite/AdvertisingLite.plugin, proxy=REJECT, tag=Adv, enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/Loon/Redirect/Redirect.plugin, tag=General, enabled=false
 https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Loon/Plugin/Profile.plugin, tag=Profile, enabled=false
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_remove_ads.lnplugin, proxy=REJECT, tag=SMZDM, enabled=false
 https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Loon/Plugin/HKMTMedia.plugin, proxy=REJECT, tag=HKMTMedia, enabled=false
 https://raw.githubusercontent.com/app2smile/rules/master/plugin/spotify.plugin, tag=spotify, enabled=false
 https://raw.githubusercontent.com/jkgtw/Surge/master/Modules/ADList.sgmodule, tag=ADList, enabled=true
+https://raw.githubusercontent.com/rjansng/js/master/plugin/filters.plugin, tag=filters, enabled=true
 # https://raw.githubusercontent.com/jimmyorz/Surge/master/ManhuarenPrivacy.sgmodule, tag=擋漫畫人追蹤, enabled=true
 # https://raw.githubusercontent.com/jkgtw/Surge/master/Modules/LINE-ADs.sgmodule, tag=Line ADs, enabled=true
-https://raw.githubusercontent.com/rjansng/js/master/plugin/filters.plugin, tag=filters, enabled=true
 # https://raw.githubusercontent.com/rjansng/js/master/plugin/shopee_checkin.plugin, tag=shopee, enabled=true
 
+[Rule]
 
-[MITM]
+GEOIP,TW,DIRECT
+FINAL,DIRECT
+
+[Mitm]
 enable = true
 hostname = *.googlevideo.com,www.youtube.com,s.youtube.com, ios.prod.ftl.netflix.com
 skip-server-cert-verify = true
