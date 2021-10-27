@@ -30,5 +30,5 @@ DOMAIN-SUFFIX,pubnative.net,REJECT
 DOMAIN-SUFFIX,sf-tb-sg.ibytedtos.com,REJECT
 DOMAIN-SUFFIX,dm16-alisg.byteoversea.com,REJECT
 
-[MITM]
+[Mitm]
 hostname = mangaapi.manhuaren.com
