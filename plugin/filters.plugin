@@ -38,7 +38,7 @@ URL-REGEX,^https:\/\/bilanx\.dcard\.tw\/v\d\/configs$,REJECT
 URL-REGEX,^https?:\/\/mangaapi.manhuaren.com\/.+\/public\/(getShelfActivity|getStartPageAds|getStartPageAds2|getRecommendedGame|getAditem|getAds|getMultiAds|getUpgradeInfo|getVendor|getUserLocation),REJECT
 URL-REGEX,^https?:\/\/mangaapi.manhuaren.com\/.+\/manga\/getMangaPromotionActivity,REJECT
 URL-REGEX,^https?:\/\/mangaapi.manhuaren.com\/.+\/ad\/,REJECT
-URL-REGEX,^https?:\/\/mangaapi.manhuaren.com\/v2\/ad\/,REJECT
+URL-REGEX,^http?:\/\/mangaapi.manhuaren.com\/v2\/ad\/,REJECT
 DOMAIN-SUFFIX,hkadsapi.manhuaren.com,REJECT
 DOMAIN-SUFFIX,adsapi.manhuaren.com,REJECT
 DOMAIN-SUFFIX,videoapi.manhuaren.com,REJECT
