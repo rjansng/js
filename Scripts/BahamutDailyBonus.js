@@ -36,10 +36,10 @@ cron "0 8 * * *" script-path=https://raw.githubusercontent.com/NobyDa/Script/mas
 const $ = new Env('巴哈姆特');
 
 // 用户名
-$.uid = $.getdata('@ND_BAHA.ID') || 'mnjor';
+$.uid = $.getdata('@ND_BAHA.ID') || 'YOUR ID';
 
 // 用户密码
-$.pwd = $.getdata('@ND_BAHA.PW') || 'Dreamforest1';
+$.pwd = $.getdata('@ND_BAHA.PW') || 'YOUR PW';
 
 // 两步验证Token, 16位数, 未设置请保持默认
 $.totp = $.getdata('@ND_BAHA.TOTP') || '';
