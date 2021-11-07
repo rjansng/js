@@ -1,0 +1,12 @@
+#!name=人人视频
+#!desc=您的海外追剧神器
+#!system=ios
+
+[Rule]
+URL-REGEX,^https?:\/\/api\.rr\.tv\/(?:ad\/getAll$|storage/business/rootName/app/homePage),REJECT
+
+[Script]
+http-response ^https?:\/\/api\.rr\.tv\/v\dplus\/index\/channel ,script-path=https://Choler.github.io/Surge/Script/rrsp.js, requires-body=true, timeout=10, tag=人人視頻
+
+[MITM]
+hostname = api.rr.tv
