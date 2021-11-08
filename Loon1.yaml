@@ -65,7 +65,7 @@ https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Advertising/Advertising_Domain.list, policy=REJECT, tag=REJECT, enabled=true
 
 [Plugin]
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/Loon/AdvertisingLite/AdvertisingLite.plugin, proxy=REJECT, tag=Adv, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/Loon/Advertising/Advertising.plugin, proxy=REJECT, tag=Adv, enabled=true
 https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Loon/Plugin/Profile.plugin, tag=Profile, enabled=false
 https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Loon/Plugin/HKMTMedia.plugin, proxy=REJECT, tag=HKMTMedia, enabled=false
 https://raw.githubusercontent.com/app2smile/rules/master/plugin/spotify.plugin, tag=spotify, enabled=false
