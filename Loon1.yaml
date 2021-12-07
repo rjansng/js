@@ -75,7 +75,7 @@ https://raw.githubusercontent.com/rjansng/js/master/plugin/mix.plugin, tag=MIX�
 https://raw.githubusercontent.com/rjansng/js/master/plugin/embyUnlocked.plugin, tag=emby解鎖, enabled=true
 https://raw.githubusercontent.com/rjansng/js/master/plugin/startup.plugin, tag=開屏廣告, enabled=true
 https://raw.githubusercontent.com/chiupam/surge/main/Surge/YouTubeAds.sgmodule, tag=YouTubeAds, enabled=true
-https://raw.githubusercontent.com/rjansng/js/master/plugin/mcdonalds.plugin, tag=麥當勞簽到, enabled=true
+# https://raw.githubusercontent.com/rjansng/js/master/plugin/mcdonalds.plugin, tag=麥當勞簽到, enabled=true
 # https://raw.githubusercontent.com/rjansng/js/master/plugin/video.plugin, tag=VideoSpeed, enabled=true
 # https://raw.githubusercontent.com/rjansng/js/master/plugin/rrsp.plugin, tag=人人視頻, enabled=true
 # https://raw.githubusercontent.com/rjansng/js/master/plugin/BahamutDailyBonus.plugin, tag=巴哈簽到, enabled=true
