@@ -39,7 +39,7 @@ enable = true
 
 [Remote Rewrite]
 # Block YouTube Ads
-https://raw.githubusercontent.com/Orz-3/QuantumultX/master/YouTube.conf, tag=🛡不适用允许 UDP 转发的节点及 Premium, enabled=true
+https://raw.githubusercontent.com/mymoonyue/QuantumultX/master/YouTubeADs.conf, tag=ytads, enabled=true
 
 
 [Script] 
@@ -74,7 +74,7 @@ https://raw.githubusercontent.com/chiupam/surge/main/Surge/RRTV_SVIP.sgmodule, t
 https://raw.githubusercontent.com/rjansng/js/master/plugin/mix.plugin, tag=MIX解鎖, enabled=true
 https://raw.githubusercontent.com/rjansng/js/master/plugin/embyUnlocked.plugin, tag=emby解鎖, enabled=true
 https://raw.githubusercontent.com/rjansng/js/master/plugin/startup.plugin, tag=開屏廣告, enabled=true
-https://raw.githubusercontent.com/mymoonyue/QuantumultX/master/YouTubeADs.conf, tag=YouTubeAds, enabled=true
+# https://raw.githubusercontent.com/mymoonyue/QuantumultX/master/YouTubeADs.conf, tag=YouTubeAds, enabled=true
 # https://raw.githubusercontent.com/rjansng/js/master/plugin/mcdonalds.plugin, tag=麥當勞簽到, enabled=true
 # https://raw.githubusercontent.com/rjansng/js/master/plugin/video.plugin, tag=VideoSpeed, enabled=true
 # https://raw.githubusercontent.com/rjansng/js/master/plugin/rrsp.plugin, tag=人人視頻, enabled=true
