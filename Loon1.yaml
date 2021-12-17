@@ -32,7 +32,7 @@ resource-parser = https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/scr
 SSID = ssid,default=DIRECT,cellular=DIRECT,"tsu office"=DIRECT,"an1"=DIRECT,"WiFiAir"=DIRECT,"tsu wifi"=DIRECT,"an"=DIRECT
 
 [Remote Filter]
-http://limbopro.com/Adblock4limbo.list, policy=REJECT, tag=毒奶特供, enabled=true
+
 
 [URL Rewrite]
 enable = true 
@@ -61,6 +61,7 @@ https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Loon/Cookie.co
 [Remote Rule]
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Advertising/Advertising.list, policy=REJECT, tag=REJECT, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Advertising/Advertising_Domain.list, policy=REJECT, tag=REJECT, enabled=false
+http://limbopro.com/Adblock4limbo.list, policy=REJECT, tag=毒奶特供, enabled=true
 
 [Plugin]
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/Loon/AdvertisingLite/AdvertisingLite.plugin, proxy=REJECT, tag=Adv, enabled=true
