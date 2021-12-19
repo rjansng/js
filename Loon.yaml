@@ -1,0 +1,77 @@
+[General] 
+ipv6 = false
+skip-proxy = 127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,100.64.0.0/10,localhost,*.local,*.post.gov.tw
+bypass-tun = 10.0.0.0/8,100.64.0.0/10,127.0.0.0/8,169.254.0.0/16,172.16.0.0/12,192.0.0.0/24,192.0.2.0/24,192.88.99.0/24,192.168.0.0/16,198.18.0.0/15,198.51.100.0/24,203.0.113.0/24,224.0.0.0/4,255.255.255.255/32
+doh-server = https://doh.futa.gg/dns-query
+# [DNS] => DNS server
+dns-server = system,8.8.8.8,8.8.4.4
+# Wi-Fi 访问
+# > 允许 Wi-Fi 网络下其它设备访问
+allow-udp-proxy = true
+allow-wifi-access = false
+wifi-access-http-port = 7222
+wifi-access-socket5-port = 7221
+# > 代理测速 URL
+proxy-test-url = http://www.gstatic.com/generate_204
+# > 测速超时 (s)
+test-timeout = 5
+# > 解决一些ip请求无法匹配域名类规则的问题。real-ip指定的域名将不返回fake ip响应，直接将dns请求发往目标dns服务器
+real-ip = msftconnecttest.com, msftncsi.com, *.msftconnecttest.com, *.msftncsi.com, *.srv.nintendo.net, *.stun.playstation.net, xbox.*.microsoft.com, *.xboxlive.com, *.battlenet.com.cn, *.battlenet.com, *.blzstatic.cn, *.battle.net
+# 解析器
+resource-parser = https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/scripts/sub-store-parser.js
+# ssid-trigger参数，用于指定SSID下流量模式切换，（default表示默认，cellular表示蜂窝，目前支持三种值：rule，direct，proxy） 
+# ssid-trigger="default":rule,"cellular":rule,"ASUS":direct,"TPLINK":proxy 
+
+[Host]
+
+[Proxy]
+
+[Remote Proxy]
+
+[Proxy Group]
+SSID = ssid,default=DIRECT,cellular=DIRECT,"tsu office"=DIRECT,"an1"=DIRECT,"WiFiAir"=DIRECT,"tsu wifi"=DIRECT,"an"=DIRECT
+
+[Remote Filter]
+
+
+[URL Rewrite]
+enable = true 
+
+[Remote Rewrite]
+http://limbopro.com/Adblock4limbo.conf, tag=毒奶特供, enabled=true
+
+
+[Script] 
+enable = true
+
+[Remote Script]
+# https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Loon/Cookie.conf, tag=Cookie, enabled=false
+
+[Remote Rule]
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Advertising/Advertising.list, policy=REJECT, tag=REJECT, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Advertising/Advertising_Domain.list, policy=REJECT, tag=REJECT, enabled=false
+http://limbopro.com/Adblock4limbo.list, policy=REJECT, tag=毒奶特供, enabled=true
+
+[Plugin]
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/Loon/AdvertisingLite/AdvertisingLite.plugin, proxy=REJECT, tag=Adv, enabled=true
+https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Loon/Plugin/Profile.plugin, tag=Profile, enabled=false
+https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Loon/Plugin/HKMTMedia.plugin, proxy=REJECT, tag=HKMTMedia, enabled=false
+https://raw.githubusercontent.com/app2smile/rules/master/plugin/spotify.plugin, tag=spotify, enabled=true
+https://raw.githubusercontent.com/jkgtw/Surge/master/Modules/ADList.sgmodule, tag=ADList, enabled=true
+https://raw.githubusercontent.com/rjansng/js/master/plugin/filters.plugin, tag=filters, enabled=true
+https://raw.githubusercontent.com/rjansng/js/master/plugin/manhuaren.plugin, tag=漫畫人, enabled=false
+https://raw.githubusercontent.com/rjansng/js/master/plugin/shopee_checkin.plugin, tag=蝦皮簽到, enabled=false
+https://raw.githubusercontent.com/chiupam/surge/main/Surge/RRTV_SVIP.sgmodule, tag=人人視頻, enabled=false
+https://raw.githubusercontent.com/rjansng/js/master/plugin/mix.plugin, tag=MIX解鎖, enabled=false
+https://raw.githubusercontent.com/rjansng/js/master/plugin/embyUnlocked.plugin, tag=emby解鎖, enabled=false
+https://raw.githubusercontent.com/rjansng/js/master/plugin/startup.plugin, tag=開屏廣告, enabled=false
+https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Module/Block/YouTubeAds.sgmodule, tag=YouTubeAds, enabled=false
+
+[Rule]
+GEOIP,TW,DIRECT
+FINAL,DIRECT
+
+[Mitm]
+enable = false
+hostname = ios.prod.ftl.netflix.com,lambda.us-east-1.amazonaws.com
+skip-server-cert-verify = true
