@@ -66,6 +66,7 @@ https://raw.githubusercontent.com/rjansng/js/master/plugin/mix.plugin, tag=MIX�
 https://raw.githubusercontent.com/rjansng/js/master/plugin/embyUnlocked.plugin, tag=emby解鎖, enabled=false
 https://raw.githubusercontent.com/rjansng/js/master/plugin/startup.plugin, tag=開屏廣告, enabled=false
 https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Module/Block/YouTubeAds.sgmodule, tag=YouTubeAds, enabled=false
+https://raw.githubusercontent.com/rjansng/js/master/plugin/vsco.plugin, tag=vsco, enabled=true
 
 [Rule]
 GEOIP,TW,DIRECT
