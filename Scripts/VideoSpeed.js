@@ -1,4 +1,4 @@
-function() {
+function Video() {
     var dcE = function(ln, o = null) {
         return document.createElement(ln, o);
     };
@@ -168,3 +168,8 @@ function() {
         }
     }
 }
+
+(async function() {
+	await  Video(); 
+	$.done(); 
+})();
