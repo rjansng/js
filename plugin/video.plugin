@@ -1,6 +1,5 @@
 
-[Script]
 ^https:\/\/777tv\.app.\/vod\/play* url response-body <head> response-body <head><script type="text/javascript"  src="//raw.githubusercontent.com/rjansng/js/master/Scripts/VideoSpeed.js"></script>
 
-[MITM]
+
 hostname = 777tv.app
