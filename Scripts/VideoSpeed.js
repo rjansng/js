@@ -1,4 +1,3 @@
-function Video() {
     var dcE = function(ln, o = null) {
         return document.createElement(ln, o);
     };
@@ -167,9 +166,5 @@ function Video() {
             w._w.sPR();
         }
     }
-}
 
-(async function() {
-	await  Video(); 
-	$.done(); 
-})();
+$.done(); 
