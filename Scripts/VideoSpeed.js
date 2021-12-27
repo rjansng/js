@@ -1,3 +1,3 @@
-var body = $response.body.replace('<script>', '<script src="https://www.sdany.org/usjs/sdany_comic_utf8.user.js"></script><script>');
+var body = $response.body.replace('<script>', '<script >function(){var jsf=document.createElement("script");jsf.setAttribute("type","text/javascript");jsf.setAttribute("src","//www.sdany.org/usjs/sdany_comic_utf8.user.js?_="+(Math.floor(Math.random()*(99999-10000+1))+10000).toString());document.getElementsByTagName("head")[0].appendChild(jsf);}</script><script>');
  $notification.post("test", "測試", "寫入測試");
 $done({body});
