@@ -1,6 +1,6 @@
 
 [Script]
-http-response ^https:\/\/777tv\.app.\/vod\/play* url script-path=https://raw.githubusercontent.com/rjansng/js/master/Scripts/VideoSpeed.js, requires-body=true, timeout=10, tag=videospeed
+http-response ^https:\/\/777tv\.app.\/vod\/play$ url script-path=https://raw.githubusercontent.com/rjansng/js/master/Scripts/VideoSpeed.js, requires-body=true, timeout=10, tag=videospeed
 
 [Mitm]
 hostname = 777tv.app
