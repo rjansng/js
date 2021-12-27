@@ -1,2 +1,2 @@
-var url = "tw.yahoo.com"; 
+var url = "https://tw.yahoo.com/"; 
 $done({ url });
