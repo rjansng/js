@@ -1,4 +1,4 @@
-var RespnseBodyData = $request.body;
+let RespnseBodyData = $request.body;
 RespnseBodyData = '<script>alert("測試文字");</script>';
 //console.log(RespnseBodyData);//输出数据
     $done({RespnseBodyData});//修改完成之后需要调用$done
