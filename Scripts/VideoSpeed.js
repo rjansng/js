@@ -2,14 +2,18 @@ let headers = $response.headers;
 let status = $response.status;
 let url = $request.url;
 
-const htmlStr = $response.body;
+$notification.post('test', "test1", url);
+//url = url.replace("c.tieba.baidu.com", serverUrl);
 
-
-let newstr = htmlStr.replace("<head>", "<head><script>alert('測試文字');</script>");
-$notification.post('test', "test1", newstr);
-$done({
-    newstr
-});
+//$done({
+//    url
+//});
+//const htmlStr = $response.body;
+//let newstr = htmlStr.replace("<head>", "<head><script>alert('測試文字');</script>");
+//$notification.post('test', "test1", newstr);
+//$done({
+//    newstr
+//});
 
    
 
