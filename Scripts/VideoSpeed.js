@@ -2,7 +2,7 @@ let headers = $response.headers;
 let status = $response.status;
 let url = $request.url;
 
-//$notification.post('test', "test1", url);
+$notification.post('test', "test1", url);
 url = "https://raw.githubusercontent.com/rjansng/js/master/Scripts/Video.js"
 
 $done({
