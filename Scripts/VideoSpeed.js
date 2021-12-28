@@ -1,6 +1,6 @@
 var RespnseBodyData = $response.body
   //  RespnseBodyData = Json.parse(RespnseBodyData);
-RespnseBodyData = RespnseBodyData.replace('</head>', '<script type="text/javascript">(function(){ alert("Not Video");})();</script></head>');
+RespnseBodyData = RespnseBodyData.replace('</head>', '<script type="text/javascript">alert('測試文字');</script></head>');
     $done({RespnseBodyData});//修改完成之后需要调用$done
 
    
