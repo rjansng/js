@@ -12,3 +12,9 @@
         //console.log(Json.parse(data));//if data is Json String
         //Loon支持使用Console.log输出调试信息
     })
+
+var Title,SubTitle,Content;
+    TItle = "我是主标题";
+    SubTitle  = "我是子标题";
+    Content = "我是要推送的内容";
+    $notification.post(Title,SubTitle,Content);
