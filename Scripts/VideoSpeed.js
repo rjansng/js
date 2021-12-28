@@ -1,6 +1,6 @@
 let headers = $response.headers;
 let status = $response.status;
-
+$notification.post('test', "1", "");
 const htmlStr = $response.body;
 const startStr = '<script';
 const str = htmlStr.substring(htmlStr.indexOf(startStr) + startStr.length, htmlStr.indexOf('</script>'));
