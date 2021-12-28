@@ -1,3 +1,2 @@
-var url = $request.url;
-url = "https://tw.yahoo.com/"; 
-$done({ url });
+var RespnseBodyData = $response.body
+console.log(RespnseBodyData);
