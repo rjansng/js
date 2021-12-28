@@ -1,7 +1,11 @@
-let RespnseBodyData = $response.body;
-//RespnseBodyData = '<script>alert("測試文字");</script>';
-console.log(RespnseBodyData);//输出数据
-    $done({});//修改完成之后需要调用$done
+let headers = $response.headers;
+let status = $response.status;
+
+const htmlStr = $response.body;
+let newstr = htmlStr.replace('</head>', '<script>alert("測試文字");</script></head>');
+$done({
+    newstr
+});
 
    
 
