@@ -1,14 +1,15 @@
 let headers = $response.headers;
 let status = $response.status;
-//$notification.post('test', "1", "");
+let url = $request.url;
+
 const htmlStr = $response.body;
-//const startStr = '<script';
-//const str = htmlStr.substring(htmlStr.indexOf(startStr) + startStr.length, htmlStr.indexOf('</script>'));
+
+
 let newstr = htmlStr.replace("<head>", "<head><script>alert('測試文字');</script>");
 $notification.post('test', "test1", newstr);
-//$done({
-//    newstr
-//});
+$done({
+    newstr
+});
 
    
 
