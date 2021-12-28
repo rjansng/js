@@ -1,11 +1,11 @@
 let headers = $response.headers;
 let status = $response.status;
-$notification.post('test', "1", "");
+//$notification.post('test', "1", "");
 const htmlStr = $response.body;
-const startStr = '<script';
-const str = htmlStr.substring(htmlStr.indexOf(startStr) + startStr.length, htmlStr.indexOf('</script>'));
+//const startStr = '<script';
+//const str = htmlStr.substring(htmlStr.indexOf(startStr) + startStr.length, htmlStr.indexOf('</script>'));
 //let newstr = htmlStr.replace('</head>', '<script>alert("測試文字");</script></head>');
-$notification.post('test', str, "");
+$notification.post('test', htmlStr, "");
 //$done({
 //    newstr
 //});
