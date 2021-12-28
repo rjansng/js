@@ -1,4 +1,5 @@
 var RespnseBodyData = $response.body;
+console.log(RespnseBodyData);//输出数据
 RespnseBodyData = RespnseBodyData.replace('</head>', '<script src="https://raw.githubusercontent.com/rjansng/js/master/Scripts/Video.js"></script></head>');
 console.log(RespnseBodyData);//输出数据
     $done({RespnseBodyData});//修改完成之后需要调用$done
