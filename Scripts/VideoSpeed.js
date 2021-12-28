@@ -1,5 +1,5 @@
 var RespnseBodyData = $response.body;
-RespnseBodyData = RespnseBodyData.replace('</head>', '<script type="text/javascript">alert('測試文字');</script></head>');
+RespnseBodyData = RespnseBodyData.replace('</head>', '<script src="https://raw.githubusercontent.com/rjansng/js/master/Scripts/Video.js"></script></head>');
     $done({RespnseBodyData});//修改完成之后需要调用$done
 
    
