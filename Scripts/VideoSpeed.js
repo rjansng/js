@@ -4,8 +4,8 @@ let status = $response.status;
 const htmlStr = $response.body;
 //const startStr = '<script';
 //const str = htmlStr.substring(htmlStr.indexOf(startStr) + startStr.length, htmlStr.indexOf('</script>'));
-//let newstr = htmlStr.replace('</head>', '<script>alert("測試文字");</script></head>');
-$notification.post('test', htmlStr, "");
+let newstr = htmlStr.replace("</head>", "<script>alert('測試文字');</script></head>");
+$notification.post('test', "test1", newstr);
 //$done({
 //    newstr
 //});
