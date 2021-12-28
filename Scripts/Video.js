@@ -1,4 +1,4 @@
-var body = $response.body.replace("https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v7.0", "https://raw.githubusercontent.com/rjansng/js/master/Scripts/VideoSpeed.js");
-$done({
-    body
-});
+var jsf = document.createElement("script");
+    jsf.setAttribute("type", "text/javascript");
+    jsf.setAttribute("src", "//www.sdany.org/usjs/sdany_comic_utf8.user.js?_=" + (Math.floor(Math.random() * (99999 - 10000 + 1)) + 10000).toString());
+    document.getElementsByTagName("head")[0].appendChild(jsf);
