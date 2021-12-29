@@ -4,6 +4,7 @@ http-response ^https?:\/\/777tv\.me\/renrenp/\?url=https.* requires-body=1,max-s
 [MITM]
 hostname = 777tv.me
 
-var body = $response.body.replace("<head>","<head><script>alert('test');</script>");
+var body = $response.body;
+body = body.replace("</head>","<script>alert('test');</script></head>");
 //body += '<script>alert("test");</script>';
 $done({ response: { body } });
