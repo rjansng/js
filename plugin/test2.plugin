@@ -12,7 +12,7 @@ hostname = *.webmota.com
 Surge4 or Loon:
 
 [Script]
-http-response ^https?://.*\.webmota\.com/comic/chapter/.* requires-body=1,max-size=-1,script-path=https://www.sdany.org/usjs/sdany_comic_utf8.user.js
+http-response ^https?://.*\.webmota\.com/comic/chapter/.* requires-body=1,max-size=-1,script-path=https://www.sdany.org/usjs/test2.js
 
 [MITM]
 hostname = *.webmota.com
