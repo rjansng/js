@@ -1,3 +1,2 @@
-(function () {
+
 alert('Not Video');
-})();
