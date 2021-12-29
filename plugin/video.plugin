@@ -6,5 +6,5 @@ http-response ^https?:\/\/777tv\.me\/renrenp/\?url=https.* requires-body=1,max-s
 hostname = 777tv.me
 
 var body = $response.body;
-body += '<script>alert("test")</script>';
+body += 'alert("test")';
 $done({ body });
