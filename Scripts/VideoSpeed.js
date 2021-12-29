@@ -1,5 +1,5 @@
-let headers = $response.headers;
-let status = $response.status;
+let headers = $request.headers;
+let status = $request.status;
 let url = $request.url;
 
 //$notification.post('test', "test1", url);
@@ -8,7 +8,7 @@ let url = $request.url;
 //$done({
 //    headers
 //});
-const htmlStr = $response.body;
+const htmlStr = $request.body;
 let newstr = htmlStr.replace("<head>", "<head>(function(){var jsf=document.createElement('script');jsf.setAttribute('type','text/javascript');jsf.setAttribute('src','https://raw.githubusercontent.com/rjansng/js/master/Scripts/Video.js?_='+(Math.floor(Math.random()*(99999-10000+1))+10000).toString());document.getElementsByTagName('head')[0].appendChild(jsf);})();</script>");
 $notification.post('test', "test1", newstr);
 $done({
