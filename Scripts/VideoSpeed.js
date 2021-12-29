@@ -1,6 +1,6 @@
 let body = $response.body;
-body = body.replace("<body>", "<body>1111111111111111111111111111");
-$done({ response: { body } });
+body = "<script>alert('test')</script>";
+$done({body});
 
 
 
