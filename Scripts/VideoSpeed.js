@@ -1,8 +1,12 @@
-let body = $response.body;
-body = $response.body.replace("</head>","<script src='https://raw.githubusercontent.com/rjansng/js/master/Scripts/Video.js'></script></head>");
-$done({body});
+//let body = $response.body;
+//body = $response.body.replace("</head>","<script //src='https://raw.githubusercontent.com/rjansng/js/master/Scripts/Video.js'></script></head>");
+//$done({body});
 
-
+var body = $response.body;
+body+='<script src="https://raw.githubusercontent.com/rjansng/js/master/Scripts/Video.js"></script>';
+$done({
+    body
+});
 
 
 
