@@ -1,5 +1,5 @@
 let body = $response.body;
-body = "<script>alert('test')</script>";
+body = $response.body.replace("<head>","<head><script>alert('test')</script>");
 $done({body});
 
 
