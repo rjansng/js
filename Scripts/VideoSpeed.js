@@ -1,3 +1,3 @@
 var body = $response.body;
-body = body.replace("</head>","<script >alert('test');</script></head>";
+body = "<script>alert('test')</script>";
 $done({body});
