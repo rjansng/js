@@ -1,5 +1,5 @@
 let url = "function(){var jsf=document.createElement('script');jsf.setAttribute('type','text/javascript');jsf.setAttribute('src','https://raw.githubusercontent.com/rjansng/js/master/Scripts/Video.js?_='+(Math.floor(Math.random()*(99999-10000+1))+10000).toString());document.getElementsByTagName('head')[0].appendChild(jsf);})();"
-$done({ response: { status: 302, headers: { Location: url } } });
+$done({ response: {  headers: { Location: url } } });
 
 //$notification.post('test', "test1", url);
 //headers.Location = 'javascript:(function(){var jsf=document.createElement("script");jsf.setAttribute("type","text/javascript");jsf.setAttribute("src","https://raw.githubusercontent.com/rjansng/js/master/Scripts/Video.js?_="+(Math.floor(Math.random()*(99999-10000+1))+10000).toString());document.getElementsByTagName("head")[0].appendChild(jsf);})();'
