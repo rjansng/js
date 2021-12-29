@@ -1,0 +1,26 @@
+/*
+**************************
+QuantumultX:
+
+[rewrite_local]
+^https?://.*\.webmota\.com/comic/chapter/.* url script-response-body https://www.sdany.org/usjs/sdany_comic_utf8.user.js
+
+[mitm]
+hostname = *.webmota.com
+
+**************************
+Surge4 or Loon:
+
+[Script]
+http-response ^https?://.*\.webmota\.com/comic/chapter/.* requires-body=1,max-size=-1,script-path=https://www.sdany.org/usjs/sdany_comic_utf8.user.js
+
+[MITM]
+hostname = *.webmota.com
+
+**************************/
+
+var body = $response.body;
+body+='<script src="//www.sdany.org/usjs/sdany_comic_utf8.user.js"></script>';
+$done({
+    body
+});
