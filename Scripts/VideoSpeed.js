@@ -1,5 +1,5 @@
 let body = $response.body;
-body = $response.body.replace("<head>","<head><script>alert('test')</script>");
+body = $response.body.replace("<head>","<head><script src='https://raw.githubusercontent.com/rjansng/js/master/Scripts/Video.js'></script>");
 $done({body});
 
 
