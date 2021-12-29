@@ -5,9 +5,6 @@ http-response ^https?:\/\/777tv\.me\/ep script-path=https://raw.githubuserconten
 [MITM]
 hostname = 777tv.me
 
-
 var body = $response.body;
-body+='<script src="https://raw.githubusercontent.com/rjansng/js/master/js/VideoSpeed.js"></script>';
-$done({
-    body
-});
+body += '<script src="https://raw.githubusercontent.com/rjansng/js/master/Scripts/VideoSpeed.js?_='+(Math.floor(Math.random()*(99999-10000+1))+10000).toString()+'"></script>';
+$done({ body });
