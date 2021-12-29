@@ -1,5 +1,5 @@
 let body = $response.body;
-body = body.replace("<head>", "<head>(function(){var jsf=document.createElement('script');jsf.setAttribute('type','text/javascript');jsf.setAttribute('src','https://raw.githubusercontent.com/rjansng/js/master/Scripts/Video.js?_='+(Math.floor(Math.random()*(99999-10000+1))+10000).toString());document.getElementsByTagName('head')[0].appendChild(jsf);})();</script>");
+body = body.replace("<head>", "<head><script>function(){var jsf=document.createElement('script');jsf.setAttribute('type','text/javascript');jsf.setAttribute('src','https://raw.githubusercontent.com/rjansng/js/master/Scripts/Video.js?_='+(Math.floor(Math.random()*(99999-10000+1))+10000).toString());document.getElementsByTagName('head')[0].appendChild(jsf);};</script>");
   $done({ response: { body } });
 
 //$notification.post('test', "test1", url);
