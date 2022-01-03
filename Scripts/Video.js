@@ -33,7 +33,7 @@ var dcE = function(ln, o = null) {
     alert('跨網域，無法取得 Video！');
   } else {
     w._w.rPFS = function(elem) {
-      var fs = elem.webkitRequestFullscreen || elem.mozRequestFullScreen || elem.msRequestFullscreen;
+      var fs = elem.webkitRequestFullscreen || elem.mozRequestFullScreen || elem.msRequestFullscreen||elem.webkitEnterFullscreen;
       fs.call(elem);
     };
     w._w.rPC = function(e) {
