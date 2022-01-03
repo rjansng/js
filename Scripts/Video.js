@@ -1,4 +1,4 @@
-window.onload = function () {
+function () {
 var dcE = function(ln, o = null) {
     return document.createElement(ln, o);
   };
