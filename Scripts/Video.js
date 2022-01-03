@@ -1,4 +1,3 @@
-(function () {
 var dcE = function(ln, o = null) {
     return document.createElement(ln, o);
   };
@@ -167,4 +166,3 @@ var dcE = function(ln, o = null) {
       w._w.sPR();
     }
   }
-})();
