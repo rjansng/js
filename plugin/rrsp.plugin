@@ -12,6 +12,6 @@ http-response ^https?:\/\/api\.rr\.tv\/watch\/v\d\/get_movie_info script-path=ht
 
 [Remote Rewrite]
 ^https?:\/\/api\.rr\.tv\/ad\/ url reject
-
+ 
 [MITM]
 hostname = api.rr.tv
