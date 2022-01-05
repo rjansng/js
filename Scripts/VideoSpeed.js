@@ -6,7 +6,7 @@ let status = $response.status;
 headers.Location = url;
 
 
-$done({headers,body}); 
+$done({status,headers,body}); 
 
 
 //$notification.post("test", "test", body);
