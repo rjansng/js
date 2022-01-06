@@ -9,8 +9,8 @@ const str = htmlStr.substring(htmlStr.indexOf(startStr) + startStr.length, htmlS
 
 str = str.match('link_pre.*m3u8');
 
-$notification.post("test", "test",  str);
-$done({});
+//$notification.post("test", "test",  str);
+$done({ response: { status: 302, headers: { Location: 'https://777tv.app/renrenp/?url=https://v10.dious.cc/20220105/gsI3Oc01/index.m3u8&next=//777tv.app' } } });
 
 
 
