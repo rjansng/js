@@ -7,9 +7,10 @@ const str = htmlStr.substring(htmlStr.indexOf(startStr) + startStr.length, htmlS
 
 //}.replace('"','')    .match('link_pre.*https.*?"');
 
-htmlStr = htmlStr.match('/renrenp.*?"');
+htmlStr = htmlStr.match('link_pre.*https.*?"');
 
 $notification.post("test", "test",  htmlStr);
 $done({});
+
 
 
