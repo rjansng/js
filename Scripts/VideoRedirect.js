@@ -1,15 +1,16 @@
 const htmlStr = $response.body;
 
-const startStr = 'var player_data';
-const str = htmlStr.substring(htmlStr.indexOf(startStr) + startStr.length, htmlStr.indexOf('play_but'));
+const startStr = 'var player_data=';
+const str = htmlStr.substring(htmlStr.indexOf(startStr) + startStr.length, htmlStr.indexOf('</script>'));
 const cgiDataStr =  JSON.parse(str);
+
+
 var str1 = null;
 var str2 = null;
-    if (body.url == undefined ) {
+    if (cgiDataStr.url == undefined ) {
        
     } else {
-        str1 = body.url;
-        str2 = body.link_next;
+        str1 = 'https://777tv.me/renrenp/?url=' + cgiDataStr.url + '&next=//777tv.me' + cgiDataStr.link_next;
     }
 
 
