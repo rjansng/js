@@ -7,7 +7,7 @@ let notifiTitle = "影片網頁跳轉到影片player";
 
 
 //if (headers.Location.indexOf('777tv') !== -1) {
-body = body.match('/renren.*?"').toString();
+body = body.match('/renren.*?"');
 //}.replace('"','')
 
 
