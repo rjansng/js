@@ -8,5 +8,7 @@ const str = htmlStr.substring(htmlStr.indexOf(startStr) + startStr.length, htmlS
 //}.replace('"','')    .match('/renren.*?"');
 
 
-$notification.post("test", "test",  str);
+$notification.post("test", "test",  htmlStr);
 $done({});
+
+
