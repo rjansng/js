@@ -1,7 +1,7 @@
 const htmlStr = $response.body;
 
-const startStr = 'mozallowfullscreen';
-const str = htmlStr.substring(htmlStr.indexOf(startStr) + startStr.length, htmlStr.indexOf('framespacing'));
+const startStr = 'player_video';
+const str = htmlStr.substring(htmlStr.indexOf(startStr) + startStr.length, htmlStr.indexOf('play_but'));
 
 //if (headers.Location.indexOf('777tv') !== -1) {
 
@@ -9,7 +9,7 @@ const str = htmlStr.substring(htmlStr.indexOf(startStr) + startStr.length, htmlS
 
 htmlStr = htmlStr.match('link_pre.*m3u8');
 
-$notification.post("test", "test",  htmlStr);
+$notification.post("test", "test",  str);
 $done({});
 
 
