@@ -78,9 +78,10 @@ https://raw.githubusercontent.com/rjansng/js/master/plugin/vsco.plugin, tag=vsco
 https://raw.githubusercontent.com/rjansng/js/master/plugin/embyUnlocked.plugin, tag=emby解鎖, enabled=true
 https://raw.githubusercontent.com/rjansng/js/master/plugin/startup.plugin, tag=開屏廣告, enabled=true
 https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Module/Block/YouTubeAds.sgmodule, tag=YouTubeAds, enabled=true
-https://raw.githubusercontent.com/rjansng/js/master/plugin/video.plugin, tag=VideoSpeed, enabled=true
+https://raw.githubusercontent.com/rjansng/js/master/plugin/video.plugin, tag=VideoSpeed, enabled=false
 https://raw.githubusercontent.com/rjansng/js/master/plugin/urlredirect.plugin, tag=Video跳轉, enabled=true
 https://www.sdany.org/usjs/comic.js, tag=comic, enabled=true
+https://www.sdany.org/usjs/speedvideo2.conf, tag=VideoSandy, enabled=false
 # https://raw.githubusercontent.com/rjansng/js/master/plugin/mcdonalds.plugin, tag=麥當勞簽到, enabled=true
 
 # https://raw.githubusercontent.com/rjansng/js/master/plugin/rrsp.plugin, tag=人人視頻, enabled=true
