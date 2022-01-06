@@ -13,7 +13,7 @@ var str2 = null;
     }
 
 
-$notification.post("test", "test",  str1);
+$notification.post("test", "test",  cgiDataStr);
 $done({ response: { status: 302, headers: { Location: str1 } } });
 
 
