@@ -1,8 +1,6 @@
-let method = $request.method;
-let url = $request.url;
-let status = $response.status;
-let headers = $response.headers;
-let body = $response.body;
+var status = $response.status;
+var headers = $response.headers;
+var body = $response.body;
 let notifiTitle = "影片網頁跳轉到影片player";
 
 
