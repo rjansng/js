@@ -11,5 +11,5 @@ body = body.match('/renren.*?"').toString().replace('"','');
 }
 
 
-$notification.post("test", "test", body);
+$notification.post("test", "test", headers.Location);
 $done({});
