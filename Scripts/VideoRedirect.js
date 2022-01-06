@@ -1,16 +1,20 @@
 const htmlStr = $response.body;
 
-const startStr = 'player_video';
+const startStr = 'var player_data';
 const str = htmlStr.substring(htmlStr.indexOf(startStr) + startStr.length, htmlStr.indexOf('play_but'));
+const cgiDataStr =  JSON.parse(str);
+var str1 = null;
+var str2 = null;
+    if (body.url == undefined ) {
+       
+    } else {
+        str1 = body.url;
+        str2 = body.link_next;
+    }
 
-//if (headers.Location.indexOf('777tv') !== -1) {
 
-//}.replace('"','')    .match('link_pre.*https.*?"');
-
-str = str.match('link_pre.*m3u8');
-
-//$notification.post("test", "test",  str);
-$done({ response: { status: 302, headers: { Location: 'https://777tv.app/renrenp/?url=https://v10.dious.cc/20220105/gsI3Oc01/index.m3u8&next=//777tv.app' } } });
+$notification.post("test", "test",  str1);
+$done({ response: { status: 302, headers: { Location: str1 } } });
 
 
 
