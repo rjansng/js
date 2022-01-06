@@ -6,10 +6,10 @@ const str = htmlStr.substring(htmlStr.indexOf(startStr) + startStr.length, htmlS
 //if (headers.Location.indexOf('777tv') !== -1) {
 
 //}.replace('"','')    .match('/renren.*?"');
+console.log(htmlStr);
+//htmlStr = htmlStr.match('/renrenp.*?"');
 
-htmlStr = htmlStr.match('/renrenp.*?"');
-
-$notification.post("test", "test",  htmlStr);
+//$notification.post("test", "test",  htmlStr);
 $done({});
 
 
