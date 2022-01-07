@@ -2,7 +2,6 @@ const body = $response.body;
 const url = $request.url;
 let headers = $response.headers;
 let status = $response.status;
-let str = url.substring(8,11);
 var re2 = new RegExp(/.+\/((777tv|gimy|www.tangrenjie)\.(app|me|tv))\/.+\.html.*$/i);
 
 var startStr = 'var player_data='; //var player_aaaa
