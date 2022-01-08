@@ -34,6 +34,7 @@ if (re2.test(url) && i1 > 0 && i2 > i1) {
 			str2 = 'ddplay';
 			url2 = 'bo.movie06.com';
 			json.url =unescape(base64decode(json.url));
+			console.log(json.url);
 			//https://bo.movie06.com/ddplay/?url=https://fendou.duoduozy.com/m3u8/202112/9/ab83797c2048f6b1875d1e290d5bc392c5a7fb49.m3u8&jump=/vodplay/48098-1-2.html
 		}else{
 			body = '';
