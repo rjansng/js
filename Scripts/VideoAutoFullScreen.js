@@ -246,12 +246,10 @@ if (re2.test(url) && i1 > 0 && i2 > i1) {
                 status, headers, body
             });
         } else {
-            body = '';
             $done({});
         }
         str1 = 'https://' + url2 + '/' + str2 + '/?url=' + json.url + '&next=//' + json.link_next;
         headers.Location = str1;
-        body = '';
     } catch (e) {
         //console.log('ERROR:');
         //console.log(e);
