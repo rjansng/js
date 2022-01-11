@@ -6,17 +6,17 @@ http://limbopro.com/Adblock4limbo.conf, tag=毒奶特供, enabled=true
 https://raw.githubusercontent.com/DivineEngine/Profiles/master/Quantumult/Rewrite/Block/YouTubeAds.conf, tag=DivineEngine (Youtube AdsBlock), enabled=false
 
 
-[Rule]
-^https?:\/\/.+\.googlevideo\.com\/.+&oad url reject-img
-^https?:\/\/.+\.googlevideo\.com\/.+ctier url reject-img
-^https?:\/\/youtubei\.googleapis\.com\/youtubei\/.+ad_ url reject-img
-^https?:\/\/youtubei\.googleapis\.com\/youtubei\/.+log_ url reject-img
-^https?:\/\/.+\.youtube\.com\/get_midroll_ url reject-img
-^https?:\/\/premiumyva\.appspot\.com\/vmclickstoadvertisersite url reject-img
-^https?:\/\/.+\.youtube\.com\/api\/stats\/ads url reject-img
-^https?:\/\/.+\.youtube\.com\/api\/stats\/.+adformat url reject-img
-^https?:\/\/.+\.youtube\.com\/pagead\/ url reject-img
-^https?:\/\/.+\.youtube\.com\/ptracking url reject-img
+#![Rule]
+#!^https?:\/\/.+\.googlevideo\.com\/.+&oad url reject-img
+#!^https?:\/\/.+\.googlevideo\.com\/.+ctier url reject-img
+#!^https?:\/\/youtubei\.googleapis\.com\/youtubei\/.+ad_ url reject-img
+#!^https?:\/\/youtubei\.googleapis\.com\/youtubei\/.+log_ url reject-img
+#!^https?:\/\/.+\.youtube\.com\/get_midroll_ url reject-img
+#!^https?:\/\/premiumyva\.appspot\.com\/vmclickstoadvertisersite url reject-img
+#!^https?:\/\/.+\.youtube\.com\/api\/stats\/ads url reject-img
+#!^https?:\/\/.+\.youtube\.com\/api\/stats\/.+adformat url reject-img
+#!^https?:\/\/.+\.youtube\.com\/pagead\/ url reject-img
+#!^https?:\/\/.+\.youtube\.com\/ptracking url reject-img
 
-[MITM]
-hostname = -redirector*.googlevideo.com,*.googlevideo.com,www.youtube.com,s.youtube.com
+#![MITM]
+#!hostname = -redirector*.googlevideo.com,*.googlevideo.com,www.youtube.com,s.youtube.com
