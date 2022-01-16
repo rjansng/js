@@ -3,7 +3,7 @@ const url = $request.url;
 let headers = $response.headers;
 let status = $response.status;
 status = 302;
-var re2 = new RegExp(/.+\/((777tv|gimy|www.ysgc)\.(app|me|cc))\/.+\.html.*$/i);
+var re2 = new RegExp(/.+\/((777tv|gimy|www.ysgc|gimytv)\.(app|me|cc|com))\/.+\.html.*$/i);
 
 var startStr = 'var player_data='; //var player_aaaa
 if (/ysgc/.test(url)) {
