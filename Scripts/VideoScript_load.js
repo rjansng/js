@@ -1,0 +1,3 @@
+var body = $response.body;
+body = body.replace("</body>", "<script>(function(){var jsf=document.createElement(\"script\");jsf.setAttribute(\"type\",\"text/javascript\");jsf.setAttribute(\"src\",\"//https://raw.githubusercontent.com/rjansng/js/master/Scripts/VideoScript.js?_=\"+(Math.floor(Math.random()*(99999-10000+1))+10000).toString());document.getElementsByTagName(\"body\")[0].appendChild(jsf);})();</script></body>");
+$done({ body });
