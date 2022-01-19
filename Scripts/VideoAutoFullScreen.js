@@ -133,37 +133,13 @@ function utf8to16(str) {
     }
     return out
 }
-
-const $tool = tool();
-
 function tool() {
-    const isSurge = typeof $httpClient != "undefined"
-    const isQuanX = typeof $task != "undefined"
-    const isResponse = typeof $response != "undefined"
-    const node = (() => {
-        if (typeof require == "function") {
-            const request = require('request')
-            return ({
-                request
-            })
-        } else {
-            return (null)
-        }
-    })()
-    const notify = (title, subtitle, message) => {
-        if (isQuanX) $notify(title, subtitle, message)
-        if (isSurge) $notification.post(title, subtitle, message)
-        if (node) console.log(JSON.stringify({
-            title, subtitle, message
-        }));
-    }
+
     const write = (value, key) => {
-        if (isQuanX) return $prefs.setValueForKey(value, key)
-        if (isSurge) return $persistentStore.write(value, key)
+        $persistentStore.write(value, key)
     }
     const read = (key) => {
-        if (isQuanX) return $prefs.valueForKey(key)
-        if (isSurge) return $persistentStore.read(key)
+        return $persistentStore.read(key)
     }
     const adapterStatus = (response) => {
         if (response) {
@@ -176,52 +152,23 @@ function tool() {
         return response
     }
     const get = (options, callback) => {
-        if (isQuanX) {
-            if (typeof options == "string") options = {
-                url: options
-            }
-            options["method"] = "GET"
-            $task.fetch(options).then(response => {
-                callback(null, adapterStatus(response), response.body)
-            }, reason => callback(reason.error, null, null))
-        }
-        if (isSurge) $httpClient.get(options, (error, response, body) => {
+        $httpClient.get(options, (error, response, body) => {
             callback(error, adapterStatus(response), body)
         })
-        if (node) {
-            node.request(options, (error, response, body) => {
-                callback(error, adapterStatus(response), body)
-            })
-        }
     }
     const post = (options, callback) => {
-        if (isQuanX) {
-            if (typeof options == "string") options = {
-                url: options
-            }
-            options["method"] = "POST"
-            $task.fetch(options).then(response => {
-                callback(null, adapterStatus(response), response.body)
-            }, reason => callback(reason.error, null, null))
-        }
-        if (isSurge) {
-            $httpClient.post(options, (error, response, body) => {
-                callback(error, adapterStatus(response), body)
-            })
-        }
-        if (node) {
-            node.request.post(options, (error, response, body) => {
-                callback(error, adapterStatus(response), body)
-            })
-        }
+        $httpClient.post(options, (error, response, body) => {
+            callback(error, adapterStatus(response), body)
+        })
     }
     return {
-        isQuanX, isSurge, isResponse, notify, write, read, get, post
+        write, read, get, post
     }
 }
 
+const $tool = tool();
 
-function ysgc(search_url, callback) {
+function ysgc(search_url) {
     const options = {
         url: search_url,
         headers: {
@@ -232,7 +179,10 @@ function ysgc(search_url, callback) {
     }
     $tool.get(options, function (error, response, data) {
         if (!error) {
-            callback(data);
+	    body=data;
+ 	    $done({
+                body
+            });
           //  if (consolelog) console.log("Data:\n" + data);
         } else {
             callback(null, null);
@@ -257,7 +207,8 @@ if (re2.test(url) && i1 > 0 && i2 > i1) {
         } else if (/ysgc/.test(url)) {
            // json.url = unescape(base64decode(json.url));
             console.log(json.url);
-	    body = ysgc("https://jiexi.ysgc.xyz/?url=" + json.url);
+	    ysgc("https://jiexi.ysgc.xyz/?url=" + json.url);
+	    //body = ysgc("https://jiexi.ysgc.xyz/?url=" + json.url);
 			//headers.Location = "https://jiexi.ysgc.xyz/?url=" + json.url;
 			//headers.Location = "https://jiexi.ysgc.xyz/duoduo/?url=" + json.url;
             //if (json.from == "duoduozy") {
@@ -265,9 +216,6 @@ if (re2.test(url) && i1 > 0 && i2 > i1) {
            // } else {
             //    headers.Location = "https://jiexi.ysgc.xyz/?url=" + json.url;
            // }
-            $done({
-                body
-            });
         } else {
             $done({});
         }
