@@ -256,6 +256,7 @@ if (re2.test(url) && i1 > 0 && i2 > i1) {
                     return;
                 }
 				body = data;
+				 console.log(body);
             });
 
 
