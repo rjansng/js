@@ -220,6 +220,27 @@ function tool() {
     }
 }
 
+
+function ysgc(search_url, callback) {
+    const options = {
+        url: search_url,
+        headers: {
+            "Content-Type": "application/x-www-form-urlencoded;charset=utf-8",
+            "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 13_1_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 - mmbWebBrowse - ios",
+	     Referer: "https://www.ysgc.cc/"
+        }
+    }
+    $tool.get(options, function (error, response, data) {
+        if (!error) {
+            callback(data);
+          //  if (consolelog) console.log("Data:\n" + data);
+        } else {
+            callback(null, null);
+           // if (consolelog) console.log("Error:\n" + error);
+        }
+    })
+}
+
 if (re2.test(url) && i1 > 0 && i2 > i1) {
     try {
         var strr = body.substring(i1, i2 + 1);
@@ -236,15 +257,16 @@ if (re2.test(url) && i1 > 0 && i2 > i1) {
         } else if (/ysgc/.test(url)) {
            // json.url = unescape(base64decode(json.url));
             console.log(json.url);
+	    body = ysgc("https://jiexi.ysgc.xyz/?url=" + json.url);
 			//headers.Location = "https://jiexi.ysgc.xyz/?url=" + json.url;
-			headers.Location = "https://jiexi.ysgc.xyz/duoduo/?url=" + json.url;
+			//headers.Location = "https://jiexi.ysgc.xyz/duoduo/?url=" + json.url;
             //if (json.from == "duoduozy") {
             //    headers.Location = "https://jiexi.ysgc.xyz/?url=" + json.url;
            // } else {
             //    headers.Location = "https://jiexi.ysgc.xyz/?url=" + json.url;
            // }
             $done({
-                status, headers, body
+                body
             });
         } else {
             $done({});
