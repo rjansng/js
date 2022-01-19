@@ -1,3 +1,4 @@
+@@ -1,261 +1,261 @@
 const body = $response.body;
 const url = $request.url;
 let headers = $response.headers;
@@ -234,37 +235,18 @@ if (re2.test(url) && i1 > 0 && i2 > i1) {
         } else if (/gimy/.test(url)) {
             str2 = 'jcplayer';
         } else if (/ysgc/.test(url)) {
-            // json.url = unescape(base64decode(json.url));
-            //headers['Referer'] = 'https://www.ysgc.cc/';
-            //headers.Location = "https://jiexi.ysgc.xyz/duoduo/?url=" + json.url;
-            const option = {
-                url: `https://jiexi.ysgc.xyz/duoduo/?url=` + json.url,
-                headers: {
-                    'Connection': 'keep-alive',
-                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36',
-                    'Accept': '*/*',
-					'Referer': 'https://www.ysgc.cc/',
-                    'Accept-Language': 'zh-CN,zh;q=0.9',
-                },
-                timeout: 2000
-            };
 
-            $.get(option, (err, rsp, data) => {
-                if (err) {
-                    $.log(`Error:${err}`);
-                    callback("");
-                    return;
-                }
-				body = data;
-				 console.log(body);
-            });
-
-
+           // json.url = unescape(base64decode(json.url));
+            console.log(json.url);
+			headers.Location = "https://jiexi.ysgc.xyz/duoduo/?url=" + json.url;
+	headers: {
+            "Referer": "https://www.ysgc.cc/"
+        }
             //if (json.from == "duoduozy") {
             //    headers.Location = "https://jiexi.ysgc.xyz/?url=" + json.url;
-            // } else {
+           // } else {
             //    headers.Location = "https://jiexi.ysgc.xyz/?url=" + json.url;
-            // }
+           // }
             $done({
                 status, headers, body
             });
