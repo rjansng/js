@@ -234,13 +234,10 @@ if (re2.test(url) && i1 > 0 && i2 > i1) {
         } else if (/gimy/.test(url)) {
             str2 = 'jcplayer';
         } else if (/ysgc/.test(url)) {
-
            // json.url = unescape(base64decode(json.url));
             console.log(json.url);
+			//headers.Location = "https://jiexi.ysgc.xyz/?url=" + json.url;
 			headers.Location = "https://jiexi.ysgc.xyz/duoduo/?url=" + json.url;
-	headers: {
-            "Referer": "https://www.ysgc.cc/"
-        }
             //if (json.from == "duoduozy") {
             //    headers.Location = "https://jiexi.ysgc.xyz/?url=" + json.url;
            // } else {
