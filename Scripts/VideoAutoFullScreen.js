@@ -1,3 +1,4 @@
+const $ = new Env()
 const body = $response.body;
 const url = $request.url;
 let headers = $response.headers;
@@ -12,183 +13,18 @@ if (/ysgc/.test(url)) {
 }
 var i1 = body.indexOf(startStr) + startStr.length;
 var i2 = body.indexOf('}', i1);
-var base64EncodeChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
-var base64DecodeChars = new Array(-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 62, -1, -1, -1, 63, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, -1, -1, -1, -1, -1, -1, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, -1, -1, -1, -1, -1, -1, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, -1, -1, -1, -1, -1);
-
-function base64encode(str) {
-    var out, i, len;
-    var c1, c2, c3;
-    len = str.length;
-    i = 0;
-    out = "";
-    while (i < len) {
-        c1 = str.charCodeAt(i++) & 0xff;
-        if (i == len) {
-            out += base64EncodeChars.charAt(c1 >> 2);
-            out += base64EncodeChars.charAt((c1 & 0x3) << 4);
-            out += "==";
-            break
-        }
-        c2 = str.charCodeAt(i++);
-        if (i == len) {
-            out += base64EncodeChars.charAt(c1 >> 2);
-            out += base64EncodeChars.charAt(((c1 & 0x3) << 4) | ((c2 & 0xF0) >> 4));
-            out += base64EncodeChars.charAt((c2 & 0xF) << 2);
-            out += "=";
-            break
-        }
-        c3 = str.charCodeAt(i++);
-        out += base64EncodeChars.charAt(c1 >> 2);
-        out += base64EncodeChars.charAt(((c1 & 0x3) << 4) | ((c2 & 0xF0) >> 4));
-        out += base64EncodeChars.charAt(((c2 & 0xF) << 2) | ((c3 & 0xC0) >> 6));
-        out += base64EncodeChars.charAt(c3 & 0x3F)
-    }
-    return out
-}
-
-function base64decode(str) {
-    var c1, c2, c3, c4;
-    var i, len, out;
-    len = str.length;
-    i = 0;
-    out = "";
-    while (i < len) {
-        do {
-            c1 = base64DecodeChars[str.charCodeAt(i++) & 0xff]
-        } while (i < len && c1 == -1);
-        if (c1 == -1) break;
-        do {
-            c2 = base64DecodeChars[str.charCodeAt(i++) & 0xff]
-        } while (i < len && c2 == -1);
-        if (c2 == -1) break;
-        out += String.fromCharCode((c1 << 2) | ((c2 & 0x30) >> 4));
-        do {
-            c3 = str.charCodeAt(i++) & 0xff;
-            if (c3 == 61) return out;
-            c3 = base64DecodeChars[c3]
-        } while (i < len && c3 == -1);
-        if (c3 == -1) break;
-        out += String.fromCharCode(((c2 & 0XF) << 4) | ((c3 & 0x3C) >> 2));
-        do {
-            c4 = str.charCodeAt(i++) & 0xff;
-            if (c4 == 61) return out;
-            c4 = base64DecodeChars[c4]
-        } while (i < len && c4 == -1);
-        if (c4 == -1) break;
-        out += String.fromCharCode(((c3 & 0x03) << 6) | c4)
-    }
-    return out
-}
-
-function utf16to8(str) {
-    var out, i, len, c;
-    out = "";
-    len = str.length;
-    for (i = 0; i < len; i++) {
-        c = str.charCodeAt(i);
-        if ((c >= 0x0001) && (c <= 0x007F)) {
-            out += str.charAt(i)
-        } else if (c > 0x07FF) {
-            out += String.fromCharCode(0xE0 | ((c >> 12) & 0x0F));
-            out += String.fromCharCode(0x80 | ((c >> 6) & 0x3F));
-            out += String.fromCharCode(0x80 | ((c >> 0) & 0x3F))
-        } else {
-            out += String.fromCharCode(0xC0 | ((c >> 6) & 0x1F));
-            out += String.fromCharCode(0x80 | ((c >> 0) & 0x3F))
-        }
-    }
-    return out
-}
-
-function utf8to16(str) {
-    var out, i, len, c;
-    var char2, char3;
-    out = "";
-    len = str.length;
-    i = 0;
-    while (i < len) {
-        c = str.charCodeAt(i++);
-        switch (c >> 4) {
-        case 0:
-        case 1:
-        case 2:
-        case 3:
-        case 4:
-        case 5:
-        case 6:
-        case 7:
-            out += str.charAt(i - 1);
-            break;
-        case 12:
-        case 13:
-            char2 = str.charCodeAt(i++);
-            out += String.fromCharCode(((c & 0x1F) << 6) | (char2 & 0x3F));
-            break;
-        case 14:
-            char2 = str.charCodeAt(i++);
-            char3 = str.charCodeAt(i++);
-            out += String.fromCharCode(((c & 0x0F) << 12) | ((char2 & 0x3F) << 6) | ((char3 & 0x3F) << 0));
-            break
-        }
-    }
-    return out
-}
-function tool() {
-
-    const write = (value, key) => {
-        $persistentStore.write(value, key)
-    }
-    const read = (key) => {
-        return $persistentStore.read(key)
-    }
-    const adapterStatus = (response) => {
-        if (response) {
-            if (response.status) {
-                response["statusCode"] = response.status
-            } else if (response.statusCode) {
-                response["status"] = response.statusCode
-            }
-        }
-        return response
-    }
-    const get = (options, callback) => {
-        $httpClient.get(options, (error, response, body) => {
-            callback(error, adapterStatus(response), body)
-        })
-    }
-    const post = (options, callback) => {
-        $httpClient.post(options, (error, response, body) => {
-            callback(error, adapterStatus(response), body)
-        })
-    }
-    return {
-        write, read, get, post
-    }
-}
-
-const $tool = tool();
 
 function ysgc(search_url) {
-    const options = {
+   const options = {
         url: search_url,
         headers: {
             "Content-Type": "application/x-www-form-urlencoded;charset=utf-8",
             "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 13_1_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 - mmbWebBrowse - ios",
-	     Referer: "https://www.ysgc.cc/"
+       Referer: "https://www.ysgc.cc/"
         }
     }
-    $tool.get(options, function (error, response, data) {
-        if (!error) {
-	    body=data;
- 	    $done({
-                body
-            });
-          //  if (consolelog) console.log("Data:\n" + data);
-        } else {
-            callback(null, null);
-           // if (consolelog) console.log("Error:\n" + error);
-        }
-    })
+	$.get(options, (err, resp, data) => {$persistentStore.write(data, 'ysgc');
+	})
 }
 
 if (re2.test(url) && i1 > 0 && i2 > i1) {
@@ -205,17 +41,21 @@ if (re2.test(url) && i1 > 0 && i2 > i1) {
         } else if (/gimy/.test(url)) {
             str2 = 'jcplayer';
         } else if (/ysgc/.test(url)) {
-           // json.url = unescape(base64decode(json.url));
-            console.log(json.url);
-	    ysgc("https://jiexi.ysgc.xyz/?url=" + json.url);
-	    //body = ysgc("https://jiexi.ysgc.xyz/?url=" + json.url);
-			//headers.Location = "https://jiexi.ysgc.xyz/?url=" + json.url;
-			//headers.Location = "https://jiexi.ysgc.xyz/duoduo/?url=" + json.url;
+            // json.url = unescape(base64decode(json.url));
+         
+            ysgc("https://jiexi.ysgc.xyz/duoduo/?url=" + json.url);
+		body = $persistentStore.write(data, 'ysgc');
+ 	    $done({
+                body
+            });
+            //body = ysgc("https://jiexi.ysgc.xyz/?url=" + json.url);
+            //headers.Location = "https://jiexi.ysgc.xyz/?url=" + json.url;
+            //headers.Location = "https://jiexi.ysgc.xyz/duoduo/?url=" + json.url;
             //if (json.from == "duoduozy") {
             //    headers.Location = "https://jiexi.ysgc.xyz/?url=" + json.url;
-           // } else {
+            // } else {
             //    headers.Location = "https://jiexi.ysgc.xyz/?url=" + json.url;
-           // }
+            // }
         } else {
             $done({});
         }
@@ -230,3 +70,9 @@ if (re2.test(url) && i1 > 0 && i2 > i1) {
 $done({
     status, headers, body
 });
+
+
+
+
+// prettier-ignore
+function Env(t,e){"undefined"!=typeof process&&JSON.stringify(process.env).indexOf("GITHUB")>-1&&process.exit(0);class s{constructor(t){this.env=t}send(t,e="GET"){t="string"==typeof t?{url:t}:t;let s=this.get;return"POST"===e&&(s=this.post),new Promise((e,i)=>{s.call(this,t,(t,s,r)=>{t?i(t):e(s)})})}get(t){return this.send.call(this.env,t)}post(t){return this.send.call(this.env,t,"POST")}}return new class{constructor(t,e){this.name=t,this.http=new s(this),this.data=null,this.dataFile="box.dat",this.logs=[],this.isMute=!1,this.isNeedRewrite=!1,this.logSeparator="\n",this.startTime=(new Date).getTime(),Object.assign(this,e),this.log("",`🔔${this.name}, 开始!`)}isNode(){return"undefined"!=typeof module&&!!module.exports}isQuanX(){return"undefined"!=typeof $task}isSurge(){return"undefined"!=typeof $httpClient&&"undefined"==typeof $loon}isLoon(){return"undefined"!=typeof $loon}toObj(t,e=null){try{return JSON.parse(t)}catch{return e}}toStr(t,e=null){try{return JSON.stringify(t)}catch{return e}}getjson(t,e){let s=e;const i=this.getdata(t);if(i)try{s=JSON.parse(this.getdata(t))}catch{}return s}setjson(t,e){try{return this.setdata(JSON.stringify(t),e)}catch{return!1}}getScript(t){return new Promise(e=>{this.get({url:t},(t,s,i)=>e(i))})}runScript(t,e){return new Promise(s=>{let i=this.getdata("@chavy_boxjs_userCfgs.httpapi");i=i?i.replace(/\n/g,"").trim():i;let r=this.getdata("@chavy_boxjs_userCfgs.httpapi_timeout");r=r?1*r:20,r=e&&e.timeout?e.timeout:r;const[o,h]=i.split("@"),n={url:`http://${h}/v1/scripting/evaluate`,body:{script_text:t,mock_type:"cron",timeout:r},headers:{"X-Key":o,Accept:"*/*"}};this.post(n,(t,e,i)=>s(i))}).catch(t=>this.logErr(t))}loaddata(){if(!this.isNode())return{};{this.fs=this.fs?this.fs:require("fs"),this.path=this.path?this.path:require("path");const t=this.path.resolve(this.dataFile),e=this.path.resolve(process.cwd(),this.dataFile),s=this.fs.existsSync(t),i=!s&&this.fs.existsSync(e);if(!s&&!i)return{};{const i=s?t:e;try{return JSON.parse(this.fs.readFileSync(i))}catch(t){return{}}}}}writedata(){if(this.isNode()){this.fs=this.fs?this.fs:require("fs"),this.path=this.path?this.path:require("path");const t=this.path.resolve(this.dataFile),e=this.path.resolve(process.cwd(),this.dataFile),s=this.fs.existsSync(t),i=!s&&this.fs.existsSync(e),r=JSON.stringify(this.data);s?this.fs.writeFileSync(t,r):i?this.fs.writeFileSync(e,r):this.fs.writeFileSync(t,r)}}lodash_get(t,e,s){const i=e.replace(/\[(\d+)\]/g,".$1").split(".");let r=t;for(const t of i)if(r=Object(r)[t],void 0===r)return s;return r}lodash_set(t,e,s){return Object(t)!==t?t:(Array.isArray(e)||(e=e.toString().match(/[^.[\]]+/g)||[]),e.slice(0,-1).reduce((t,s,i)=>Object(t[s])===t[s]?t[s]:t[s]=Math.abs(e[i+1])>>0==+e[i+1]?[]:{},t)[e[e.length-1]]=s,t)}getdata(t){let e=this.getval(t);if(/^@/.test(t)){const[,s,i]=/^@(.*?)\.(.*?)$/.exec(t),r=s?this.getval(s):"";if(r)try{const t=JSON.parse(r);e=t?this.lodash_get(t,i,""):e}catch(t){e=""}}return e}setdata(t,e){let s=!1;if(/^@/.test(e)){const[,i,r]=/^@(.*?)\.(.*?)$/.exec(e),o=this.getval(i),h=i?"null"===o?null:o||"{}":"{}";try{const e=JSON.parse(h);this.lodash_set(e,r,t),s=this.setval(JSON.stringify(e),i)}catch(e){const o={};this.lodash_set(o,r,t),s=this.setval(JSON.stringify(o),i)}}else s=this.setval(t,e);return s}getval(t){return this.isSurge()||this.isLoon()?$persistentStore.read(t):this.isQuanX()?$prefs.valueForKey(t):this.isNode()?(this.data=this.loaddata(),this.data[t]):this.data&&this.data[t]||null}setval(t,e){return this.isSurge()||this.isLoon()?$persistentStore.write(t,e):this.isQuanX()?$prefs.setValueForKey(t,e):this.isNode()?(this.data=this.loaddata(),this.data[e]=t,this.writedata(),!0):this.data&&this.data[e]||null}initGotEnv(t){this.got=this.got?this.got:require("got"),this.cktough=this.cktough?this.cktough:require("tough-cookie"),this.ckjar=this.ckjar?this.ckjar:new this.cktough.CookieJar,t&&(t.headers=t.headers?t.headers:{},void 0===t.headers.Cookie&&void 0===t.cookieJar&&(t.cookieJar=this.ckjar))}get(t,e=(()=>{})){t.headers&&(delete t.headers["Content-Type"],delete t.headers["Content-Length"]),this.isSurge()||this.isLoon()?(this.isSurge()&&this.isNeedRewrite&&(t.headers=t.headers||{},Object.assign(t.headers,{"X-Surge-Skip-Scripting":!1})),$httpClient.get(t,(t,s,i)=>{!t&&s&&(s.body=i,s.statusCode=s.status),e(t,s,i)})):this.isQuanX()?(this.isNeedRewrite&&(t.opts=t.opts||{},Object.assign(t.opts,{hints:!1})),$task.fetch(t).then(t=>{const{statusCode:s,statusCode:i,headers:r,body:o}=t;e(null,{status:s,statusCode:i,headers:r,body:o},o)},t=>e(t))):this.isNode()&&(this.initGotEnv(t),this.got(t).on("redirect",(t,e)=>{try{if(t.headers["set-cookie"]){const s=t.headers["set-cookie"].map(this.cktough.Cookie.parse).toString();s&&this.ckjar.setCookieSync(s,null),e.cookieJar=this.ckjar}}catch(t){this.logErr(t)}}).then(t=>{const{statusCode:s,statusCode:i,headers:r,body:o}=t;e(null,{status:s,statusCode:i,headers:r,body:o},o)},t=>{const{message:s,response:i}=t;e(s,i,i&&i.body)}))}post(t,e=(()=>{})){if(t.body&&t.headers&&!t.headers["Content-Type"]&&(t.headers["Content-Type"]="application/x-www-form-urlencoded"),t.headers&&delete t.headers["Content-Length"],this.isSurge()||this.isLoon())this.isSurge()&&this.isNeedRewrite&&(t.headers=t.headers||{},Object.assign(t.headers,{"X-Surge-Skip-Scripting":!1})),$httpClient.post(t,(t,s,i)=>{!t&&s&&(s.body=i,s.statusCode=s.status),e(t,s,i)});else if(this.isQuanX())t.method="POST",this.isNeedRewrite&&(t.opts=t.opts||{},Object.assign(t.opts,{hints:!1})),$task.fetch(t).then(t=>{const{statusCode:s,statusCode:i,headers:r,body:o}=t;e(null,{status:s,statusCode:i,headers:r,body:o},o)},t=>e(t));else if(this.isNode()){this.initGotEnv(t);const{url:s,...i}=t;this.got.post(s,i).then(t=>{const{statusCode:s,statusCode:i,headers:r,body:o}=t;e(null,{status:s,statusCode:i,headers:r,body:o},o)},t=>{const{message:s,response:i}=t;e(s,i,i&&i.body)})}}time(t,e=null){const s=e?new Date(e):new Date;let i={"M+":s.getMonth()+1,"d+":s.getDate(),"H+":s.getHours(),"m+":s.getMinutes(),"s+":s.getSeconds(),"q+":Math.floor((s.getMonth()+3)/3),S:s.getMilliseconds()};/(y+)/.test(t)&&(t=t.replace(RegExp.$1,(s.getFullYear()+"").substr(4-RegExp.$1.length)));for(let e in i)new RegExp("("+e+")").test(t)&&(t=t.replace(RegExp.$1,1==RegExp.$1.length?i[e]:("00"+i[e]).substr((""+i[e]).length)));return t}msg(e=t,s="",i="",r){const o=t=>{if(!t)return t;if("string"==typeof t)return this.isLoon()?t:this.isQuanX()?{"open-url":t}:this.isSurge()?{url:t}:void 0;if("object"==typeof t){if(this.isLoon()){let e=t.openUrl||t.url||t["open-url"],s=t.mediaUrl||t["media-url"];return{openUrl:e,mediaUrl:s}}if(this.isQuanX()){let e=t["open-url"]||t.url||t.openUrl,s=t["media-url"]||t.mediaUrl;return{"open-url":e,"media-url":s}}if(this.isSurge()){let e=t.url||t.openUrl||t["open-url"];return{url:e}}}};if(this.isMute||(this.isSurge()||this.isLoon()?$notification.post(e,s,i,o(r)):this.isQuanX()&&$notify(e,s,i,o(r))),!this.isMuteLog){let t=["","==============📣系统通知📣=============="];t.push(e),s&&t.push(s),i&&t.push(i),console.log(t.join("\n")),this.logs=this.logs.concat(t)}}log(...t){t.length>0&&(this.logs=[...this.logs,...t]),console.log(t.join(this.logSeparator))}logErr(t,e){const s=!this.isSurge()&&!this.isQuanX()&&!this.isLoon();s?this.log("",`❗️${this.name}, 错误!`,t.stack):this.log("",`❗️${this.name}, 错误!`,t)}wait(t){return new Promise(e=>setTimeout(e,t))}done(t={}){const e=(new Date).getTime(),s=(e-this.startTime)/1e3;this.log("",`🔔${this.name}, 结束! 🕛 ${s} 秒`),this.log(),(this.isSurge()||this.isQuanX()||this.isLoon())&&$done(t)}}(t,e)}
