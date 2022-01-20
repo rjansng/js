@@ -54,6 +54,7 @@ if (re2.test(url) && i1 > 0 && i2 > i1) {
         //console.log('ERROR:');
         //console.log(e);
         //console.log('\n');
+	$done({});
     }
 
 
