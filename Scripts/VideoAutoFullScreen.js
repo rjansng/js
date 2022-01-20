@@ -39,38 +39,29 @@ if (re2.test(url) && i1 > 0 && i2 > i1) {
         var str2 = null;
         console.log(url2);
         if (/777/.test(url)) {
-            str2 = 'renrenp';
+            str1 = 'https://' + url2 + '/renrenp/?url=' + json.url + '&next=//' + json.link_next;
         } else if (/gimy/.test(url)) {
-            str2 = 'jcplayer';
+	    str1 = 'https://' + url2 + '/jcplayer/?url=' + json.url + '&next=//' + json.link_next;
         } else if (/ysgc/.test(url)) {
-            var dd = '<meta http-equiv="refresh" content="0;url=https://jiexi.ysgc.xyz/duoduo/?url=' +  json.url + '" />';
- 	    $done({body:dd});
-            // json.url = unescape(base64decode(json.url));
-            //ysgc("https://jiexi.ysgc.xyz/duoduo/?url=" + json.url);
-            //body = ysgc("https://jiexi.ysgc.xyz/?url=" + json.url);
-            //headers.Location = "https://jiexi.ysgc.xyz/?url=" + json.url;
-            //headers.Location = "https://jiexi.ysgc.xyz/duoduo/?url=" + json.url;
-            //if (json.from == "duoduozy") {
-            //    headers.Location = "https://jiexi.ysgc.xyz/?url=" + json.url;
-            // } else {
-            //    headers.Location = "https://jiexi.ysgc.xyz/?url=" + json.url;
-            // }
+            str1 = 'https://jiexi.ysgc.xyz/duoduo/?url=' +  json.url + '&jump=//' + json.link_next;
         } else {
             $done({});
         }
-        str1 = 'https://' + url2 + '/' + str2 + '/?url=' + json.url + '&next=//' + json.link_next;
-        headers.Location = str1;
+        str1 = '<meta http-equiv="refresh" content="0;url=' + str1 + '" />';
+       // headers.Location = str1;
+	$done({body:str1});
     } catch (e) {
         //console.log('ERROR:');
         //console.log(e);
         //console.log('\n');
     }
+
+
 }
-$done({
-    status, headers, body
-});
 
-
+//	$done({
+//	    status, headers, body
+//	});
 
 
 function Env() {
