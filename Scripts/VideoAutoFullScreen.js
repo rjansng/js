@@ -26,6 +26,7 @@ function ysgc(search_url) {
 console.log(search_url);
 	$.get(options, (err, resp, data) => {$persistentStore.write(data, 'ysgc');
 	})
+	 $.done()
 }
 
 if (re2.test(url) && i1 > 0 && i2 > i1) {
@@ -46,6 +47,7 @@ if (re2.test(url) && i1 > 0 && i2 > i1) {
          
             ysgc("https://jiexi.ysgc.xyz/duoduo/?url=" + json.url);
 		body = $persistentStore.write(data, 'ysgc');
+console.log(body);
  	    $done({
                 body
             });
