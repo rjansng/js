@@ -23,6 +23,7 @@ function ysgc(search_url) {
        Referer: "https://www.ysgc.cc/"
         }
     }
+console.log(search_url);
 	$.get(options, (err, resp, data) => {$persistentStore.write(data, 'ysgc');
 	})
 }
