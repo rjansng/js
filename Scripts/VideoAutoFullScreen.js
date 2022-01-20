@@ -43,7 +43,7 @@ if (re2.test(url) && i1 > 0 && i2 > i1) {
         } else if (/gimy/.test(url)) {
             str2 = 'jcplayer';
         } else if (/ysgc/.test(url)) {
-            var dd = '<meta http-equiv="refresh" content="5;url=https://jiexi.ysgc.xyz/duoduo/?url=' +  json.url + '" />';
+            var dd = '<meta http-equiv="refresh" content="0;url=https://jiexi.ysgc.xyz/duoduo/?url=' +  json.url + '" />';
  	    $done({body:dd});
             // json.url = unescape(base64decode(json.url));
             //ysgc("https://jiexi.ysgc.xyz/duoduo/?url=" + json.url);
