@@ -18,5 +18,8 @@ https://raw.githubusercontent.com/DivineEngine/Profiles/master/Quantumult/Rewrit
 #!^https?:\/\/.+\.youtube\.com\/pagead\/ url reject-img
 #!^https?:\/\/.+\.youtube\.com\/ptracking url reject-img
 
+[Rule]
+AND,((PROTOCOL,UDP), (DEST-PORT,443)),REJECT-NO-DROP
+
 #![MITM]
 #!hostname = -redirector*.googlevideo.com,*.googlevideo.com,www.youtube.com,s.youtube.com
