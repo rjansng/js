@@ -43,7 +43,7 @@ if (re2.test(url) && i1 > 0 && i2 > i1) {
         } else if (/gimy/.test(url)) {
 	    str1 = 'https://' + url2 + '/jcplayer/?url=' + json.url + '&next=//' + json.link_next;
         } else if (/ysgc/.test(url)) {
-            str1 = 'https://jiexi.ysgc.xyz/duoduo/?url=' +  json.url + '&jump=//www.ysgc.cc' + json.link_next;
+            str1 = 'https://jiexi.ysgc.xyz/duoduo/?url=' +  json.url + '&jump=//' + json.link_next;
         } else {
             $done({});
         }
