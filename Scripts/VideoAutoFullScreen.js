@@ -39,9 +39,9 @@ if (re2.test(url) && i1 > 0 && i2 > i1) {
         var str2 = null;
         console.log(url2);
         if (/777/.test(url)) {
-            str1 = 'https://' + url2 + '/renrenp/?url=' + json.url + '&next=//' + json.link_next;
+            str1 = 'https://' + url2 + '/renrenp/?url=' + json.url + '&next=//777tv.app' + json.link_next;
         } else if (/gimy/.test(url)) {
-	    str1 = 'https://' + url2 + '/jcplayer/?url=' + json.url + '&next=//' + json.link_next;
+	    str1 = 'https://' + url2 + '/jcplayer/?url=' + json.url + '&next=//gimy.app' + json.link_next;
         } else if (/ysgc/.test(url)) {
             str1 = 'https://jiexi.ysgc.xyz/duoduo/?url=' +  json.url + '&jump=//' + json.link_next;
         } else {
