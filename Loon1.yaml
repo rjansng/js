@@ -87,6 +87,8 @@ https://www.sdany.org/usjs/comic.js, tag=comic, enabled=true
 https://www.sdany.org/usjs/speedvideo2.conf, tag=VideoSandy, enabled=false
 https://www.sdany.org/usjs/VideoAutoFullScreen_777tv.conf, tag=VideoSandy1, enabled=false
 https://raw.githubusercontent.com/rjansng/js/master/plugin/videoscript.plugin, tag=videoscript, enabled=false
+https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Plugin/Dualsub.plugin, tag=Dualsub, enabled=false
+
 # https://raw.githubusercontent.com/rjansng/js/master/plugin/mcdonalds.plugin, tag=麥當勞簽到, enabled=true
 
 # https://raw.githubusercontent.com/rjansng/js/master/plugin/rrsp.plugin, tag=人人視頻, enabled=true
