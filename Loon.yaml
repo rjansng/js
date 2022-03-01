@@ -62,7 +62,8 @@ https://raw.githubusercontent.com/app2smile/rules/master/plugin/spotify.plugin, 
 https://raw.githubusercontent.com/jkgtw/Surge/master/Modules/ADList.sgmodule, tag=ADList, enabled=true
 https://raw.githubusercontent.com/rjansng/js/master/plugin/filters.plugin, tag=filters, enabled=true
 https://raw.githubusercontent.com/rjansng/js/master/plugin/manhuaren.plugin, tag=漫畫人, enabled=false
-https://raw.githubusercontent.com/rjansng/js/master/plugin/shopee_checkin.plugin, tag=蝦皮簽到, enabled=false
+https://raw.githubusercontent.com/rjansng/js/master/plugin/shopee_checkin.plugin, tag=蝦皮簽到, enabled=true
+https://raw.githubusercontent.com/rjansng/js/master/plugin/shopee_auto.plugin, tag=蝦皮果園, enabled=true
 https://raw.githubusercontent.com/chiupam/surge/main/Surge/RRTV_SVIP.sgmodule, tag=人人視頻, enabled=false
 https://raw.githubusercontent.com/rjansng/js/master/plugin/mix.plugin, tag=MIX解鎖, enabled=false
 https://raw.githubusercontent.com/rjansng/js/master/plugin/embyUnlocked.plugin, tag=emby解鎖, enabled=false
@@ -72,6 +73,7 @@ https://raw.githubusercontent.com/rjansng/js/master/plugin/vsco.plugin, tag=vsco
 https://raw.githubusercontent.com/rjansng/js/master/plugin/videofullscreen.plugin, tag=VideoFullScreen, enabled=true
 https://raw.githubusercontent.com/rjansng/js/master/plugin/video.plugin, tag=VideoSpeed, enabled=false
 https://www.sdany.org/usjs/speedvideo2.conf, tag=VideoSandy, enabled=false
+https://raw.githubusercontent.com/rjansng/js/master/plugin/mcdonalds.plugin, tag=麥當勞簽到, enabled=false
 [Rule]
 GEOIP,TW,DIRECT
 FINAL,DIRECT
