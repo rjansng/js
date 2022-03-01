@@ -15,4 +15,4 @@ http-request ^https:\/\/mall\.shopee\.tw\/api\/v2\/referral\/get_sharing_data$ s
 http-request ^https:\/\/games\.shopee\.tw\/farm\/api\/orchard\/crop\/water(.*) script-path=https://kinta.ma/surge/scripts/shopee_get_crop.js, requires-body=true
 [MITM]
 enable = true
-hostname = mall.shopee.tw
+hostname = mall.shopee.tw,games.shopee.tw
