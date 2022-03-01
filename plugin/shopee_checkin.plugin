@@ -4,8 +4,15 @@
 [Script]
 cron "58 6 * * *" script-path=https://kinta.ma/surge/scripts/shopee_checkin.js, wake-system=1, timeout=30
 cron "0 7 * * *" script-path=https://kinta.ma/surge/scripts/shopee_luckydraw.js, wake-system=1, timeout=30
-http-request ^https:\/\/mall\.shopee\.tw\/api\/v2\/referral\/get_sharing_data$ script-path=https://kinta.ma/surge/scripts/shopee_token.js
+cron "10 0,4,8 * * *" script-path=https://kinta.ma/surge/scripts/shopee_water_checkin.js, wake-system=1, timeout=5
+cron "8 0 * * *" script-path=https://kinta.ma/surge/scripts/shopee_water_mission.js, wake-system=1, timeout=30
+cron "4 */3 * * *" script-path=https://kinta.ma/surge/scripts/shopee_auto_water.js, wake-system=1, timeout=5
+cron "58 23 * * *" script-path=https://kinta.ma/surge/scripts/shopee_water_signin_bundle.js, wake-system=1, timeout=5
+cron "58 23 * * *" script-path=https://kinta.ma/surge/scripts/shopee_water_mission_claim.js, wake-system=1, timeout=15
 
+
+http-request ^https:\/\/mall\.shopee\.tw\/api\/v2\/referral\/get_sharing_data$ script-path=https://kinta.ma/surge/scripts/shopee_token.js
+http-request ^https:\/\/games\.shopee\.tw\/farm\/api\/orchard\/crop\/water(.*) script-path=https://kinta.ma/surge/scripts/shopee_get_crop.js, requires-body=true
 [MITM]
 enable = true
 hostname = mall.shopee.tw
