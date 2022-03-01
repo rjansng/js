@@ -5,11 +5,9 @@
 cron "3 7 * * *" script-path=https://kinta.ma/surge/scripts/mcdonalds_checkin.js, wake-system=1, timeout=30
 cron "4 7 * * *" script-path=https://kinta.ma/surge/scripts/mcdonalds_luckydraw.js, wake-system=1, timeout=30
 cron "5 7 * * 3,6" script-path=https://kinta.ma/surge/scripts/mcdonalds_mediacheckin.js, wake-system=1, timeout=30
+
+script-path=https://kinta.ma/surge/scripts/mcdonalds_set_token.js
 http-request ^https:\/\/mcdapi\.mcddailyapp\.com\.tw\/McDonaldAPI\/member\/updateRegisterInfo$ script-path=https://kinta.ma/surge/scripts/mcdonalds_token.js
-
-#mcdonalds_set_token.js = script-path=https://kinta.ma/surge/scripts/mcdonalds_set_token.js,script-update-interval=-1
-
-
 [MITM]
 enable = true
 hostname = mcdapi.mcddailyapp.com.tw
