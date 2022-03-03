@@ -4,10 +4,10 @@ const url = $request.url;
 let headers = $response.headers;
 let status = $response.status;
 status = 302;
-var re2 = new RegExp(/.+\/((777tv|gimy|www.ysgc|gimytv|www.tkys)\.(app|me|cc|com|tv))\/.+\.html.*$/i);
+var re2 = new RegExp(/.+\/((777tv|gimy|www.ysgc|gimytv|www.tkys|vipmv)\.(app|me|cc|com|tv|co))\/.+\.html.*$/i);
 
 var startStr = 'var player_data='; //var player_aaaa
-if ((/ysgc/.test(url)) || (/tkys/.test(url))) {
+if ((/ysgc/.test(url)) || (/tkys/.test(url)) || (/vipmv/.test(url))) {
     startStr = 'var player_aaaa=';
     console.log(startStr);
 }
@@ -45,6 +45,8 @@ if (re2.test(url) && i1 > 0 && i2 > i1) {
             str1 = 'https://' + url2 + '/jcplayer/?url=' + json.url + '&next=//gimy.app' + json.link_next;
         } else if (/ysgc/.test(url)) {
             str1 = 'https://jiexi.ysgc.xyz/duoduo/?url=' + json.url + '&jump=//' + json.link_next;
+        } else if (/vipmv/.test(url)) {
+            str1 = 'https://vip123kan.vip/m3u8.php?url=' + json.url + '&jump=//' + json.link_next;
         } else if (/tkys/.test(url)) {
 	    var str3 = null;
             switch (json.from) {
