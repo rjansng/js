@@ -1,5 +1,5 @@
 [MITM]
-hostname = 777tv.me,777tv.app,gimy.app,www.ysgc.cc,gimytv.com
+hostname = 777tv.me,777tv.app,gimy.app,www.ysgc.cc,gimytv.com,www.tkys.tv
 
 [Script]
-http-response ^https?:\/\/(777tv|gimy|www.ysgc|gimytv)\.(app|me|cc|com)\/.+\.html.* script-path=https://raw.githubusercontent.com/rjansng/js/master/Scripts/VideoAutoFullScreen.js, requires-body=true, max-size=-1, timeout=10, tag=VideoAutoFullScreen
+http-response ^https?:\/\/(777tv|gimy|www.ysgc|gimytv|www.tkys)\.(app|me|cc|com|tv)\/.+\.html.* script-path=https://raw.githubusercontent.com/rjansng/js/master/Scripts/VideoAutoFullScreen.js, requires-body=true, max-size=-1, timeout=10, tag=VideoAutoFullScreen
