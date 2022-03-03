@@ -7,7 +7,7 @@ status = 302;
 var re2 = new RegExp(/.+\/((777tv|gimy|www.ysgc|gimytv|www.tkys)\.(app|me|cc|com|tv))\/.+\.html.*$/i);
 
 var startStr = 'var player_data='; //var player_aaaa
-if (/ysgc/.test(url)) {
+if (/ysgc/.test(url)) || (/tkys/.test(url))  {
     startStr = 'var player_aaaa=';
     console.log(startStr);
 }
