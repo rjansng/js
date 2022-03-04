@@ -44,6 +44,7 @@ enable = true
 
 [Remote Rewrite]
 http://limbopro.com/Adblock4limbo.conf, tag=毒奶特供, enabled=true
+https://raw.githubusercontent.com/jkgtw/Surge/master/Modules/LINE-ADs.sgmodule, policy=REJECT, tag=LINE NoAD, enabled=true
 
 
 [Script] 
