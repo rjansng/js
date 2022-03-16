@@ -57,10 +57,11 @@ if (re2.test(url) && i1 > 0 && i2 > i1) {
                 str3 = 'https:\/\/www.x-n.cc\/api.php?url=';
                 break;
             default:
-                 str3 = 'https://jxqd.tkys.tv/dnmd.php?url=';
+                 //str3 = 'https://jxqd.tkys.tv/dnmd.php?url=';
+		str3 = 'https://gimy.app/jcplayer/?url=';
             }
 
-            str1 = str3 + json.url + '&jump=//' + json.link_next;
+            str1 = str3 + json.url + '&next=//' + json.link_next;
         } else {
             $done({});
         }
