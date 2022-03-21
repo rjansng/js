@@ -9,7 +9,7 @@ var re2 = new RegExp(/.+\/((777tv|gimy|www.ysgc|gimytv|www.tkys|vipmv)\.(app|me|
 var startStr = 'var player_data='; //var player_aaaa
 if ((/ysgc/.test(url)) || (/tkys/.test(url)) || (/vipmv/.test(url))) {
     startStr = 'var player_aaaa=';
-    console.log(startStr);
+   // console.log(startStr);
 }
 var i1 = body.indexOf(startStr) + startStr.length;
 var i2 = body.indexOf('}', i1);
@@ -67,6 +67,7 @@ if (re2.test(url) && i1 > 0 && i2 > i1) {
         }
         str1 = '<meta http-equiv="refresh" content="0;url=' + str1 + '" />';
         // headers.Location = str1;
+	console.log(str1);
         $done({
             body: str1
         });
