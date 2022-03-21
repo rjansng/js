@@ -35,7 +35,7 @@ if (re2.test(url) && i1 > 0 && i2 > i1) {
         var strr = body.substring(i1, i2 + 1);
         var json = JSON.parse(strr);
         var url2 = url.replace(re2, '$1');
-        //console.log('URL2:' + url2 + '\n');
+        console.log('URL2:' + url2 + '\n');
         var str1 = null;
         var str2 = null;
         console.log(url2);
