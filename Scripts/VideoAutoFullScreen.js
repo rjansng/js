@@ -4,7 +4,7 @@ const url = $request.url;
 let headers = $response.headers;
 let status = $response.status;
 status = 302;
-var re2 = new RegExp(/.+\/((777tv|gimy|ysgc|gimytv|www.tkys|vipmv)\.(app|me|cc|com|tv|co))\/.+\.html.*$/i);
+var re2 = new RegExp(/.+\/((777tv|gimy|www.ysgc|gimytv|www.tkys|vipmv)\.(app|me|cc|com|tv|co))\/.+\.html/i);
 
 var startStr = 'var player_data='; //var player_aaaa
 if ((/ysgc/.test(url)) || (/tkys/.test(url)) || (/vipmv/.test(url))) {
@@ -38,7 +38,7 @@ if (re2.test(url) && i1 > 0 && i2 > i1) {
         console.log('URL2:' + url2 + '\n');
         var str1 = null;
         var str2 = null;
-        console.log(url2);
+        console.log( json.url);
         if (/777/.test(url)) {
             str1 = 'https://' + url2 + '/renrenp/?url=' + json.url + '&next=//777tv.app' + json.link_next;
         } else if (/gimy/.test(url)) {
@@ -66,7 +66,7 @@ console.log(str1);
         } else {
             $done({});
         }
-        str1 = '<meta http-equiv="refresh" content="0;url=' + str1 + '" />';
+        str1 = '<meta http-equiv="refresh" content="0;url=' + str1 + '"/>';
         // headers.Location = str1;
 	
         $done({
