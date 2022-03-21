@@ -45,6 +45,7 @@ if (re2.test(url) && i1 > 0 && i2 > i1) {
             str1 = 'https://' + url2 + '/jcplayer/?url=' + json.url + '&next=//gimy.app' + json.link_next;
         } else if (/ysgc/.test(url)) {
             str1 = 'https://p.tjomet.com/duoduo/?url=' + json.url + '&jump=//' + json.link_next;
+console.log(str1);
         } else if (/vipmv/.test(url)) {
             str1 = 'https://vip123kan.vip/m3u8.php?url=' + json.url + '&jump=//' + json.link_next;
         } else if (/tkys/.test(url)) {
@@ -67,7 +68,7 @@ if (re2.test(url) && i1 > 0 && i2 > i1) {
         }
         str1 = '<meta http-equiv="refresh" content="0;url=' + str1 + '" />';
         // headers.Location = str1;
-	console.log(str1);
+	
         $done({
             body: str1
         });
