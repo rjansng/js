@@ -12,7 +12,7 @@ if ((/ysgc/.test(url)) || (/tkys/.test(url)) || (/vipmv/.test(url))) {
    // console.log(startStr);
 }
 var i1 = body.indexOf(startStr) + startStr.length;
-var i2 = body.indexOf('}', i1);
+var i2 = body.indexOf('}<', i1);
 
 function ysgc(search_url) {
     const options = {
