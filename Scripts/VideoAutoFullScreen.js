@@ -7,12 +7,15 @@ status = 302;
 var re2 = new RegExp(/.+\/((777tv|gimy|ysgc|gimytv|www.tkys|vipmv)\.(app|me|cc|com|tv|co))\/.+\.html.*/i);
 
 var startStr = 'var player_data='; //var player_aaaa
+var endStr = '}';
 if ((/ysgc/.test(url)) || (/tkys/.test(url)) || (/vipmv/.test(url))) {
     startStr = 'var player_aaaa=';
+    endStr = '<';
    // console.log(startStr);
 }
+
 var i1 = body.indexOf(startStr) + startStr.length;
-var i2 = body.indexOf('<', i1-1);
+var i2 = body.indexOf(endStr, i1);
 
 function ysgc(search_url) {
     const options = {
@@ -33,7 +36,9 @@ function ysgc(search_url) {
 if (re2.test(url) && i1 > 0 && i2 > i1) {
     try {
         var strr = body.substring(i1, i2 + 1);
-	console.log(strr);
+	if (/ysgc/.test(url)){
+	    strr = strr.replace('<','');	
+	}
         var json = JSON.parse(strr);
         var url2 = url.replace(re2, '$1');
         console.log('URL2:' + url2 + '\n');
