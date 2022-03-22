@@ -33,8 +33,9 @@ function ysgc(search_url) {
 if (re2.test(url) && i1 > 0 && i2 > i1) {
     try {
         var strr = body.substring(i1, i2 + 1);
-	strr= strr.replace('<', '');
 	console.log(strr);
+	strr= strr.replace('<', '');
+	//console.log(strr);
         var json = JSON.parse(strr);
         var url2 = url.replace(re2, '$1');
         console.log('URL2:' + url2 + '\n');
