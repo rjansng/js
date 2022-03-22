@@ -46,7 +46,7 @@ https://raw.githubusercontent.com/jkgtw/Surge/master/Modules/LINE-ADs.sgmodule, 
 
 [Script] 
 enable = true
-http-response (gimy)(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4))).* script-path=https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/surge_gimy.js, requires-body=true, timeout=10, tag=gimy
+
 
 
 [Remote Script]
