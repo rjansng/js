@@ -33,12 +33,13 @@ function ysgc(search_url) {
 if (re2.test(url) && i1 > 0 && i2 > i1) {
     try {
         var strr = body.substring(i1, i2 + 1);
+	console.log(strr);
         var json = JSON.parse(strr);
         var url2 = url.replace(re2, '$1');
         console.log('URL2:' + url2 + '\n');
         var str1 = null;
         var str2 = null;
-        console.log( json.url);
+        //console.log( json.url);
         if (/777/.test(url)) {
             str1 = 'https://' + url2 + '/renrenp/?url=' + json.url + '&next=//777tv.app' + json.link_next;
         } else if (/gimy/.test(url)) {
