@@ -74,7 +74,7 @@ console.log(str1);
         });
     } catch (e) {
         console.log('ERROR:');
-        console.log(e);
+        console.log(e.name + ': ' + e.message);
         console.log('\n');
         $done({});
     }
