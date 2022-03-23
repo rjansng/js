@@ -2,11 +2,11 @@
 #!desc=每天早上自動簽到 & 參加活動。第一次使用先去個人資料那邊按修改，但什麼都不要改，直接儲存就可以獲得 token。 v20211205
 
 [Script]
-cron "3 7 * * *" script-path=https://kinta.ma/surge/scripts/mcdonalds_checkin.js, wake-system=1, timeout=30
-cron "4 7 * * *" script-path=https://kinta.ma/surge/scripts/mcdonalds_luckydraw.js, wake-system=1, timeout=30
-cron "5 7 * * 3,6" script-path=https://kinta.ma/surge/scripts/mcdonalds_mediacheckin.js, wake-system=1, timeout=30
+cron "13 0 * * *" script-path=https://kinta.ma/surge/scripts/mcdonalds_checkin.js, wake-system=1, timeout=5
+cron "14 0 * * *" script-path=https://kinta.ma/surge/scripts/mcdonalds_luckydraw.js, wake-system=1, timeout=10
+cron "14 0 * * 3,6" script-path=https://kinta.ma/surge/scripts/mcdonalds_question.js, wake-system=1, timeout=10
+cron "15 0 * * 3,6" script-path=https://kinta.ma/surge/scripts/mcdonalds_media_checkin.js, wake-system=1, timeout=30
 
-script-path=https://kinta.ma/surge/scripts/mcdonalds_set_token.js
 http-request ^https:\/\/mcdapi\.mcddailyapp\.com\.tw\/McDonaldAPI\/member\/updateRegisterInfo$ script-path=https://kinta.ma/surge/scripts/mcdonalds_token.js
 [MITM]
 enable = true
