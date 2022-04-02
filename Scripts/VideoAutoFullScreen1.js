@@ -36,7 +36,7 @@ var dee = '}';
 var dpp = '';
 var uu = ['777tv.app', '777tv.me', 'gimy.app', 'gimytv.com','ysgc.cc','ysgc.tv','tkys.tv'];
 var dd = [-1, -1, -1, 'player_aaaa', 'player_aaaa', 'player_aaaa'];
-var ss = [-1, -1, 'jcplayer', -1, -1, -1, -1];
+var ss = [-1, -1, 'jcplayer', -1, 'duoduo', 'duoduo', -1];
 var ee = [-1, -1, -1, -1,'<', '<', '<'];
 var nn = ['next', 'next', 'next', 'next','jump', 'jump', 'jump'];
 //var dpp2 = '&jctype=renrenmi';
@@ -88,13 +88,33 @@ for (var i = 0; i < uu.length; i++) {
         if (url2 != null && i1 > 0 && i2 > i1) {
             try {
                 var str = body.substring(i1, i2 + 1);
-                  if (ee[i] != -1) { str = str.replace('<',''); }
+                if (ee[i] != -1) { str = str.replace('<','');
                 if (pc > 0) console.log('STR:' + str + '\n');
-  
+
                 var json = JSON.parse(str);
                 if (pc > 0) console.log('JSON:');
                 if (pc > 0) console.log(json);
                 if (pc > 0) console.log('\n');
+
+ 
+                 if (/ysgc/.test(url)) {
+            	url2 = 'p.tjomet.com';
+                } else if (/tkys/.test(url)) {
+	    dss ='';
+            switch (json.from) {
+            case "ftqp4":case "laodim3u8":case "laodiyun":
+                url2 = 'https://play.tkys.tv/laodi.php';
+                break;
+            case "xg_app_player":
+                url2 = 'https://www.x-n.cc/api.php';
+                break;
+            default:
+                 url2 = 'https://jxqd.tkys.tv/dnmd.php';
+		//str3 = 'https://gimy.app/jcplayer/?url=';
+            }
+        } else {
+         //   $done({});
+        }
 
                 if (pc > 0) console.log('URL2:' + url2 + '\n');
                 var str1 = 'https://' + url2 + '/' + dss + '/?url=' + json.url;
