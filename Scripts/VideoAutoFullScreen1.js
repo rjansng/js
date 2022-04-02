@@ -143,7 +143,7 @@ console.log(str1);
                         + '</style>'
                         + '<script>var p_d='+JSON.stringify(json)+';</script>'
                         + '</head><body>'
-                        + '<video src="' + json.url + '" preload="auto" controls webkit-playsinline playsinline autoplay muted></video>'
+                        + '<video src="' + json.url + '" preload="auto" controls webkit-playsinline playsinline autoplay></video>'
                         + '<script src="//sdany.somee.com/usjs/speedvideo2.js'
                         + '?_=' + (Math.floor(Math.random() * (99999 - 10000 + 1)) + 10000).toString()
                         + '"></script>'
