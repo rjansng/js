@@ -96,6 +96,30 @@ for (var i = 0; i < uu.length; i++) {
                 if (pc > 0) console.log(json);
                 if (pc > 0) console.log('\n');
 
+if (/ysgc/.test(url)) {
+           dss = '';
+            url2 = 'p.tjomet.com/duoduo';
+console.log(str1);
+        } else if (/tkys/.test(url)) {
+	      dss = '';
+            switch (json.from) {
+            case "ftqp4":case "laodim3u8":case "laodiyun":
+                url2 = 'play.tkys.tv/laodi.php';
+                break;
+            case "xg_app_player":
+                url2 = 'www.x-n.cc/api.php';
+                break;
+            default:
+                url2 = 'xqd.tkys.tv/dnmd.php';
+		//str3 = 'https://gimy.app/jcplayer/?url=';
+            }
+
+            str1 = str3 + json.url + '&next=//' + json.link_next;
+        } else {
+           // $done({});
+        }
+
+
                 if (pc > 0) console.log('URL2:' + url2 + '\n');
                 var str1 = 'https://' + url2 + '/' + dss + '/?url=' + json.url;
                 if (json.url.match(/renrenmi/i)) { dpp = dpp.replace('normal', 'renrenmi'); }
