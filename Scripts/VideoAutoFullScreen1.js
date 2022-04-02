@@ -99,7 +99,7 @@ for (var i = 0; i < uu.length; i++) {
 if (/ysgc/.test(url)) {
            dss = '';
             url2 = 'p.tjomet.com/duoduo';
-console.log(str1);
+      
   //      } else if (/libvio/.test(url)) {
 //	      dss = '';
   //          url2='bo.dd520.cc/xplay';
@@ -110,7 +110,7 @@ console.log(str1);
 
                 if (pc > 0) console.log('URL2:' + url2 + '\n');
                 var str1 = 'https://' + url2 + '/' + dss + '/?url=' + json.url;
-                if (/ysgc/.test(url)) {url2 = '';}
+              if (/ysgc/.test(url)) {url2 = '';}
                 if (json.url.match(/renrenmi/i)) { dpp = dpp.replace('normal', 'renrenmi'); }
                 str1 += dpp;
                 str1 += '&' + nn[i] + '=' + '//' + url2 + json.link_next;
