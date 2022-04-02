@@ -96,25 +96,6 @@ for (var i = 0; i < uu.length; i++) {
                 if (pc > 0) console.log(json);
                 if (pc > 0) console.log('\n');
 
- 
-                 if (/ysgc/.test(url)) {
-            	url2 = 'p.tjomet.com';
-                } else if (/tkys/.test(url)) {
-	    dss ='';
-            switch (json.from) {
-            case "ftqp4":case "laodim3u8":case "laodiyun":
-                url2 = 'https://play.tkys.tv/laodi.php';
-                break;
-            case "xg_app_player":
-                url2 = 'https://www.x-n.cc/api.php';
-                break;
-            default:
-                 url2 = 'https://jxqd.tkys.tv/dnmd.php';
-		//str3 = 'https://gimy.app/jcplayer/?url=';
-            }
-        } else {
-         //   $done({});
-        }
 
                 if (pc > 0) console.log('URL2:' + url2 + '\n');
                 var str1 = 'https://' + url2 + '/' + dss + '/?url=' + json.url;
