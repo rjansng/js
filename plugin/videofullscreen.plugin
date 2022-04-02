@@ -1,5 +1,10 @@
 [MITM]
-hostname = 777tv.me,777tv.app,gimy.app,ysgc.cc,gimytv.com,www.tkys.tv,vipmv.co,ysgc.tv
+hostname = *777tv.app,*777tv.me,*gimy.app,*gimytv.com,*ysgc.cc,*tkys.tv,*ysgc.tv
 
 [Script]
-http-response ^https?:\/\/(777tv|gimy|ysgc|gimytv|www.tkys|vipmv)\.(app|me|cc|com|tv|co)\/.+\.html.* script-path=https://raw.githubusercontent.com/rjansng/js/master/Scripts/VideoAutoFullScreen.js, requires-body=true, max-size=-1, timeout=10, tag=VideoAutoFullScreen
+http-response ^https?:\/\/[^\/]*777tv\.app\/vod\/play\/.+\.html script-path=https://raw.githubusercontent.com/rjansng/js/master/Scripts/VideoAutoFullScreen1.js, requires-body=true, max-size=-1, timeout=10, tag=VideoAutoFullScreen777tv1
+http-response ^https?:\/\/[^\/]*777tv\.me\/ep\/.+\.html script-path=https://raw.githubusercontent.com/rjansng/js/master/Scripts/VideoAutoFullScreen1.js, requires-body=true, max-size=-1, timeout=10, tag=VideoAutoFullScreen777tv2
+http-response ^https?:\/\/[^\/]*gimy\.app\/eps\/.+\.html script-path=https://raw.githubusercontent.com/rjansng/js/master/Scripts/VideoAutoFullScreen1.js.js, requires-body=true, max-size=-1, timeout=10, tag=VideoAutoFullScreenGimy1
+http-response ^https?:\/\/[^\/]*gimytv\.com\/ep\-.+\.html script-path=https://raw.githubusercontent.com/rjansng/js/master/Scripts/VideoAutoFullScreen1.js, requires-body=true, max-size=-1, timeout=10, tag=VideoAutoFullScreenGimy2
+http-response ^https?:\/\/[^\/]*ysgc\.(cc|tv)\/vodplay\-.+\.html script-path=https://raw.githubusercontent.com/rjansng/js/master/Scripts/VideoAutoFullScreen1.js, requires-body=true, max-size=-1, timeout=10, tag=VideoAutoFullScreenYsgc
+http-response ^https?:\/\/[^\/]*tkys\.tv\/vodplay\-.+\.html script-path=https://raw.githubusercontent.com/rjansng/js/master/Scripts/VideoAutoFullScreen1.js, requires-body=true, max-size=-1, timeout=10, tag=VideoAutoFullScreenTkys
