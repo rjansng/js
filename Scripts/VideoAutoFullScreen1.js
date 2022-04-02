@@ -132,29 +132,29 @@ console.log(str1);
 
                 var output = '';
                 // 直接改內建播放
-                if (json.url.match(/^http.+\.(mp4|m3u8).*/i)) {
-                    output = '<html><head>'
-                        + '<meta charset="utf-8" />'
-                        + '<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1">'
-                        + '<style>'
-                        + 'body * {box-sizing: border-box!important;}'
-                        + 'body{width:100vw;height:100vh;margin:auto;padding:0;background-color:black;vertical-align:middle;}'
-                        + 'video{width:100vw;height:100vh;display:block;}'
-                        + '</style>'
-                        + '<script>var p_d='+JSON.stringify(json)+';</script>'
-                        + '</head><body>'
-                        + '<video src="' + json.url + '" preload="auto" controls webkit-playsinline playsinline autoplay muted></video>'
-                        + '<script src="//sdany.somee.com/usjs/speedvideo2.js'
-                        + '?_=' + (Math.floor(Math.random() * (99999 - 10000 + 1)) + 10000).toString()
-                        + '"></script>'
-                        + '</body></html>';
-                    console.log('video url');
-                }
-                else
-                {
+                //if (json.url.match(/^http.+\.(mp4|m3u8).*/i)) {
+                //    output = '<html><head>'
+                //        + '<meta charset="utf-8" />'
+                //        + '<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1">'
+                //        + '<style>'
+                //        + 'body * {box-sizing: border-box!important;}'
+                 //       + 'body{width:100vw;height:100vh;margin:auto;padding:0;background-color:black;vertical-align:middle;}'
+                //        + 'video{width:100vw;height:100vh;display:block;}'
+                 //       + '</style>'
+               //         + '<script>var p_d='+JSON.stringify(json)+';</script>'
+                //        + '</head><body>'
+               //         + '<video src="' + json.url + '" preload="auto" controls webkit-playsinline playsinline autoplay muted></video>'
+               //         + '<script src="//sdany.somee.com/usjs/speedvideo2.js'
+               //         + '?_=' + (Math.floor(Math.random() * (99999 - 10000 + 1)) + 10000).toString()
+              //          + '"></script>'
+              //          + '</body></html>';
+              //      console.log('video url');
+             //   }
+             //   else
+            //    {
                     output = '<html><head><meta http-equiv="refresh" content="0;url=' + str1 + '"/></head><body></body></html>';
                     console.log('Refresh url');
-                }
+            //    }
                 //headers.Location = str1;
                 //status = 302;
                 //if (pc == 0) { $done({ status, headers }); }
