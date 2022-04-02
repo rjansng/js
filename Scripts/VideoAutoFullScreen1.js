@@ -34,7 +34,7 @@ var ddd = 'player_data';
 var dss = 'renrenp';
 var dee = '}';
 var dpp = '';
-var uu = ['777tv.app', '777tv.me', 'gimy.app', 'gimytv.com','ysgc.cc','ysgc.tv','tkys.tv'];
+var uu = ['777tv.app', '777tv.me', 'gimy.app', 'gimytv.com','ysgc.cc','ysgc.tv','libvio.com'];
 var dd = [-1, -1, -1, 'player_aaaa', 'player_aaaa', 'player_aaaa'];
 var ss = [-1, -1, 'jcplayer', -1, -1, -1, -1];
 var ee = [-1, -1, -1, -1,'<', '<', '<'];
@@ -111,7 +111,6 @@ console.log(str1);
                 break;
             default:
                 url2 = 'xqd.tkys.tv/dnmd.php';
-		//str3 = 'https://gimy.app/jcplayer/?url=';
             }
 
             str1 = str3 + json.url + '&next=//' + json.link_next;
