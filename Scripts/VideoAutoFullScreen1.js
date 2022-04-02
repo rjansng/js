@@ -100,20 +100,9 @@ if (/ysgc/.test(url)) {
            dss = '';
             url2 = 'p.tjomet.com/duoduo';
 console.log(str1);
-        } else if (/tkys/.test(url)) {
+        } else if (/libvio/.test(url)) {
 	      dss = '';
-            switch (json.from) {
-            case "ftqp4":case "laodim3u8":case "laodiyun":
-                url2 = 'play.tkys.tv/laodi.php';
-                break;
-            case "xg_app_player":
-                url2 = 'www.x-n.cc/api.php';
-                break;
-            default:
-                url2 = 'xqd.tkys.tv/dnmd.php';
-            }
-
-            str1 = str3 + json.url + '&next=//' + json.link_next;
+            url2='bo.dd520.cc/xplay';
         } else {
            // $done({});
         }
