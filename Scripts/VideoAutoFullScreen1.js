@@ -116,7 +116,7 @@ if (/ysgc/.test(url)) {
                 str1 += '&' + nn[i] + '=' + '//' + url2 + json.link_next;
                 str1 += '&link_pre=' + '//' + url2 + json.link_pre;
                 if (eps != '') str1 += eps;
-                str1  = str1.replace("///","/");
+                str1  = str1.replace('///','/');
                 json.link_next = '//' + url2 + json.link_next;
                 json.link_pre = '//' + url2 + json.link_pre;
                 if (eps != '') {
