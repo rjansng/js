@@ -4,9 +4,9 @@
 [Script]
 cron "16 0 * * *" script-path=https://kinta.ma/surge/scripts/shopee_checkin.js, wake-system=1, timeout=5
 cron "17 0 * * *" script-path=https://kinta.ma/surge/scripts/shopee_coin_lucky_draw.js, wake-system=1, timeout=10
-#cron "17 0 * * *" script-path=https://kinta.ma/surge/scripts/shopee_shipping_lucky_draw.js, wake-system=1, timeout=10
+cron "17 0 * * *" script-path=https://kinta.ma/surge/scripts/shopee_shipping_lucky_draw.js, wake-system=1, timeout=10
 
-http-request ^https:\/\/mall\.shopee\.tw\/api\/v2\/referral\/get_sharing_data$ script-path=https://kinta.ma/surge/scripts/shopee_token.js
+http-request ^https:\/\/mall\.shopee\.tw\/api\/v4\/microsite\/campaign_site_page script-path=https://kinta.ma/surge/scripts/shopee_token.js
 
 [MITM]
 enable = true
