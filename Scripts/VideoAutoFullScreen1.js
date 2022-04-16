@@ -132,6 +132,7 @@ if (/dadagui/.test(url)) {
                 var output = '';
                 // 直接改內建播放
                 if (json.url.match(/^http.+\.(mp4|m3u8).*/i)) {
+	if (/dadagui/.test(url)) {str1=str1.replace('vodplay', 'http://www.dadagui.com/vodplay');}
                     output = '<html><head>'
                         + '<meta charset="utf-8" />'
                         + '<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1">'
