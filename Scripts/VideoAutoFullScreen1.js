@@ -99,14 +99,11 @@ for (var i = 0; i < uu.length; i++) {
 if (/ysgc/.test(url)) {
            dss = '';
             url2 = 'p.tjomet.com/duoduo';
-      
-  //      } else if (/libvio/.test(url)) {
-//	      dss = '';
-  //          url2='bo.dd520.cc/xplay';
-   //     } else {
-           // $done({});
         }
-
+if (/dadagui/.test(url)) {
+           dss = '';
+            url2 = 'bo.dd520.cc/xmplayer';
+        }
 
                 if (pc > 0) console.log('URL2:' + url2 + '\n');
                 var str1 = 'https://' + url2 + '/' + dss + '/?url=' + json.url;
