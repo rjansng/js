@@ -1,3 +1,6 @@
+#!name=影片播放器全螢幕
+#!desc=777tv,gimy,libvio
+
 [MITM]
 hostname = *777tv.app,*777tv.me,*gimy.app,*gimytv.app,*ysgc.cc,*libvio.com,*ysgc.tv,www.dadagui.com
 
