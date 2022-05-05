@@ -69,7 +69,7 @@ http://limbopro.com/Adblock4limbo.list, policy=REJECT, tag=毒奶特供, enabled
 
 [Plugin]
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/Loon/AdvertisingLite/AdvertisingLite.plugin, proxy=REJECT, tag=Adv, enabled=true
-http://limbopro.com/Adblock4limbo.conf, tag=毒奶特供, enabled=true
+https://raw.githubusercontent.com/rjansng/js/master/plugin/Adblock4limbo.plugin, tag=毒奶特供, enabled=true
 https://raw.githubusercontent.com/app2smile/rules/master/plugin/spotify.plugin, tag=spotify, enabled=true
 https://raw.githubusercontent.com/jkgtw/Surge/master/Modules/ADList.sgmodule, tag=ADList, enabled=true
 https://raw.githubusercontent.com/rjansng/js/master/plugin/filters.plugin, tag=filters, enabled=true
