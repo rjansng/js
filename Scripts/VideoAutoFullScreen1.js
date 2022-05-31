@@ -107,7 +107,7 @@ if (/dadagui/.test(url)) {
 
                 if (pc > 0) console.log('URL2:' + url2 + '\n');
                 var str1 = 'https://' + url2 + '/' + dss + '/?url=' + json.url;
-              if (/ysgc/.test(url)) {url2 = '';}
+              if (/ysgc/.test(url)) {url2 = uu[i];}
 	if (/dadagui/.test(url)) {url2 =  '';}
                 if (json.url.match(/renrenmi/i)) { dpp = dpp.replace('normal', 'renrenmi'); }
                 str1 += dpp;
