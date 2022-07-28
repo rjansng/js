@@ -78,6 +78,7 @@ https://raw.githubusercontent.com/rjansng/js/master/plugin/filters.plugin, tag=f
 https://raw.githubusercontent.com/rjansng/js/master/plugin/manhuaren.plugin, tag=漫畫人, enabled=true
 https://raw.githubusercontent.com/rjansng/js/master/plugin/shopee_checkin.plugin, tag=蝦皮簽到, enabled=true
 https://raw.githubusercontent.com/rjansng/js/master/plugin/shopee_auto.plugin, tag=蝦皮果園, enabled=true
+https://raw.githubusercontent.com/rjansng/js/master/plugin/shopee_auto_crop.plugin, tag=蝦皮果園搶種子, enabled=true
 https://raw.githubusercontent.com/rjansng/js/master/plugin/rrsp.plugin, tag=人人視頻, enabled=true
 https://raw.githubusercontent.com/rjansng/js/master/plugin/mix.plugin, tag=MIX解鎖, enabled=true
 https://raw.githubusercontent.com/rjansng/js/master/plugin/vsco.plugin, tag=vsco, enabled=true
