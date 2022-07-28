@@ -72,8 +72,6 @@ https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/Lo
 https://raw.githubusercontent.com/rjansng/js/master/plugin/Adblock4limbo.plugin, tag=毒奶特供, enabled=true
 https://raw.githubusercontent.com/app2smile/rules/master/plugin/spotify.plugin, tag=spotify, enabled=true
 https://raw.githubusercontent.com/jkgtw/Surge/master/Modules/ADList.sgmodule, tag=ADList, enabled=true
-https://raw.githubusercontent.com/I-am-R-E/Functional-Store-Hub/Master/CaiXin/Loon.plugin, tag=財新, enabled=true
-https://raw.githubusercontent.com/I-am-R-E/Functional-Store-Hub/Master/CaiXinWeekly/Loon.plugin, tag=財新周刊, enabled=true
 https://raw.githubusercontent.com/rjansng/js/master/plugin/filters.plugin, tag=filters, enabled=true
 https://raw.githubusercontent.com/rjansng/js/master/plugin/manhuaren.plugin, tag=漫畫人, enabled=true
 https://raw.githubusercontent.com/rjansng/js/master/plugin/shopee_checkin.plugin, tag=蝦皮簽到, enabled=true
@@ -91,7 +89,9 @@ https://raw.githubusercontent.com/rjansng/js/master/plugin/mcdonalds.plugin, tag
 https://raw.githubusercontent.com/rjansng/js/master/plugin/ParseVideo.plugin, tag=ParseVideo, enabled=false
 https://www.sdany.org/usjs/speedvideo2.conf, tag=VideoSandy, enabled=false
 https://www.sdany.org/usjs/videoautofullscreen1.conf, tag=VAFS1, enabled=false
-#https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Loon/Plugin/Profile.plugin, tag=Profile, enabled=false
+# https://raw.githubusercontent.com/I-am-R-E/Functional-Store-Hub/Master/CaiXin/Loon.plugin, tag=財新, enabled=false
+# https://raw.githubusercontent.com/I-am-R-E/Functional-Store-Hub/Master/CaiXinWeekly/Loon.plugin, tag=財新周刊, enabled=false
+# https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Loon/Plugin/Profile.plugin, tag=Profile, enabled=false
 # https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Plugin/Dualsub.plugin, tag=Dualsub, enabled=false
 # https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Loon/Plugin/HKMTMedia.plugin, proxy=REJECT, tag=HKMTMedia, enabled=false
 # https://www.sdany.org/usjs/comic.js, tag=comic, enabled=true

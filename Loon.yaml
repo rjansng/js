@@ -61,6 +61,7 @@ https://raw.githubusercontent.com/rjansng/js/master/plugin/filters.plugin, tag=f
 https://raw.githubusercontent.com/rjansng/js/master/plugin/manhuaren.plugin, tag=漫畫人, enabled=false
 https://raw.githubusercontent.com/rjansng/js/master/plugin/shopee_checkin.plugin, tag=蝦皮簽到, enabled=false
 https://raw.githubusercontent.com/rjansng/js/master/plugin/shopee_auto.plugin, tag=蝦皮果園, enabled=false
+https://raw.githubusercontent.com/rjansng/js/master/plugin/shopee_auto_crop.plugin, tag=蝦皮果園搶種子, enabled=true
 https://raw.githubusercontent.com/chiupam/surge/main/Surge/RRTV_SVIP.sgmodule, tag=人人視頻, enabled=false
 https://raw.githubusercontent.com/rjansng/js/master/plugin/mix.plugin, tag=MIX解鎖, enabled=false
 https://raw.githubusercontent.com/rjansng/js/master/plugin/embyUnlocked.plugin, tag=emby解鎖, enabled=false
