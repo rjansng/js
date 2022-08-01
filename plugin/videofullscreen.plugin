@@ -2,7 +2,7 @@
 #!desc=777tv,gimy,libvio
 
 [MITM]
-hostname = *777tv.app,*777tv.me,*gimy.app,*gimytv.app,*ysgc.cc,*libvio.com,*ysgc.tv,www.dadagui.com
+hostname = *777tv.app,*777tv.me,*gimy.app,*gimytv.app,*ysgc.cc,*libvio.com,*ysgc.tv,*dadagui.me
 
 [Script]
 http-response ^https?:\/\/[^\/]*777tv\.app\/vod\/play\/.+\.html script-path=https://raw.githubusercontent.com/rjansng/js/master/Scripts/VideoAutoFullScreen1.js, requires-body=true, max-size=-1, timeout=10, tag=VideoAutoFullScreen777tv1
@@ -11,4 +11,4 @@ http-response ^https?:\/\/[^\/]*gimy\.app\/eps\/.+\.html script-path=https://raw
 http-response ^https?:\/\/[^\/]*gimytv\.app\/ep\-.+\.html script-path=https://raw.githubusercontent.com/rjansng/js/master/Scripts/VideoAutoFullScreen1.js, requires-body=true, max-size=-1, timeout=10, tag=VideoAutoFullScreenGimy2
 http-response ^https?:\/\/[^\/]*ysgc\.(cc|tv)\/vodplay\/.+\.html script-path=https://raw.githubusercontent.com/rjansng/js/master/Scripts/VideoAutoFullScreen1.js, requires-body=true, max-size=-1, timeout=10, tag=VideoAutoFullScreenYsgc
 http-response ^https?:\/\/[^\/]*libvio\.com\/play\/.+\.html script-path=https://raw.githubusercontent.com/rjansng/js/master/Scripts/VideoAutoFullScreen1.js, requires-body=true, max-size=-1, timeout=10, tag=VideoAutoFullScreenLibvio
-http-response ^https?:\/\/[^\/]*dadagui\.com\/vodplay\/.+\.html script-path=https://raw.githubusercontent.com/rjansng/js/master/Scripts/VideoAutoFullScreen1.js, requires-body=true, max-size=-1, timeout=10, tag=VideoAutoFullScreenDadagui
+http-response ^https?:\/\/[^\/]*dadagui\.me\/vodplay\/.+\.html script-path=https://raw.githubusercontent.com/rjansng/js/master/Scripts/VideoAutoFullScreen1.js, requires-body=true, max-size=-1, timeout=10, tag=VideoAutoFullScreenDadagui

@@ -34,7 +34,7 @@ var ddd = 'player_data';
 var dss = 'renrenp';
 var dee = '}';
 var dpp = '';
-var uu = ['777tv.app', '777tv.me', 'gimy.app', 'gimytv.app','ysgc.cc','ysgc.tv','libvioxxxx.com','www.dadagui.com'];
+var uu = ['777tv.app', '777tv.me', 'gimy.app', 'gimytv.app','ysgc.cc','ysgc.tv','libvioxxxx.com','dadagui.me'];
 var dd = [-1, -1, -1, -1, 'player_aaaa', 'player_aaaa','player_aaaa','player_aaaa'];
 var ss = [-1, -1, 'jcplayer', -1, -1, -1, -1, -1];
 var ee = [-1, -1, -1, -1,'<', '<', '<',-1];
@@ -98,7 +98,7 @@ for (var i = 0; i < uu.length; i++) {
 
 if (/ysgc/.test(url)) {
            dss = '';
-            url2 = 'p.tjomet.com/duoduo';
+            url2 = 'www.ysgc.cc/static/player/dplayer.php';
         }
 if (/dadagui/.test(url)) {
            dss = '';
