@@ -8,7 +8,7 @@ cron "17 0 * * *" script-path=https://kinta.ma/surge/scripts/shopee_coin_lucky_d
 cron "17 0 * * *" script-path=https://kinta.ma/surge/scripts/shopee_shipping_lucky_draw.js, wake-system=1, timeout=10
 
 http-request ^https:\/\/mall\.shopee\.tw\/api\/v4\/microsite\/(.*)&url=referral-program(.*) script-path=https://kinta.ma/surge/scripts/shopee_token.js, requires-body=true
-
+ 
 [MITM]
 enable = true
 hostname = mall.shopee.tw
