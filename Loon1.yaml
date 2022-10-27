@@ -82,7 +82,9 @@ https://raw.githubusercontent.com/rjansng/js/master/plugin/mix.plugin, tag=MIX�
 https://raw.githubusercontent.com/rjansng/js/master/plugin/vsco.plugin, tag=vsco, enabled=true
 https://raw.githubusercontent.com/rjansng/js/master/plugin/embyUnlocked.plugin, tag=emby解鎖, enabled=true
 https://raw.githubusercontent.com/rjansng/js/master/plugin/startup.plugin, tag=開屏廣告, enabled=true
-https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Module/Block/YouTubeAds.sgmodule, tag=YouTubeAds, enabled=true
+https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Module/Block/YouTubeAds.sgmodule, tag=YouTubeAds, enabled=false
+https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/YouTube_remove_ads.plugin, tag=YouTubeAds（A方案）, enabled=false
+https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/YouTube_remove_ads_plan_b.plugin, tag=YouTubeAds（B方案）, enabled=false
 https://raw.githubusercontent.com/rjansng/js/master/plugin/video.plugin, tag=VideoSpeed, enabled=false
 https://raw.githubusercontent.com/rjansng/js/master/plugin/videofullscreen.plugin, tag=VideoFullScreen, enabled=true
 https://raw.githubusercontent.com/rjansng/js/master/plugin/mcdonalds.plugin, tag=麥當勞簽到, enabled=false
