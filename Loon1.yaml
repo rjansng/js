@@ -74,9 +74,11 @@ https://raw.githubusercontent.com/app2smile/rules/master/plugin/spotify.plugin, 
 https://raw.githubusercontent.com/jkgtw/Surge/master/Modules/ADList.sgmodule, tag=ADList, enabled=true
 https://raw.githubusercontent.com/rjansng/js/master/plugin/filters.plugin, tag=filters, enabled=true
 https://raw.githubusercontent.com/rjansng/js/master/plugin/manhuaren.plugin, tag=漫畫人, enabled=true
-https://raw.githubusercontent.com/rjansng/js/master/plugin/shopee_checkin.plugin, tag=蝦皮簽到, enabled=true
-https://raw.githubusercontent.com/rjansng/js/master/plugin/shopee_auto.plugin, tag=蝦皮果園, enabled=true
+https://kinta.ma/loon/plugins/shopee_checkin.plugin, tag=蝦皮簽到, enabled=true
+https://kinta.ma/loon/plugins/shopee_auto_water.plugin, tag=蝦皮果園, enabled=true
 https://raw.githubusercontent.com/rjansng/js/master/plugin/shopee_auto_crop.plugin, tag=蝦皮果園搶種子, enabled=true
+https://raw.githubusercontent.com/jkgtw/Surge/master/Modules/LINE-ADs-OLD.sgmodule, tag=Line ADs, enabled=false
+https://raw.githubusercontent.com/jkgtw/Surge/master/Modules/LINE-ADs.sgmodule, tag=Line ADs2, enabled=false
 https://raw.githubusercontent.com/rjansng/js/master/plugin/rrsp.plugin, tag=人人視頻, enabled=true
 https://raw.githubusercontent.com/rjansng/js/master/plugin/mix.plugin, tag=MIX解鎖, enabled=true
 https://raw.githubusercontent.com/rjansng/js/master/plugin/vsco.plugin, tag=vsco, enabled=true
@@ -99,7 +101,6 @@ https://www.sdany.org/usjs/videoautofullscreen1.conf, tag=VAFS1, enabled=false
 # https://www.sdany.org/usjs/comic.js, tag=comic, enabled=true
 # https://raw.githubusercontent.com/rjansng/js/master/plugin/rrsp.plugin, tag=人人視頻, enabled=true
 # https://raw.githubusercontent.com/rjansng/js/master/plugin/BahamutDailyBonus.plugin, tag=巴哈簽到, enabled=true
-# https://raw.githubusercontent.com/jkgtw/Surge/master/Modules/LINE-ADs.sgmodule, tag=Line ADs, enabled=true
 # https://www.sdany.org/usjs/VideoAutoFullScreen_777tv.conf, tag=VideoSandy1, enabled=false
 # https://raw.githubusercontent.com/rjansng/js/master/plugin/videoscript.plugin, tag=videoscript, enabled=false
 [Rule]
