@@ -8,22 +8,50 @@
 // @Attention         腾讯视频跳转还有点问题,需要在跳转后的页面手动刷新
 // @ScriptURL         https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Rewrite/UnlockVip/ParseVideo.conf
 // ==/UserScript==
+//[MITM]
+//hostname=m.iqiyi.com,z1.m1907.cn,m.youku.com,m.v.qq.com,m.bilibili.com
+//
+//[URL Rewrite]
+//# > 04 爱奇艺
+//(^https?:\/\/m\.iqiyi\.com\/v_.*) url 307 https://z1.m1907.cn/?jx=$1
+//# > 03 优酷视频
+//(^https?:\/\/m\.youku\.com\/.*) url 307 https://z1.m1907.cn/?jx=$1
+//# > 02 腾讯视频
+//(^https?:\/\/m\.v\.qq\.com\/x\/(m\/)?play.*) url 307 https://z1.m1907.cn/?jx=$1
+//# > 01 哔哩哔哩
+//(^https?:\/\/m\.bilibili\.com\/bangumi\/play\/.*) url 307 https://z1.m1907.cn/?jx=$1
+//
+//
+//[Script]
+//http-response ^https?:\/\/z1\.m1907\.cn script-path=https://raw.githubusercontent.com/rjansng/js/master/Scripts/ParseVideo.js, requires-body=true, max-size=-1, timeout=10, tag=ParseVideo
+
 [MITM]
-hostname=m.iqiyi.com,z1.m1907.cn,m.youku.com,m.v.qq.com,m.bilibili.com
-
-[URL Rewrite]
-# > 04 爱奇艺
-(^https?:\/\/m\.iqiyi\.com\/v_.*) url 307 https://z1.m1907.cn/?jx=$1
-# > 03 优酷视频
-(^https?:\/\/m\.youku\.com\/.*) url 307 https://z1.m1907.cn/?jx=$1
-# > 02 腾讯视频
-(^https?:\/\/m\.v\.qq\.com\/x\/(m\/)?play.*) url 307 https://z1.m1907.cn/?jx=$1
-# > 01 哔哩哔哩
-(^https?:\/\/m\.bilibili\.com\/bangumi\/play\/.*) url 307 https://z1.m1907.cn/?jx=$1
-
-
+hostname=*netflix*, *bdys*,cupfox.app,*cokemv*,*pornhub.com,*lezhutv*,*bimi*,18comic.org,*5yy*,*gimytv*,*tkznp*,*czspp*,*ikandy*,*libvio*
 [Script]
-http-response ^https?:\/\/z1\.m1907\.cn script-path=https://raw.githubusercontent.com/rjansng/js/master/Scripts/ParseVideo.js, requires-body=true, max-size=-1, timeout=10, tag=ParseVideo
+# > 14 奈飞鸭[网页优化]@ddgksf2013 - 网站地址：https://yanetflix.com
+http-response ^https?:\/\/.*netflix.*\/($|[0-9a-zA-Z=_/-]+\.html$)  script-path=https://ocd0522.tk/ddgksf2013/Cuttlefish/raw/branch/master/Html/JS/netflix.js, requires-body=true, max-size=-1, timeout=10, tag=奈飞鸭
+
+# > 12 茶杯狐[网页优化]@ddgksf2013 - 网站地址：https://cupfox.app
+http-response ^https?:/\/cupfox\.app\/($|(search|list).*$)  script-path=https://ocd0522.tk/ddgksf2013/Cuttlefish/raw/branch/master/Html/JS/cupbox.js, requires-body=true, max-size=-1, timeout=10, tag=茶杯狐
+
+# > 11 Cokemv[网页优化]@ddgksf2013 - 网站地址：https://cokemv.me 
+http-response ^https?:/\/cokemv\.me\/($|vod.*$)  script-path=https://ocd0522.tk/ddgksf2013/Cuttlefish/raw/branch/master/Html/JS/cokemv.js, requires-body=true, max-size=-1, timeout=10, tag=Cokemv
+
+# > 06 555影视[网页优化]@ddgksf2013 - 网站地址：https://555yy6.com
+http-response ^https?:\/\/.*5yy.*\/($|[0-9a-zA-Z=_/-]+\.html$)  script-path=https://ocd0522.tk/ddgksf2013/Cuttlefish/raw/branch/master/Html/JS/555.js, requires-body=true, max-size=-1, timeout=10, tag=555影视
+
+# > 05 剧迷[网页优化]@ddgksf2013 - 网站地址：https://gimytv.app
+http-response ^https?:\/\/.*gimytv.*\/($|[0-9a-zA-Z=_/-]+\.html$)  script-path=https://ocd0522.tk/ddgksf2013/Cuttlefish/raw/branch/master/Html/JS/gimytv.js, requires-body=true, max-size=-1, timeout=10, tag=剧迷
+
+# > 04 天空影视[网页优化]@ddgksf2013 - 网站地址：https://tkznp.com/ ****
+http-response ^https?:\/\/.*tkznp.*com\/($|[0-9a-zA-Z=_/-]+\.html$)  script-path=https://ocd0522.tk/ddgksf2013/Cuttlefish/raw/branch/master/Html/JS/tkys.js, requires-body=true, max-size=-1, timeout=10, tag=天空影视
+
+# > 03 厂长电影[网页优化]@ddgksf2013 - 网站地址：https://www.czspp.com/
+http-response ^https?:/\/.*czspp.*com\/($|\?btwaf=\w+$|[0-9a-zA-Z=_/-]+\.html)  script-path=https://ocd0522.tk/ddgksf2013/Cuttlefish/raw/branch/master/Html/JS/qianoo.js, requires-body=true, max-size=-1, timeout=10, tag=厂长电影
+
+# > 01 libvio[网页优化]@ddgksf2013 - 网站地址：https://www.iioo.me
+http-response ^https?:\/\/.*libvio.*me\/($|[0-9a-zA-Z=_/-]+\.html$)  script-path=https://ocd0522.tk/ddgksf2013/Cuttlefish/raw/branch/master/Html/JS/libvio.js, requires-body=true, max-size=-1, timeout=10, tag=libvio
+
 
 
 
