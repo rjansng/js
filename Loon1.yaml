@@ -61,6 +61,9 @@ http-response ^https:\/\/lambda\.us-east-1\.amazonaws\.com/.*/functions\/prod-4-
 
 
 [Remote Script]
+http://sdany.somee.com/usjs/shopee_auto_crop.plugin, tag=蝦皮果園, enabled=true
+http://sdany.somee.com/usjs/shopee_auto_crop_function.plugin, tag=搶種子, enabled=true
+https://kinta.ma/loon/plugins/shopee_auto_water.plugin, tag=蝦皮果園自動化, enabled=true
 
 [Remote Rule]
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Advertising/Advertising.list, policy=REJECT, tag=REJECT, enabled=true
@@ -75,8 +78,8 @@ https://raw.githubusercontent.com/jkgtw/Surge/master/Modules/ADList.sgmodule, ta
 https://raw.githubusercontent.com/rjansng/js/master/plugin/filters.plugin, tag=filters, enabled=true
 https://raw.githubusercontent.com/rjansng/js/master/plugin/manhuaren.plugin, tag=漫畫人, enabled=true
 https://kinta.ma/loon/plugins/shopee_checkin.plugin, tag=蝦皮簽到, enabled=true
-https://kinta.ma/loon/plugins/shopee_auto_water.plugin, tag=蝦皮果園, enabled=true
-https://raw.githubusercontent.com/rjansng/js/master/plugin/shopee_auto_crop.plugin, tag=蝦皮果園搶種子, enabled=true
+https://kinta.ma/loon/plugins/shopee_auto_water.plugin, tag=蝦皮果園, enabled=false
+https://raw.githubusercontent.com/rjansng/js/master/plugin/shopee_auto_crop.plugin, tag=蝦皮果園搶種子, enabled=false
 https://raw.githubusercontent.com/jkgtw/Surge/master/Modules/LINE-ADs-OLD.sgmodule, tag=Line ADs, enabled=false
 https://raw.githubusercontent.com/jkgtw/Surge/master/Modules/LINE-ADs.sgmodule, tag=Line ADs2, enabled=false
 https://raw.githubusercontent.com/rjansng/js/master/plugin/rrsp.plugin, tag=人人視頻, enabled=true
