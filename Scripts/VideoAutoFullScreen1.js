@@ -155,6 +155,7 @@ if (/dadagui/.test(url)) {
                 {
                     output = '<html><head><meta http-equiv="refresh" content="0;url=' + str1 + '"/></head><body></body></html>';
                     console.log('Refresh url');
+	//$done({url:$request.url})；
                 }
                 //headers.Location = str1;
                 //status = 302;
