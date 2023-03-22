@@ -102,6 +102,9 @@ https://www.sdany.org/usjs/videoautofullscreen1.conf, tag=VAFS1, enabled=false
 # https://www.sdany.org/usjs/VideoAutoFullScreen_777tv.conf, tag=VideoSandy1, enabled=false
 # https://raw.githubusercontent.com/rjansng/js/master/plugin/videoscript.plugin, tag=videoscript, enabled=false
 [Rule]
+URL-REGEX,^https:\/\/shopee\.tw\/,DIRECT
+URL-REGEX,^https:\/\/.+\.shopee\.tw\/,DIRECT
+URL-REGEX,^https:\/\/games\.deo\.shopeemobile\.com\/,DIRECT
 GEOIP,TW,DIRECT
 FINAL,DIRECT
 
