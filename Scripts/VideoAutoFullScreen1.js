@@ -98,7 +98,11 @@ for (var i = 0; i < uu.length; i++) {
 
 if (/ysgc/.test(url)) {
            dss = '';
-            url2 = 'www.ysgc.cc/static/player/dplayer.php';
+            url2 = 'www.ysgc.tv/static/player/ffzy.php';
+        }
+if (/gimy/.test(url)) {
+           dss = '';
+            url2 = 'gimy.app/jcplayer/';
         }
 if (/dadagui/.test(url)) {
            dss = '';
