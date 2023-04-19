@@ -37,9 +37,10 @@ SSID = ssid,default=DIRECT,cellular=DIRECT,"tsu office"=DIRECT,"an1"=DIRECT,"WiF
 [Remote Filter]
 
 
-[URL Rewrite]
+[Rewrite]
 enable = true 
- 
+https?:\/\/sdany\.somee\.com 302 http://js.sdany.org
+
 [Remote Rewrite]
 
 
