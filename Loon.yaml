@@ -71,8 +71,7 @@ https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/Lo
 https://raw.githubusercontent.com/rjansng/js/master/plugin/Adblock4limbo.plugin, tag=毒奶特供, enabled=true
 https://raw.githubusercontent.com/app2smile/rules/master/plugin/spotify.plugin, tag=spotify, enabled=true
 https://raw.githubusercontent.com/jkgtw/Surge/master/Modules/ADList.sgmodule, tag=ADList, enabled=true
-https://raw.githubusercontent.com/rjansng/js/master/plugin/filters.plugin, tag=filters, enabled=true
-https://raw.githubusercontent.com/rjansng/js/master/plugin/manhuaren.plugin, tag=漫畫人, enabled=true
+https://raw.githubusercontent.com/jimmyorz/Surge/master/Manhuaren.sgmodule, tag=漫畫人, enabled=true
 http://sdany.somee.com/usjs/shopee/auto_run.plugin               , enabled=true , tag=蝦皮 自動化
 http://sdany.somee.com/usjs/shopee/auto_farm.plugin              , enabled=true , tag=蝦蝦果園 自動化
 http://sdany.somee.com/usjs/shopee/auto_pet.plugin               , enabled=true , tag=蝦蝦寵物村 自動化
@@ -81,8 +80,7 @@ http://sdany.somee.com/usjs/shopee/filter_shopee.plugin          , enabled=true 
 http://sdany.somee.com/usjs/shopee/filter_farm.plugin            , enabled=true , tag=蝦蝦果園 過濾
 http://sdany.somee.com/usjs/shopee/filter_tasks.plugin           , enabled=true , tag=蝦皮任務 手動記錄
 http://sdany.somee.com/usjs/shopee/filter_knifethrow.plugin      , enabled=false, tag=蝦蝦飛刀 過濾
-https://raw.githubusercontent.com/jkgtw/Surge/master/Modules/LINE-ADs-OLD.sgmodule, tag=Line ADs, enabled=true
-https://raw.githubusercontent.com/jkgtw/Surge/master/Modules/LINE-ADs.sgmodule, tag=Line ADs2, enabled=false
+https://raw.githubusercontent.com/zeuikli/Loon-scripts/main/LINE-Adblock.plugin, tag=Line ADs2, enabled=false
 https://raw.githubusercontent.com/rjansng/js/master/plugin/rrsp.plugin, tag=人人視頻, enabled=false
 https://raw.githubusercontent.com/rjansng/js/master/plugin/mix.plugin, tag=MIX解鎖, enabled=false
 https://raw.githubusercontent.com/rjansng/js/master/plugin/vsco.plugin, tag=vsco, enabled=false
