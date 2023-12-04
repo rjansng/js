@@ -1,2 +1,2 @@
-let body = $response.body.replace("</body>","<script>(()=>{setTimeout(function(){document.querySelector('div[style] a button').parentElement.parentElement.remove();var xx =document.querySelectorAll('.gadBlock');xx[0].innerHTML="";},500);})();</script></body>");
+let body = $response.body.replace("</body>","<script>(()=>{setTimeout(function(){document.querySelector('div[style] a button').parentElement.parentElement.remove();var xx =document.querySelectorAll('.gadBlock');var i;for (i = 0; i < xx.length; i++) {xx[i]..innerHTML="";}},500);})();</script></body>");
 $done({body});
