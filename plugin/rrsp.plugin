@@ -5,13 +5,13 @@
 [Rule]
 URL-REGEX,^https?:\/\/api\.rr\.tv\/(?:ad\/getAll$|storage/business/rootName/app/homePage),REJECT
 AND,((USER-AGENT,PUClient*), (NOT,((DOMAIN-SUFFIX,rr.tv)))),REJECT
-
 [Script]
 http-response ^https?:\/\/api\.rr\.tv\/v\dplus\/index\/channel script-path=https://Choler.github.io/Surge/Script/rrsp.js, requires-body=true, timeout=10, tag=rrsp_banner
 http-response ^https?:\/\/api\.rr\.tv\/watch\/v\d\/get_movie_info script-path=https://Choler.github.io/Surge/Script/rrsp.js, requires-body=true, timeout=10, tag=rrsp_video
 
+
 [Remote Rewrite]
 ^https?:\/\/api\.rr\.tv\/ad\/ url reject
- 
+
 [MITM]
 hostname = api.rr.tv
