@@ -1,0 +1,10 @@
+#!name=稷下書院
+#!desc=稷下書院
+#!system=ios
+
+[Script]
+http-response ^https?:\/\/(www\.novel543\.com)\/.*?\.htm.* script-path=https://raw.githubusercontent.com/rjansng/js/master/Scripts/543.js, requires-body=true, timeout=10, tag=543
+
+ 
+[MITM]
+hostname = www.novel543.com

@@ -1,0 +1,2 @@
+let body = $response.body.replace("</body>","<script>(()=>{setTimeout(function(){document.querySelector('div[style] a button').parentElement.parentElement.remove();},500);})();</script></body>");
+$done({body});
