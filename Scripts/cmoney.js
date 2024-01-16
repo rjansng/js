@@ -1,5 +1,5 @@
 let inapp_data = {
-  "unactivatedAuthDays": 365,
+  "unactivatedAuthDays": 0,
   "serverTime": 1705045278699,
   "expiredTime": 1736987566344
 }
