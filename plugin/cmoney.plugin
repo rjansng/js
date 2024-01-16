@@ -10,6 +10,8 @@
 http-request ^https:\/\/www\.cmoney\.tw\/AuthorizationServer\/Authorization\/ExpiredTime\/MobilePaid script-path=https://raw.githubusercontent.com/rjansng/js/master/Scripts/cmoney.js, requires-body=false, tag=cmoney, enabled=true
 http-request ^https:\/\/mobile\.cmoney\.tw\/AuthorizationServer\/AuthorizationServer\/Authorization\/MobilePaid script-path=https://raw.githubusercontent.com/rjansng/js/master/Scripts/cmoney.js, requires-body=false, tag=cmoney, enabled=true
 http-request ^https:\/\/mobile\.cmoney\.tw\/AuthorizationServer\/Authorization\/ExpiredTime\/MobilePaid script-path=https://raw.githubusercontent.com/rjansng/js/master/Scripts/cmoney.js, requires-body=false, tag=cmoney, enabled=true
+http-request ^https:\/\/mobile\.cmoney\.tw\//AuthorizationServer\/Authorization\/MobilePaid script-path=https://raw.githubusercontent.com/rjansng/js/master/Scripts/cmoney1.js, requires-body=false, tag=cmoney, enabled=true
+
 
 [MITM]
 hostname=*.cmoney.tw
