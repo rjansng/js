@@ -11,5 +11,5 @@
 
 [Script]
 cron "50 23 * * *" script-path=https://raw.githubusercontent.com/rjansng/js/master/Scripts/farm/crop_list.js        , enabled=true, tag=🌱取得 種子清單🌱
-cron "0 0 * * Mon-Fri" script-path=https://raw.githubusercontent.com/rjansng/js/master/Scripts/farm/auto_crop.js    , enabled=true, tag=🌱自動種植🌱
+cron "0 0 * * Mon-Thu" script-path=https://raw.githubusercontent.com/rjansng/js/master/Scripts/farm/auto_crop.js    , enabled=true, tag=🌱自動種植🌱
 cron "1 0 * * *" script-path=https://raw.githubusercontent.com/rjansng/js/master/Scripts/farm/auto_crop_s.js        , enabled=true, tag=🌱自動種植 次要🌱
