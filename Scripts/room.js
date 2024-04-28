@@ -1,0 +1,4 @@
+(async () => {
+  let rbody = {"_id":"662d1d7b417bc698cda6b60b","favourites":"","furniture":[],"photos":[],"projects":"","blocked":[],"role":"account","created":"2024-04-27T15:44:59.939Z","updated":"2024-04-27T15:45:01.883Z","__v":0,"commercial":false,"culture":"zh-TW","enterprise":false,"ip":"121.151.0.99","ipDetails":{"status":"success","country":"Taiwan","countryCode":"TW","region":"TAO","regionName":"Taipei","city":"Taipei District","zip":"","lat":24.9889,"lon":121.3176,"timezone":"Asia/Taipei","isp":"Chunghwa Telecom Co., Ltd.","org":"Chunghwa Telecom Co. Ltd.","as":"AS3462 Data Communication Business Group","query":"121.151.0.99"},"lang":"zh-hant","pro":true,"room":"all","id":"662d1d7b417bc698cda6b60b","location":"Taoyuan District, Taiwan"}
+  $done({ response: { status: 200, headers: {}, body: JSON.stringify(rbody) } });
+})();
