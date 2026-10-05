@@ -1,0 +1,12 @@
+#!name=即時資金雷達 解鎖
+#!desc=App通用解鎖
+//#!openUrl=https://apps.apple.com/app/id6761592561
+//#!openUrl=https://apps.apple.com/app/id6761592561
+//#!author=
+//#!openUrl=
+
+[Script]
+http-request ^https?:\/\/stock-flow-app-production\.up\.railway\.app\/subscription\/verify.* script-path=https://raw.githubusercontent.com/rjansng/js/master/Scripts/20261005.js, requires-body=false, tag=MobilePaid_Universal, enabled=true
+
+[MITM]
+hostname=stock-flow-app-production.up.railway.app
