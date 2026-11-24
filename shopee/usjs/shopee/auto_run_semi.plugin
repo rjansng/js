@@ -1,0 +1,38 @@
+#!name=蝦皮 半自動
+#!desc=v20230925
+//#!author=Sdany
+//#!openUrl=https://sdany.org/usjs/shopee/auto_run_semi.plugin
+
+[Script]
+cron "50,57 23 * * *" script-path=https://sdany.org/usjs/shopee/scripts1/tasks_check_list.js         , enabled=true,  tag=_🍤搶蝦幣💰 每日任務 總覽 本機, argument="0"
+cron "5 6 * * *" script-path=https://sdany.org/usjs/shopee/candycrush/share.js                       , enabled=false,  tag=_🔶消消樂 分享 +1💎
+cron "30 0 * * *" script-path=https://sdany.org/usjs/shopee/filter/finish_product_feeds_task_and_claim.js, enabled=false, tag=_🍤手動 30秒領蝦幣💰
+cron "50 * * * *" script-path=https://sdany.org/usjs/shopee/scripts1/mkt_coins_task_claim.js         , enabled=false, tag=_🍤我的蝦幣💰 領蝦幣任務
+cron "16 0/3 * * *" script-path=https://sdany.org/usjs/shopee/pet/food_feed.js                       , enabled=false, tag=_🐥寵物 餵食 扭蛋
+cron "16 0/3 * * *" script-path=https://sdany.org/usjs/shopee/pet/task_daily_claim.js                , enabled=false, tag=_🐥簽到 領任務獎勵
+cron "16 0/3 * * *" script-path=https://sdany.org/usjs/shopee/pet/task_daily_list.js                 , enabled=false, tag=_🐥每日任務
+cron "0 2 * * *" script-path=https://sdany.org/usjs/shopee/pet/game_progress.js                      , enabled=false, tag=_🐥取得學校遊戲狀態 (團體賽)
+cron "7 0/4 * * *" script-path=https://sdany.org/usjs/shopee/farm/grocery_store_water.js             , enabled=false, tag=_🌱推薦商店 領30💧x3
+cron "10 0/4 * * *" script-path=https://sdany.org/usjs/shopee/farm/tasks_checkin.js                  , enabled=false, tag=_🌱任務 打卡3次💧
+cron "50 5-23/3 * * *" script-path=https://sdany.org/usjs/shopee/farm/tasks_mission_claim.js         , enabled=false, tag=_🌱任務 領💧
+cron "5 6,7 * * *" script-path=https://sdany.org/usjs/shopee/farm/brands_ads_task_claim.js           , enabled=false, tag=_🌱品牌商店 領50 💧
+cron "5 7 * * *" script-path=https://sdany.org/usjs/shopee/farm/share_link.js                        , enabled=false, tag=_🌱取得 站外澆水💦 Link🔗
+cron "1 0 * * *" script-path=https://sdany.org/usjs/shopee/scripts1/my_ticket_list.js                , enabled=false, tag=🍤顯示 我的票匣清單, argument="0"
+cron "1 0 * * *" script-path=https://sdany.org/usjs/shopee/scripts1/my_ticket_list.js                , enabled=false, tag=🍤顯示 我的票匣清單 (TG), argument="1"
+cron "1 0 * * *" script-path=https://sdany.org/usjs/shopee/scripts1/games_list_banner.js             , enabled=false, tag=🍤顯示 遊戲清單 BANNER
+// cron "1 0 * * *" script-path=https://sdany.org/usjs/shopee/scripts1/games_list.js                    , enabled=false, tag=🍤顯示 遊戲清單 ALL (Fail)  
+// cron "1 0 * * *" script-path=https://sdany.org/usjs/shopee/scripts1/games_list_post.js               , enabled=false, tag=🍤顯示 遊戲清單 ALL POST (418)
+cron "1 0 * * *" script-path=https://sdany.org/usjs/shopee/scripts1/games_list1.js                   , enabled=false, tag=🍤顯示 遊戲清單 1
+cron "1 0 * * *" script-path=https://sdany.org/usjs/shopee/scripts1/games_list2.js                   , enabled=false, tag=🍤顯示 遊戲清單 2
+cron "56 23 * * *" script-path=https://sdany.org/usjs/shopee/redeem/redeem_pet_list.js               , enabled=false, tag=🐥顯示 寵物村 兌換清單
+cron "1 0 * * *"    script-path=https://sdany.org/usjs/shopee/pet/home_get.js                        , enabled=false, tag=🐥查看 寵物資訊
+cron "0 22 * * *" script-path=https://sdany.org/usjs/shopee/_shopee/crop/shopee_auto_notify_0.js     , enabled=false, tag=🎵通知 關閉
+cron "0 7 * * *"  script-path=https://sdany.org/usjs/shopee/_shopee/crop/shopee_auto_notify_1.js     , enabled=false, tag=🎵通知 開啟
+
+#cron "10 8,12,16,22 * * *" script-path=https://sdany.org/usjs/shopee/scripts1/shopee_luckydraw.js    , enabled=true,  tag=_🍤抽👉抽抽樂
+#cron "10 8,12,16,22 * * *" script-path=https://sdany.org/usjs/shopee/scripts1/shopee_luckydraw_3eggs.js, enabled=true,  tag=_🍤抽👉豪禮尋寶記
+#cron "16 4 * * *" script-path=https://sdany.org/usjs/shopee/scripts1/shopee_luckydraw_wheel.js       , enabled=false, tag=🍤自動抽👉VT COSMETICS轉盤
+#cron "16 0/3 * * *" script-path=https://sdany.org/usjs/shopee/collectible/task_reward.js             , enabled=false, tag=_🎡特蒐任務 自動玩
+
+#[MITM]
+#hostname = idgame.shopee.tw

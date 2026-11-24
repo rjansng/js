@@ -1,0 +1,92 @@
+#!name=蝦皮 自動化 過濾 特別服務
+#!desc=v20260416
+# [桌上曲棍球限名次]: (預設不限制)，非指定名次，則不會送出數據，可以再重新挑戰。[點數不足限名次]: 點數不足3200時。
+~~#!input=寵物村目前點數
+#!select=蝦皮底部按鈕調整,預設:否,是
+#!select=蝦皮首頁過濾,預設:否,是
+#!select=蝦皮首頁重新讀取,預設:否,是
+#!select=蝦皮商城過濾,預設:否,是
+#!select=顯示購買清單,預設:是,必要,否
+#!select=顯示電子票券與繳費,預設:是,否
+#!select=顯示我的票匣,預設:否,是
+#!select=顯示我的優惠券,預設:是,否
+#!select=顯示遊戲快捷,預設:否,是
+#!select=顯示蝦幣任務狀態,預設:否,是
+#!select=顯示遊戲狀態,預設:否,是
+#!select=顯示更多遊戲,預設:否,是
+#!select=顯示更多服務,預設:是,必要,簡略,否
+#!select=顯示服務與支援,預設:是,必要,否
+#!select=顯示我的蝦皮錢包,預設:否,是
+#!select=我的蝦幣顯示IFRAME,預設:是,否
+#!select=顯示IFRAME內容,預設:否,是
+~~#!select=用蝦幣抽寵物,預設:否,是
+~~#!select=桌上曲棍球限名次,不限制,第1名,第2名,第3名
+~~#!select=桌上曲棍球點數不足限名次,依限名次,第1名,第2名,第3名
+~~#!select=桌上曲棍球報錯模式,預設:是,否
+~~#!select=桌上曲棍球用蝦幣玩,預設:否,是
+~~#!select=貪食蛇用蝦幣玩,預設:否,是
+~~#!select=貪食蛇視野大小,預設,2,3,4,5
+~~#!select=彈珠台用蝦幣玩,預設:否,是
+~~#!select=彈珠台過濾機台,預設:否,是
+~~#!select=金頭腦完成標示,預設,1,2,3
+~~#!select=賽跑完成標示,預設,1,2,3
+~~#!select=找碴完成標示,預設,1,2,3
+~~#!select=足球完成標示,預設,1,2,3
+#!select=傳送每日任務,預設:是,否
+
+//#!author=Sdany
+//#!openUrl=https://sdany.org/usjs/shopee/filter_shopee2.plugin
+
+[Rule]
+// URL-REGEX,^https:\/\/mall\.shopee\.tw\/api\/v4\/market_coin\/get_iframe_list.+,REJECT
+URL-REGEX,^https:\/\/games\.shopee\.tw\/api-gateway\/luckydraw\/api\/v1\/schedule\/activities\/.+,REJECT
+// 商城推薦
+URL-REGEX,^https:\/\/mall\.shopee\.tw\/api\/v4\/recommend\/recommend.+,REJECT
+
+[Script]
+http-response ^https:\/\/mall\.shopee\.tw\/api\/v4\/pages\/bottom_tab_bar script-path=https://sdany.org/usjs/shopee/filter/shopee_pages_bottom_tab_bar.js            , requires-body=true, enabled=true, tag=過濾 蝦皮底部按鈕調整
+http-request ^https:\/\/mall\.shopee\.tw\/api\/v4\/native\/homepage script-path=https://sdany.org/usjs/shopee/filter/shopee_homepageQ.js                             , requires-body=true, enabled=true, tag=過濾 蝦皮首頁 Q
+http-response ^https:\/\/mall\.shopee\.tw\/api\/v4\/native\/homepage script-path=https://sdany.org/usjs/shopee/filter/shopee_homepage.js                             , requires-body=true, enabled=true, tag=過濾 蝦皮首頁
+// http-request ^https:\/\/mall\.shopee\.tw\/api\/v4\/traffic\/page_component\/get_mall_page script-path=https://sdany.org/usjs/shopee/filter/shopee_get_mall_pageQ.js  , requires-body=true, enabled=true, tag=過濾 蝦皮商城 Q
+http-response ^https:\/\/mall\.shopee\.tw\/api\/v4\/traffic\/page_component\/get_mall_page script-path=https://sdany.org/usjs/shopee/filter/shopee_get_mall_page.js  , requires-body=true, enabled=true, tag=過濾 蝦皮商城
+http-request ^https:\/\/mall\.shopee\.tw\/api\/v4\/banner\/batch_list_by_spaces script-path=https://sdany.org/usjs/shopee/filter/shopee_mall_banner.js               , requires-body=true, enabled=true, tag=過濾 蝦皮商城 Banner
+http-request ^https:\/\/mall\.shopee\.tw\/api\/v4\/official_shop\/get_shops script-path=https://sdany.org/usjs/shopee/filter/shopee_mall_official_shop.js            , requires-body=true, enabled=true, tag=過濾 蝦皮商城 品牌旗艦店
+http-request ^https:\/\/mall\.shopee\.tw\/api\/v2\/flash_sale\/brand_sale_get_items script-path=https://sdany.org/usjs/shopee/filter/shopee_mall_flash_sale.js       , requires-body=true, enabled=true, tag=過濾 蝦皮商城 限時特價
+
+
+//http-request ^https:\/\/games\.shopee\.tw\/api-gateway\/pet\/garden\/info\?.+  script-path=https://sdany.org/usjs/shopee/filter/pet_garden_info.js                                                 , requires-body=false, enabled=true, tag=過濾 免誤按家園設定
+
+http-request ^https?:\/\/lo.on\/black.png script-path=https://sdany.org/usjs/shopee/filter/png_black.js                                                                  , requires-body=false, enabled=true, tag=黑色滿版圖檔
+http-request ^https?:\/\/lo.on\/white.png script-path=https://sdany.org/usjs/shopee/filter/png_white.js                                                                  , requires-body=false, enabled=true, tag=白色滿版圖檔
+http-request ^https?:\/\/lo.on\/trans.png script-path=https://sdany.org/usjs/shopee/filter/png_trans.js                                                                  , requires-body=false, enabled=true, tag=透明色滿版圖檔
+
+http-request ^http:\/\/lo.on\/simulate\?suid=null script-path=https://sdany.org/usjs/shopee/mitm/shopee_simulate_page.js                                               , requires-body=false, enabled=true, tag=🍤GUI 清除偽裝UserID
+http-request ^http:\/\/lo.on\/simulate\?page=list script-path=https://sdany.org/usjs/shopee/mitm/shopee_simulate_page.js                                               , requires-body=false, enabled=true, tag=🍤GUI 每日任務 Page List
+http-request ^http:\/\/lo.on\/simulate\/tasks_check_list_cloud\?suid=[^\=&]+(&date=.+)?$ script-path=https://sdany.org/usjs/shopee/scripts1/tasks_check_list_cloud.js  , requires-body=false, enabled=true, tag=🍤GUI UserID 任務 總覽 List
+http-request ^http:\/\/lo.on\/simulate.+ script-path=https://sdany.org/usjs/shopee/mitm/shopee_simulate_page_not.js                                                    , requires-body=false, enabled=true, tag=🍤GUI 偽裝模擬 Page 未啟用
+http-request ^http:\/\/lo.on\/tasks_check_list.* script-path=https://sdany.org/usjs/shopee/scripts1/tasks_check_list.js                                                 , requires-body=false, enabled=true, tag=🍤GUI 每日任務 總覽 Page
+http-request ^http:\/\/lo.on\/coins$ script-path=https://sdany.org/usjs/shopee/filter/finish_product_feeds_task_and_claim.js                                           , requires-body=false, enabled=true, tag=🍤GUI 手動 30秒領蝦幣💰 Page
+http-request ^http:\/\/lo.on\/pet_game_progress$ script-path=https://sdany.org/usjs/shopee/pet/game_progress.js                                                        , requires-body=false, enabled=true, tag=🍤GUI 🐥取得學校遊戲狀態ℹ️ Page
+http-request ^http:\/\/lo.on\/get_user_coin_list$ script-path=https://sdany.org/usjs/shopee/scripts1/shopee_get_user_coin_list.js                                      , requires-body=false, enabled=true, tag=🍤GUI 💰我的蝦幣 清單 Page
+http-response ^https:\/\/mall\.shopee\.tw\/api\/v4\/pages\/get_buyer_order_info.* script-path=https://sdany.org/usjs/shopee/filter/shopee_get_buyer_order_info.js      , requires-body=true, enabled=true, tag=取得 訂單資訊 with 我的頁面
+http-response ^https:\/\/mall\.shopee\.tw\/api\/v4\/pages\/get_me_page\?iosversion=.+ script-path=https://sdany.org/usjs/shopee/filter/shopee_get_me_page.js           , requires-body=true, enabled=true, tag=過濾 我的頁面
+http-response ^https:\/\/mall\.shopee\.tw\/api\/v4\/pages\/get_me_page_v2\?iosversion=.+ script-path=https://sdany.org/usjs/shopee/filter/shopee_get_me_page_v2.js     , requires-body=true, enabled=true, tag=過濾 我的頁面v2
+http-response ^https:\/\/mall\.shopee\.tw\/api\/v4\/pages\/get_me_page_v2\?.+&iosversion=.+ script-path=https://sdany.org/usjs/shopee/filter/shopee_get_me_page_v2.js     , requires-body=true, enabled=true, tag=過濾 我的頁面v2-2
+http-response ^https:\/\/mall\.shopee\.tw\/api\/v4\/market_coin\/get_iframe_list\?.+ script-path=https://sdany.org/usjs/shopee/filter/market_coin_get_iframe_list.js   , requires-body=true, enabled=true, tag=過濾 iframe List
+http-response ^https:\/\/games\.shopee\.tw\/gameplatform\/api\/v2\/game_reco\/games\/channels\/.+ script-path=https://sdany.org/usjs/shopee/filter/games_channels.js   , requires-body=true, enabled=true, tag=過濾 games channels
+// http-response ^https:\/\/txp\.rs\/viewvoucher\.aspx\?voucherguid=.+ script-path=https://sdany.org/usjs/shopee/mitm/get_viewvoucher.js                                , requires-body=true, enabled=true, tag=電子券 調整BarCode位置
+
+http-response ^https:\/\/games\.shopee\.tw\/api-gateway\/pet\/task\/daily_list\?activityCode=.+&eventCode=.+$ script-path=https://sdany.org/usjs/shopee/filter/pet_daily_list.js, requires-body=true, enabled=true, tag=寵物村 每日任務 調整
+
+// 偽裝 response 不送出 request
+http-request ^https:\/\/mall\.shopee\.tw\/userstats_record\/(record|batchrecord)$ script-path=https://sdany.org/usjs/shopee/mitm/userstats_record.js                                    , requires-body=false, enabled=true, tag=REQ USERSTATS RECORD
+http-request ^https:\/\/idgame\.shopee\.tw\/worms\/api\/v\d\/ping script-path=https://sdany.org/usjs/shopee/filter/pet_worms_ping.js                                                     , requires-body=false, enabled=true, tag=REQ 貪食蛇 PING
+http-request ^https:\/\/idgame\.shopee\.tw\/non-slo\/worms\/api\/v\d\/heartbeat\/ping script-path=https://sdany.org/usjs/shopee/filter/pet_worms_heartbeat_ping.js                       , requires-body=false, enabled=true, tag=REQ 貪食蛇 Heart Beat PING
+http-request ^https:\/\/idgame\.shopee\.tw\/crash-ball\/api\/v1\/ping$ script-path=https://sdany.org/usjs/shopee/filter/pet_crashball_ping.js                                            , requires-body=false, enabled=true, tag=REQ 桌上曲棍球 PING
+http-request ^https:\/\/games\.shopee\.tw\/game\/stats\/api\/v2\/report$ script-path=https://sdany.org/usjs/shopee/filter/games_report.js                                                , requires-body=false, enabled=true, tag=REQ GAME REPORT
+http-request ^https:\/\/games\.shopee\.tw\/game\/stats\/api\/batch_report$ script-path=https://sdany.org/usjs/shopee/filter/games_batch_report.js                                        , requires-body=false, enabled=true, tag=REQ GAME BATCH REPORT
+
+
+[MITM]
+hostname = mall.shopee.tw, games.shopee.tw
+// , txp.rs

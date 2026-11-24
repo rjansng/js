@@ -1,0 +1,57 @@
+#!name=蝦皮 蝦蝦果園🌱 自動化
+#!desc=v20261124 蝦蝦果園通知澆水
+#!select=蝦蝦果園通知澆水,預設:否,是,自動
+// #!select=蝦蝦果園站外澆水Link,預設:0,1,2,3
+// #!select=蝦蝦果園站外澆水LinkTG,預設:是,否
+// #!author=Sdany
+// #!openUrl=https://sdany.org/usjs/shopee/auto_farm.plugin
+
+[Argument]
+eFriendHelp = switch,false,tag=幫朋友澆水
+eFriendShakeTree = switch,false,tag=朋友搖樹
+e1 = switch,false,tag=果園狀態
+e2 = switch,false,tag=推薦商店
+e3 = switch,false,tag=任務打卡
+e4 = switch,false,tag=任務簽到獎勵
+e5 = switch,false,tag=任務領取水滴
+e6 = switch,false,tag=自動購買免費道具
+e7 = switch,false,tag=自動使用道具
+e8 = switch,false,tag=分享
+
+[Script]
+cron "5,30,50 * * * *" script-path = https://sdany.org/usjs/shopee/farm/farm_water.js                     , enabled={e1}, tag=🌱果園狀態 更新 收成 通知🥬
+cron "5 0/5 * * *" script-path = https://sdany.org/usjs/shopee/farm/friend_help_v2.js                     , enabled={eFriendHelp}, tag=🌱自動幫朋友 澆水💦
+cron "8 0/5 * * *" script-path = https://sdany.org/usjs/shopee/farm/friend_shake_tree.js                  , enabled={eFriendShakeTree}, tag=🌱朋友 搖樹💦
+cron "7 0/4 * * *" script-path = https://sdany.org/usjs/shopee/farm/grocery_store_water.js                , enabled={e2}, tag=🌱推薦商店 領30💧x3
+cron "10 0/4 * * *" script-path = https://sdany.org/usjs/shopee/farm/tasks_checkin.js                     , enabled={e3}, tag=🌱任務打卡 3次💧
+cron "50 4,5,12 * * *" script-path = https://sdany.org/usjs/shopee/farm/tasks_signin_bundle.js            , enabled={e4}, tag=🌱任務簽到獎勵
+cron "50 5-23/3 * * *" script-path = https://sdany.org/usjs/shopee/farm/tasks_mission_claim.js            , enabled={e5}, tag=🌱任務領取水滴💧
+cron "19 0,4 * * *" script-path = https://sdany.org/usjs/shopee/farm/buy_free_item.js                     , enabled={e6}, tag=🌱自動購買免費道具🛠
+cron "10 0 * * *" script-path = https://sdany.org/usjs/shopee/farm/prop_use_auto.js                       , enabled={e7}, tag=🌱自動使用道具🛠
+cron "18 0,4 * * *" script-path = https://sdany.org/usjs/shopee/farm/share.js                             , enabled={e8}, tag=🌱分享 領10💧
+
+// cron "5 6 * * *" script-path=https://sdany.org/usjs/shopee/farm/share_link.js                           , enabled=true, tag=🌱取得站外澆水💦Link🔗
+// cron "5 6,7,8,12,18 * * *" script-path=https://sdany.org/usjs/shopee/farm/brands_ads_task_claim.js      , enabled=true, tag=🌱品牌商店 領50 💧, timeout = 370
+// cron "50 23 * * *" script-path=https://sdany.org/usjs/shopee/farm/crop_list.js                           , enabled=true, tag=🌱顯示 種子清單🌱
+
+//cron "5 8-20/3 * * *" script-path=https://sdany.org/usjs/shopee/farm/tasks_message_anonymous_help.js    , enabled=true, tag=🌱取得站外澆水💦記錄
+// cron "50 * * * *" script-path=https://sdany.org/usjs/shopee/farm/crop_reward_claim.js                   , enabled=false, tag=🌱自動更新作物狀態 待合併
+// cron "0 0 0 * * *" script-path=https://sdany.org/usjs/shopee/_shopee/crop/shopee_auto_crop.js           , enabled=false, tag=🌱自動種植 搶種子🌱
+// cron "55 * * * *" script-path=https://sdany.org/usjs/shopee/_shopee/crop/shopee_auto_harvest.js         , enabled=true, tag=🌱自動收成🪴
+// cron "5,45 * * * *" script-path=https://sdany.org/usjs/shopee/_shopee/crop/shopee_auto_water.js         , enabled=false, tag=🌱自動澆水💦
+
+//#!date=2023-09-18
+//。[作物ID]:參考用。[作物名稱]:4蝦幣(預設)，多名稱用[ ; ]區隔，名稱越完整不容易錯；[作物名稱的判斷]:0 文字開頭，1 任何位置，預設:0,1~
+//#!select=通知澆水,預設,否,是,0,1,2,3
+//#!input=蝦蝦果園KEY
+//#!input=蝦蝦果園澆水KEY
+//#!select=蝦蝦果園自動澆水,預設:否,是
+//#!select=自動澆水,預設:否,是
+//#!select=通知特別種子時間,預設,否,是
+//#!input=自動種植等待秒
+//#!input=作物ID
+//#!input=作物名稱
+//#!input=作物名稱的判斷
+//#!select=作物名稱,4蝦幣,統一布丁,麥香奶茶,森永牛奶糖,77乳加,嗨啾葡萄軟糖,生活泡沫綠茶,多多活菌發酵乳
+//#!select=作物名稱的判斷,0,1,0;0,0;1,1;0,1;1
+//#!select=自動種植,預設,否,是
